@@ -1,0 +1,1157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Techniques - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="baking.html" class="active">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Advanced Techniques > Baking
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Mastering Baking Techniques in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Advanced</span></span>
+                            <span>Time: 45 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>Baking is the process of transferring high-detail information from a high-polygon model to a low-polygon model through texture maps. This technique is essential for creating game-ready assets that look highly detailed while maintaining performance. In Substance 3D Painter, baking allows you to capture intricate details like surface normals, curvature, ambient occlusion, and more, then apply them to your low-poly models for use in Roblox and other real-time engines.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Baking Matters for Roblox</h4>
+                            <p>Roblox has performance constraints that limit polygon counts. Baking allows you to create visually rich assets with detailed surface information baked into texture maps, rather than relying on high polygon counts. This enables you to create assets that look complex and detailed while remaining performant in Roblox experiences.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding the Baking Process</h2>
+                            <p>How baking works and what it accomplishes:</p>
+
+                            <div class="pro-tip">
+                                <h4>Baking Fundamentals:</h4>
+                                <ul>
+                                    <li><strong>Purpose:</strong> Transfer high-poly detail to low-poly models</li>
+                                    <li><strong>Input:</strong> High-poly model (source of detail) + Low-poly model (target)</li>
+                                    <li><strong>Output:</strong> Texture maps (normal, AO, curvature, etc.)</li>
+                                    <li><strong>Result:</strong> Low-poly model appears as detailed as high-poly when using baked maps</li>
+                                    <li><strong>Performance:</strong> Dramatically reduces polygon count while preserving visual detail</li>
+                                    <li><em>Tip: Think of baking as "taking a picture" of your high-poly detail to apply to your low-poly model</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Common Baked Map Types in Substance Painter:</h4>
+                                <p>What each map type captures:</p>
+                                <ul>
+                                    <li><strong>Normal Map:</strong> Surface orientation and detail (most important)</li>
+                                    <li><strong>World Space Normal:</strong> Normals in world space (useful for certain effects)</li>
+                                    <li><strong>Curvature:</strong> Convex/concave surface information</li>
+                                    <li><strong>Ambient Occlusion (AO):</strong> Shadowing in crevices and enclosed areas</li>
+                                    <li><strong>Thickness:</strong> Volume information (thick vs thin areas)</li>
+                                    <li><strong>Position:</strong> World position information</li>
+                                    <li><strong>ID Map:</strong> Material/color identification for masking</li>
+                                    <li><strong>Normals (Tangent Space):</strong> Standard normal map format</li>
+                                    <li><em>Tip: For Roblox, Normal Map and AO are most commonly used</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Baking Requirements:</h4>
+                                <p>What you need for successful baking:</p>
+                                <ul>
+                                    <li>High-poly model with detailed geometry</li>
+                                    <li>Low-poly model (game-ready version)</li>
+                                    <li>Proper UV unwrapping on low-poly model</li>
+                                    <li>Models positioned correctly relative to each other</li>
+                                    <li>Appropriate cage settings (if using)</li>
+                                    <li><em>Tip: Models should share the same origin and be properly aligned</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Setting Up for Successful Baking</h2>
+                            <p>Preparing your models and scene for baking:</p>
+
+                            <div class="subsection">
+                                <h3>Model Preparation</h4>
+                                <p>Getting your high-poly and low-poly models ready:</p>
+                                <div class="pro-tip">
+                                    <h4>High-Poly Model Requirements:</h4>
+                                    <ul>
+                                        <li>Contains all the detail you want to capture</li>
+                                        <li>Can be sculpted, modeled, or procedurally generated</li>
+                                        <li>Does not need clean topology (for detail capture)</li>
+                                        <li>Should be manifold (no holes or non-manifold edges)</li>
+                                        <li><em>Tip: Use your sculpt or high-detail model as the high-poly</em></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pro-tip">
+                                    <h4>Low-Poly Model Requirements:</h4>
+                                    <ul>
+                                        <li>Game-ready topology with proper edge flow</li>
+                                        <li>Clean, manifold geometry</li>
+                                        <li>Properly unwrapped UVs (no overlaps, proper spacing)</li>
+                                        <li>Matches the silhouette of the high-poly model</li>
+                                        <li><em>Tip: Spend time on good UVs - they're crucial for baking quality</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Scene Setup in Substance Painter</h4>
+                                <p>Configuring your project for baking:</p>
+                                <div class="steps">
+                                    <h4>Setting Up Your Baking Project Step-by-Step</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Create New Project</h4>
+                                            <p>Start your baking project:</p>
+                                            <ul>
+                                                <li>File > New Project</li>
+                                                <li>Select your low-poly model as the mesh</li>
+                                                <li>Choose appropriate document resolution (2K, 4K, etc.)</li>
+                                                <li>Set up normal map format (usually OpenGL or DirectX)</li>
+                                                <li><em>Tip: For Roblox, OpenGL normal map format is commonly used</em></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Import High-Poly Meshes</h4>
+                                            <p>Add your high-poly detail sources:</p>
+                                            <ul>
+                                                <li>Texture Set Settings > Import Meshes</li>
+                                                <li>Add your high-poly model(s)</li>
+                                                <li>Ensure they're properly positioned relative to low-poly</li>
+                                                <li>You can import multiple high-poly meshes for different parts</li>
+                                                <li><em>Tip: Name your high-poly meshes clearly for organization</em></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Access Baker Settings</h4>
+                                            <p>Open the baking configuration:</p>
+                                            <ul>
+                                                <li>Go to Texture Set Settings</li>
+                                                <li>Click the "Bake" button or go to Bake menu</li>
+                                                <li>This opens the Baker window with all available map types</li>
+                                                <li><em>Tip: You can bake multiple maps simultaneously</em></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">4</div>
+                                        <div class="step-content">
+                                            <h4>Configure Baker Parameters</h4>
+                                            <p>Set up your baking parameters:</p>
+                                            <ul>
+                                                <li>Select which maps to bake (Normal, AO, Curvature, etc.)</li>
+                                                <li>Set output resolution (match your document resolution)</li>
+                                                <li>Set anti-aliasing (usually 4x or 8x for quality)</li>
+                                                <li>Set max tracing distance (important for proper ray casting)</li>
+                                                <li><em>Tip: Start with default settings, then adjust based on results</em></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">5</div>
+                                        <div class="step-content">
+                                            <h4>Set Up Cage (If Needed)</h4>
+                                            <p>Configure the cage for problematic bakes:</p>
+                                            <ul>
+                                                <li>The cage defines the ray casting distance</li>
+                                                <li>Use automatic cage generation first</li>
+                                                <li>If baking fails, manually adjust cage parameters</li>
+                                                <li>Frontal distance: rays cast outward from low-poly</li>
+                                                <li>Rear distance: rays cast inward toward low-poly</li>
+                                                <li><em>Tip: Proper cage settings eliminate most baking artifacts</em></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">6</div>
+                                        <div class="step-content">
+                                            <h4>Execute the Bake</h4>
+                                            <p>Run your baking process:</p>
+                                            <ul>
+                                                <li>Review all settings one final time</li>
+                                                <li>Click the "Bake" button to start processing</li>
+                                                <li>Wait for baking to complete (time varies with complexity)</li>
+                                                <li>Review the baked maps in the viewport</li>
+                                                <li><em>Tip: Bake a small test area first to verify settings</em></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

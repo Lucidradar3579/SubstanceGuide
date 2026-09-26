@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Layers - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="layers.html" class="active">Understanding Layers</a></li>
+                    <li><a href="smart-materials.html">Smart Materials</a></li>
+                    <li><a href="masks.html">Masks</a></li>
+                    <li><a href="generators.html">Generators</a></li>
+                    <li><a href="fill-layers.html">Fill Layers</a></li>
+                    <li><a href="paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Substance 3D Painter Basics > Understanding Layers
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Understanding Layers in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span></span>
+                            <span>Time: 25 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: Fundamental</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Layers are the foundation of Substance 3D Painter's non-destructive workflow. Understanding how layers work is essential for creating complex, editable materials for your Roblox assets. This guide covers all layer types, their properties, and how to use them effectively.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Layers Matter for Roblox Workflows</h4>
+                            <p>Mastering layers allows you to create complex materials that are easy to modify, iterate on, and reuse across different Roblox projects. Non-destructive workflow means you can always go back and adjust without starting over.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>The Layer Stack Concept</h2>
+                            <p>Before diving into specific layer types, understand how the layer stack works:</p>
+
+                            <div class="pro-tip">
+                                <h4>How the Layer Stack Works:</h4>
+                                <ul>
+                                    <li>Layers are composited from bottom to top</li>
+                                    <li>Each layer can affect one or more channels (Base Color, Roughness, Metalness, Normal, Height)</li>
+                                    <li>Blending modes determine how layers interact with layers below</li>
+                                    <li>Masks control where each layer is visible</li>
+                                    <li>Layers can be grouped for organization</li>
+                                    <li><em>Roblox Tip: Think of each layer as adding a specific characteristic to your material</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="callout-warning">
+                                <h4>Channels Explained</h4>
+                                <p>Substance 3D Painter works with these texture channels:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Base Color</h4>
+                                        <p>The actual color of your material (Albedo)</p>
+                                        <p><em>Roblox: Maps to SurfaceAppearance.ColorMap</em></p>
+                                        <p><em>Color Space: sRGB</em></p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Roughness</h4>
+                                        <p>How smooth or rough the surface is</p>
+                                        <p><em>Roblox: Maps to SurfaceAppearance.RoughnessMap</em></p>
+                                        <p><em>Value: 0 = smooth, 1 = rough</em></p>
+                                        <p><em>Color Space: Linear</em></p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Metalness</h4>
+                                        <p>Whether the surface is metallic or not</p>
+                                        <p><em>Roblox: Maps to SurfaceAppearance.MetalnessMap</em></p>
+                                        <p><em>Value: 0 = non-metal, 1 = metal</em></p>
+                                        <p><em>Color Space: Linear</em></p>
+                                    </div>
+                                </div>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Normal</h4>
+                                        <p>Surface detail for lighting simulation</p>
+                                        <p><em>Roblox: Maps to SurfaceAppearance.NormalMap</em></p>
+                                        <p><em>Format: OpenGL (Y inverted for DirectX)</em></p>
+                                        <p><em>Color Space: Linear</em></p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Height</h4>
+                                        <p>Surface displacement (for parallax effects)</p>
+                                        <p><em>Roblox: Not directly used, but useful for baking</em></p>
+                                        <p><em>Color Space: Linear</em></p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Ambient Occlusion</h4>
+                                        <p>Contact shadowing in crevices</p>
+                                        <p><em>Roblox: Can be used in ColorMap or as separate map</em></p>
+                                        <p><em>Color Space: Linear</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Layer Types Overview</h2>
+                            <p>Substance 3D Painter offers several layer types, each serving different purposes:</p>
+
+                            <div class="grid-3">
+                                <div class="feature-item">
+                                    <h3>Fill Layers</h2>
+                                    <p>Uniform content across the entire texture set:</p>
+                                    <ul>
+                                        <li>Solid colors, gradients, or procedural patterns</li>
+                                        <li>Infinitely editable and resolution independent</li>
+                                        <li>Great for base material properties</li>
+                                        <li><em>Roblox Use: Setting base PBR values (color, roughness, metalness)</em></p>
+                                    </ul>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>Paint Layers</h2>
+                                    <p>Hand-painted or projected content:</p>
+                                    <ul>
+                                        <li>Brush-based painting in 2D or 3D view</li>
+                                        <li>Projection through camera or stencils</li>
+                                        <li>Clone, heal, and other painting tools</li>
+                                        <li><em>Roblox Use: Adding unique details, wear, dirt, or character-specific markings</em></p>
+                                    </ul>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>Layer Groups</h2>
+                                    <p>Organizational containers for layers:</p>
+                                    <ul>
+                                        <li>Group related layers (e.g., all "wear" layers)</li>
+                                        <li>Apply masks and effects to entire groups</li>
+                                        <li>Collapse/export for cleaner layer stack</li>
+                                        <li><em>Roblox Use: Organizing complex materials by component or effect type</em></p>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Fill Layers Deep Dive</h2>
+                            <p>The most versatile layer type for base material setup:</p>
+
+                            <div class="subsection">
+                                <h3>Fill Layer Properties</h4>
+                                <p>What you can control in a Fill Layer:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Content Type</h4>
+                                        <p>What the layer fills with:</p>
+                                        <ul>
+                                            <li>Solid Color</li>
+                                            <li>Gradient (linear, radial, angular)</li>
+                                            <li>Noise (various types: Gaussian, etc.)</li>
+                                            <li>Patterns (bricks, tiles, etc.)</li>
+                                            <li>From Mesh (baked curvature, position, etc.)</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Channels</h4>
+                                        <p>Which texture channels to affect:</p>
+                                        <ul>
+                                            <li>Base Color (RGB)</li>
+                                            <li>Roughness (Grayscale)</li>
+                                            <li>Metalness (Grayscale)</li>
+                                            <li>Normal (RGB - usually from generator)</li>
+                                            <li>Height (Grayscale)</li>
+                                            <li>Ambient Occlusion (Grayscale)</li>
+                                            <li><em>Tip: You can enable/disable channels independently</em></p>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Blending and Opacity</h4>
+                                        <p>How the layer combines with layers below:</p>
+                                        <ul>
+                                            <li>Blending Mode (Normal, Multiply, Overlay, etc.)</li>
+                                            <li>Opacity (0-100%)</li>
+                                            <li>Flow (for brush-like buildup)</li>
+                                            <li>Per-channel blending modes (advanced)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Practical Fill Layer Examples for Roblox</h4>
+                                <p>Common uses in Roblox texturing workflows:</p>
+
+                                <div class="steps">
+                                    <h4>Setting Up Basic PBR Properties</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Base Color Fill Layer</h4>
+                                            <p>Create your foundation color:</p>
+                                            <ul>
+                                                <li>Add Fill Layer</li>
+                                                <li>Set Content to "Color"</li>
+                                                <li>Choose your base color (e.g., #8B4513 for wood)</li>
+                                                <li>Enable only Base Color channel</li>
+                                                <li>Set blending to "Normal"</li>
+                                                <li><em>Name: "Base Color - Wood"</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Roughness Fill Layer</h4>
+                                            <p>Define surface smoothness:</p>
+                                            <ul>
+                                                <li>Add Fill Layer</li>
+                                                <li>Set Content to "Color" (grayscale)</li>
+                                                <li>Set value (0.3 for moderately smooth wood)</li>
+                                                <li>Enable only Roughness channel</li>
+                                                <li>Set blending to "Normal"</li>
+                                                <li><em>Name: "Roughness - Wood"</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Metalness Fill Layer</h4>
+                                            <p>Define metallic properties:</p>
+                                            <ul>
+                                                <li>Add Fill Layer</li>
+                                                <li>Set Content to "Color" (grayscale)</li>
+                                                <li>Set value (0.0 for wood)</li>
+                                                <li>Enable only Metalness channel</li>
+                                                <li>Set blending to "Normal"</li>
+                                                <li><em>Name: "Metalness - Wood"</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Pro Tip: Using Gradients in Fill Layers</h4>
+                                <p>Gradients are powerful for creating variety:</p>
+                                <ul>
+                                    <li>Linear gradients for directional variation</li>
+                                    <li>Radial gradients for falloff from center</li>
+                                    <li>Angular gradients for rotational patterns</li>
+                                    <li><em>Roblox Example: Use radial gradient in roughness to create worn centers on wheels or handles</em></p>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Paint Layers Deep Dive</h2>
+                            <p>For when you need hand-crafted details:</p>
+
+                            <div class="subsection">
+                                <h3>Paint Layer Properties</h4>
+                                <p>What makes Paint Layers unique:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Painting Tools</h4>
+                                        <p>Different ways to apply paint:</p>
+                                        <ul>
+                                            <li>Brush Tool - Freehand painting</li>
+                                            <li>Eraser Tool - Removing paint</li>
+                                            <li>Clone Tool - Copying from one area to another</li>
+                                            <li>Heal Tool - Blending copied content</li>
+                                            <li>Shape Tool - Drawing geometric shapes</li>
+                                            <li>Text Tool - Adding text</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Brush Settings</h4>
+                                        <p>Control your brush behavior:</p>
+                                        <ul>
+                                            <li>Size - Brush diameter</li>
+                                            <li>Hardness - Edge softness</li>
+                                            <li>Flow - Paint buildup rate</li>
+                                            <li>Spacing - Distance between paint dots</li>
+                                            <li>Rotation - Brush angle</li>
+                                            <li>Scatter - Random position variation</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Projection Modes</h4>
+                                        <p>How paint gets applied to 3D models:</p>
+                                        <ul>
+                                            <li>View Projected - Through camera view</li>
+                                            <li>UV Projected - Through UV space</li>
+                                            <li>Normal Projected - Along surface normals</li>
+                                            <li>Stencil Projected - Through a stencil mask</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Practical Paint Layer Examples for Roblox</h4>
+                                <p>Common uses in Roblox texturing workflows:</p>
+
+                                <div class="steps">
+                                    <h4>Adding Character Details</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Painting Wear and Scratches</h4>
+                                            <p>Add realistic use patterns:</p>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose a scratch or wear brush</li>
+                                                <li>Set color to slightly lighter/darker than base</li>
+                                                <li>Paint in areas that would naturally wear</li>
+                                                <li>Use pressure sensitivity for variation</li>
+                                                <li><em>Tip: Use low flow (10-30%) for subtle buildup</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Adding Unique Markings</h4>
+                                            <p>Create character-specific details:</p>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose appropriate color</li>
+                                                <li>Use stencils for logos, numbers, or symbols</li>
+                                                <li>Or freehand paint for unique designs</li>
+                                                <li>Consider placement for visibility in-game</li>
+                                                <li><em>Tip: Use layers to easily toggle markings on/off</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Projection Painting for Precision</h4>
+                                            <p>Apply details with accurate positioning:</p>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Switch to "View Projected" mode</li>
+                                                <li>Position your camera for desired angle</li>
+                                                <li>Paint - strokes will follow camera perspective</li>
+                                                <li>Great for applying decals or labels</li>
+                                                <li><em>Roblox Tip: Use for applying Roblox logos or brand elements</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Layer Groups and Organization</h2>
+                            <p>Keeping your layer stack manageable:</p>
+
+                            <div class="pro-tip">
+                                <h4>When to Use Layer Groups:</h4>
+                                <ul>
+                                    <li>Organizing by material type (wood, metal, plastic)</li>
+                                    <li>Grouping by effect type (base, details, wear, dirt)</li>
+                                    <li>Creating variations (different color schemes)</li>
+                                    <li>Preparing for export (group layers you want to toggle)</li>
+                                </ul>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating and Using Layer Groups</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Creating a Layer Group</h4>
+                                        <p>Organize related layers:</p>
+                                        <ul>
+                                            <li>Select layers to group (Shift+Click)</li>
+                                            <li>Right-click > "Group Layers"</li>
+                                            <li>Or press Ctrl+G (Cmd+G on Mac)</li>
+                                            <li>Name your group descriptively</li>
+                                            <li><em>Example: "Wood Material" group containing base color, roughness, etc.</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Group Properties</h4>
+                                        <p>Control the group as a unit:</p>
+                                        <ul>
+                                            <li>Group blending mode affects all layers inside</li>
+                                            <li>Group opacity affects all layers inside</li>
+                                            <li>Group mask affects visibility of all layers inside</li>
+                                            <li>You can still edit individual layers inside</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Practical Grouping Examples</h4>
+                                        <p>Common grouping strategies for Roblox:</p>
+                                        <ul>
+                                            <li><strong>Material Groups:</strong> Separate groups for wood, metal, fabric, etc.</li>
+                                            <li><strong>Effect Groups:</strong> Base, Details, Wear, Dirt, etc.</li>
+                                            <li><strong>Variation Groups:</strong> Different color schemes or weather states</li>
+                                            <li><strong>Roblox Specific:</strong> Groups for different LOD levels or platforms</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Advanced Layer Techniques</h2>
+                            <p>Power-user features for complex materials:</p>
+
+                            <div class="subsection">
+                                <h3>Blending Modes Deep Dive</h4>
+                                <p>Understanding how layers combine:</p>
+                                <div class="callout">
+                                    <h4>Most Useful Blending Modes for Roblox:</h4>
+                                    <div class="grid-3">
+                                        <div class="feature-item">
+                                            <h4>Normal</h4>
+                                            <p>Standard alpha blending</p>
+                                            <p><em>Use for: Most layers, base colors</em></p>
+                                        </div>
+
+                                        <div class="feature-item">
+                                            <h4>Multiply</h4>
+                                            <p>Darkens based on layer values</p>
+                                            <p><em>Use for: Dirt, grime, shadows, stains</em></p>
+                                        </div>
+
+                                        <div class="feature-item">
+                                            <h4>Overlay</h4>
+                                            <p>Enhances contrast</p>
+                                            <p><em>Use for: Wear, scratches, surface detail</em></p>
+                                        </div>
+                                    </div>
+                                    <div class="grid-3">
+                                        <div class="feature-item">
+                                            <h4>Screen</h4>
+                                            <p>Lightens based on layer values</p>
+                                            <p><em>Use for: Scratches, highlights, dust</em></p>
+                                        </div>
+
+                                        <div class="feature-item">
+                                            <h4>Add (Linear Dodge)</h4>
+                                            <p>Adds values together</p>
+                                            <p><em>Use for: Emissive effects, light leaks</em></p>
+                                        </div>
+
+                                        <div class="feature-item">
+                                            <h4>Color Dodge</h4>
+                                            <p>Brightens to reflect layer color</p>
+                                            <p><em>Use for: Intense highlights, sparkling effects</em></p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p><em>Tip: Experiment with blending modes to discover unique effects!</em></p>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Per-Channel Blending</h4>
+                                <p>Different blending modes per channel:</p>
+                                <p>Advanced but powerful for precise control:</p>
+                                <ul>
+                                    <li>Set different blending for Base Color vs Roughness vs Metalness</li>
+                                    <li>Example: Overlay for Base Color detail, Multiply for Roughness variation</li>
+                                    <li><em>Roblox Use: Create complex material variations while maintaining physical accuracy</em></p>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <pContinue building your layer expertise:</p>
+                            <ul>
+                                <li><a href="smart-materials.html">Learn About Smart Materials</a> - Pre-built, intelligent layer stacks</li>
+                                <li><a href="masks.html">Master Masks</a> - Essential for controlling where layers appear</li>
+                                <li><a href="fill-layers.html">Deep Dive into Fill Layers</a> - Advanced procedural content</li>
+                                <li><a href="paint-layers.html">Explore Paint Layers</a> - Hand-painted details and techniques</li>
+                                <li><a href="../materials/metal.html">Apply Your Knowledge: Create Metal Materials</a> - Practical project using layers</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create Layer Templates</h4>
+                                <p>Save time on repetitive setups:</p>
+                                <ul>
+                                    <li>Create a layer setup you use frequently (e.g., basic PWR material)</li>
+                                    <li>Right-click on the layer group > "Create Smart Material"</li>
+                                    <li>Name it and save to your shelf</li>
+                                    <li>Now you can drag-and-drop this setup onto any project</li>
+                                    <li><em>Example: Create a "Roblox Base PBR" smart material with color, roughness, and metalness fill layers</em></p>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

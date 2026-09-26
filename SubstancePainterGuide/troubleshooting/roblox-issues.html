@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox-Specific Issues - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="roblox-issues.html" class="active">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Troubleshooting > Roblox-Specific Issues
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Troubleshooting Roblox-Specific Issues in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-secondary">Intermediate</span></span>
+                            <span>Time: 35 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>Working with Substance 3D Painter to create assets for Roblox presents unique challenges that aren't always covered in general troubleshooting guides. This guide focuses specifically on issues that arise when creating textures for the Roblox platform, from SurfaceAppearance setup to performance optimization and platform-specific quirks.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Roblox-Specific Troubleshooting Matters</h4>
+                            <p>Roblox has its own technical requirements, limitations, and quirks that affect how textures should be created and optimized. Understanding these platform-specific issues helps you create assets that look great and perform well across all Roblox devices.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>SurfaceAppearance Issues</h2>
+                            <p>Problems with Roblox's SurfaceAppearance system:</p>
+
+                            <div class="subsection">
+                                <h3>Textures Not Applying Correctly</h4>
+                                <p>When your textures don't show up as expected in Roblox:</p>
+                                <div class="pro-tip">
+                                    <h4>SurfaceAppearance Application Fixes:</h4>
+                                    <ul>
+                                        <li>Verify you've assigned the correct textures to the correct slots</li>
+                                        <li>Check that your texture file names match what you expect</li>
+                                        <li>Ensure you're using the correct texture format (PNG recommended)</li>
+                                        <li>Confirm your asset is actually a MeshPart, not a regular Part</li>
+                                        <li><em>Tip: SurfaceAppearance only works on MeshPart objects</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Normal Map Lighting Looks Wrong</h4>
+                                <p>Fixing lighting direction issues with normal maps:</p>
+                                <div class="pro-tip">
+                                    <h4>Normal Map Direction Solutions:</h4>
+                                    <ul>
+                                        <li>Roblox expects OpenGL format normal maps</li>
+                                        <li>If lighting looks inverted, try flipping the green channel</li>
+                                        <li>Check your Substance Painter project settings when creating the project</li>
+                                        <li>Test a simple cube with a known normal map first</li>
+                                        <li><em>Tip: Wrong normal map format causes lighting to come from wrong directions</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Colors Look Washed Out or Incorrect</h4>
+                                <p>Solving color accuracy problems in Roblox:</p>
+                                <div class="pro-tip">
+                                    <h4>Color Accuracy Solutions:</h4>
+                                    <ul>
+                                        <li>Roblox uses sRGB color space for Base Color</li>
+                                        <li>Ensure your exported Base Color texture is in sRGB</li>
+                                        <li>Check for any color correction or grading in your export process</li>
+                                        <li>Verify your monitor is properly calibrated</li>
+                                        <li><em>Tip: Color space mismatches are a common cause of color issues</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Performance and Optimization Issues</h4>
+                            <p>Making your textures run well on Roblox:</p>
+
+                            <div class="subsection">
+                                <h3>Textures Causing Lag or Low FPS</h4>
+                                <p>Optimizing texture performance for Roblox:</p>
+                                <div class="pro-tip">
+                                    <h4>Texture Performance Solutions:</h4>
+                                    <ul>
+                                        <li>Check your texture resolution - 1024x1024 is often sufficient</li>
+                                        <li>Consider using texture compression where appropriate</li>
+                                        <li>Combine multiple textures into atlases when possible</li>
+                                        <li>Use lower resolution textures for distant or small objects</li>
+                                        <li><em>Tip: Mobile devices have much stricter texture limits than PC</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Memory Usage Issues</h4>
+                                <p>Reducing texture memory footprint:</p>
+                                <div class="pro-tip">
+                                    <h4>Memory Optimization:</h4>
+                                    <ul>
+                                        <li>Use the smallest texture size that maintains visual quality</li>
+                                        <li>Consider using 8-bit textures where 16-bit isn't needed</li>
+                                        <li>Reuse textures across multiple parts of your asset</li>
+                                        <li>Delete unused texture sets from your Substance Painter project</li>
+                                        <li><em>Tip: Every extra megabyte of texture memory affects performance</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Texture Streaming Issues</h4>
+                                <p>Handling Roblox's texture streaming system:</p>
+                                <div class="pro-tip">
+                                    <h4>Texture Streaming Solutions:</h4>
+                                    <ul>
+                                        <li>Understand that Roblox streams textures based on distance</li>
+                                        <li>Ensure important details are visible even at lower mip levels</li>
+                                        <li>Avoid putting critical details only in high frequency texture areas</li>
+                                        <li>Test your asset at various distances to see how it streams</li>
+                                        <li><em>Tip: Design textures to look good at all mip levels</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Export and Import Issues</h4>
+                            <p>Getting your textures from Substance Painter to Roblox correctly:</p>
+
+                            <div class="subsection">
+                                <h3>Exported Textures Look Different in Roblox</h4>
+                                <p>Solving appearance mismatches between Substance Painter and Roblox:</p>
+                                <div class="pro-tip">
+                                    <h4>Appearance Consistency Solutions:</h4>
+                                    <ul>
+                                        <li>Check your export settings - ensure correct color spaces</li>
+                                        <li>Base Color, Emissive, Opacity: sRGB color space</li>
+                                        <li>Normal, Roughness, Metalness, Height, AO: Linear color space</li>
+                                        <li>Verify you're not applying any unintended color correction</li>
+                                        <li>Compare viewing environments and lighting conditions</li>
+                                        <li><em>Tip: The most common issue is incorrect color space on export</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>File Format and Naming Problems</h4>
+                                <p>Ensuring your files are compatible with Roblox:</p>
+                                <div class="pro-tip">
+                                    <h4>File Compatibility Solutions:</h4>
+                                    <ul>
+                                        <li>Roblox accepts PNG, JPG, TGA, and BMP textures</li>
+                                        <li>PNG is recommended for lossless quality and alpha support</li>
+                                        <li>Avoid special characters or spaces in texture file names</li>
+                                        <li>Keep file names descriptive but concise</li>
+                                        <li>Ensure you're exporting to a location Roblox can access</li>
+                                        <li><em>Tip: Simple, reliable file naming prevents many import issues</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Platform-Specific Quirks</h4>
+                            <p>Unique considerations for different Roblox platforms:</p>
+
+                            <div class="subsection">
+                                <h3>Mobile vs PC Performance Differences</h4>
+                                <p>Addressing platform-specific texture requirements:</p>
+                                <div class="pro-tip">
+                                    <h4>Cross-Platform Solutions:</h4>
+                                    <ul>
+                                        <li>Mobile devices have much lower texture memory limits</li>
+                                        <li>Consider creating LOD (Level of Detail) versions for mobile</li>
+                                        <li>Test your assets on target devices early in development</li>
+                                        <li>Use Roblox's TextureService to check memory usage</li>
+                                        <li><em>Tip: What works great on PC might fail completely on mobile</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Console-Specific Considerations</h4>
+                                <p>Preparing for Roblox on consoles (Xbox, PlayStation):</p>
+                                <div class="pro-tip">
+                                    <h4>Console Optimization:</h4>
+                                    <ul>
+                                        <li>Consoles have intermediate capabilities between mobile and PC</li>
+                                        <li>Follow Roblox's published guidelines for console development</li>
+                                        <li>Pay attention to texture size limits and memory budgets</li>
+                                        <li>Test on actual console hardware when possible</li>
+                                        <li><em>Tip: Console certification has specific technical requirements</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Roblox-Specific Testing Checklist</h4>
+                            <p>Ensuring your textures are ready for Roblox:</p>
+
+                            <div class="pro-tip">
+                                <h4>Pre-Export Testing Checklist:</h4>
+                                <ol>
+                                    <li><strong>Color Space:</strong> Base Color/sRGB, Normal/Linear, etc.</li>
+                                    <li><strong>Resolution:</strong> Appropriate for target platform and use</li>
+                                    <li><strong>File Format:</strong> PNG for most cases, power of two dimensions</li>
+                                    <li><strong>Naming:</strong> Clear, consistent, no special characters</li>
+                                    <li><strong>Testing:</strong> View in Roblox Studio under various lighting</li>
+                                    <li><strong>Performance:</strong> Check impact on FPS and memory usage</li>
+                                    <li><strong>Streaming:</strong> Verify appearance at all mip levels</li>
+                                    <li><strong>Platform:</strong> Test on target devices (mobile, PC, console)</li>
+                                    <li><em>Tip: Create a standardized testing process for consistency</em></li>
+                                </ol>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Common Roblox Texture Specifications:</h4>
+                                <ul>
+                                    <li><strong>Maximum Texture Size:</strong> 1024x1024 (2048x2048 for special cases)</li>
+                                    <li><strong>Recommended Format:</strong> PNG (lossless, supports alpha)</li>
+                                    <li><strong>Color Space:</strong> sRGB for Base Color, Linear for data maps</li>
+                                    <li><strong>Normal Map Format:</strong> OpenGL (Green: +Y up)</li>
+                                    <li><strong>Texture Sets:</strong> Keep minimal to reduce memory usage</li>
+                                    <li><em>Tip: Always check current Roblox documentation for updates</em></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

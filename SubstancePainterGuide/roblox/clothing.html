@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Clothing - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="clothing.html" class="active">Roblox Clothing</a></li>
+                    <li><a href="accessories.html">Roblox Accessories</a></li>
+                    <li><a href="ugc.html">Roblox UGC</a></li>
+                    <li><a href="optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li
+<li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Roblox Specific > Roblox Clothing
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Roblox Clothing Creation in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span> → <span class="badge badge-secondary">Intermediate</span></span>
+                            <span>Time: 25 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Creating clothing for Roblox is one of the most popular and profitable ways to express creativity on the platform. From t-shirts and pants to jackets and dresses, well-textured clothing enhances avatar customization and allows creators to develop unique styles. This guide will walk you through the complete workflow for creating clothing items that look great on Roblox avatars while following platform guidelines and best practices.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Clothing Creation Matters for Roblox</h4>
+                            <p>Clothing is a major part of the Roblox economy and self-expression system. Well-designed clothing items can become popular marketplace items, generate Robux for creators, and allow players to customize their avatars to express their personal style.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding Roblox Clothing Types</h2>
+                            <p>The different categories of clothing items on Roblox:</p>
+
+                            <div class="pro-tip">
+                                <h4>Main Clothing Categories:</h4>
+                                <ul>
+                                    <li><strong>T-Shirts:</strong> Front-facing decals (deprecated but still used)</li>
+                                    <li><strong>Shirts:</strong> Full torso wraparound textures</li>
+                                    <li><strong>Pants:</strong> Full leg wraparound textures</li>
+                                    <li><strong>Jackets/Hoodies:</strong> Upper body clothing with sleeves</li>
+                                    <li><strong>Dresses/Skirts:</strong> Lower body clothing items</li>
+                                    <li><strong>Accessories:</strong> Hats, glasses, bags, etc. (separate category)</li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Clothing Template Structure:</h4>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Shirt Template</h4>
+                                        <p>Wraps around the avatar's torso:</p>
+                                        <ul>
+                                            <li>Front, back, left side, right side</li>
+                                            <li>Sleeves (if applicable)</li>
+                                            <li>Standardized layout for consistent fitting</li>
+                                            <li><em>Dimensions:</em> 512x512 pixels (standard)</li>
+                                            <li><em>Note:</em> Although templates are 512x512, you can use higher resolution in Substance and export at 512x512</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Pants Template</h4>
+                                        <p>Wraps around the avatar's legs:</p>
+                                        <ul>
+                                            <li>Front, back, left leg, right leg</li>
+                                            <li>Standardized layout for consistent fitting</li>
+                                            <li><em>Dimensions:</em> 512x512 pixels (standard)</li>
+                                            <li><em>Note:</em> Same resolution flexibility as shirts</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Layering System</h4>
+                                        <p>How clothing items stack on avatars:</p>
+                                        <ul>
+                                            <li>Undershirt layer (closest to skin)</li>
+                                            <li>Shirt layer (main clothing)</li>
+                                            <li>Jacket layer (outerwear)</li>
+                                            <li>Pants layer (leg clothing)</li>
+                                            <li><em>Roblox Tip:</em> Design clothing with layering in mind</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Setting Up Your Clothing Project</h2>
+                            <p>Preparing to texture Roblox clothing items:</p>
+
+                            <div class="steps">
+                                <h4>Clothing Project Setup Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Obtain Clothing Templates</h4>
+                                        <p>Get the official Roblox clothing templates:</p>
+                                        <ul>
+                                            <li>Download from Roblox Developer Hub</li>
+                                            <li>Or create your own based on specifications</li>
+                                            <li>Standard shirt: 512x512 with specific layout</li>
+                                            <li>Standard pants: 512x512 with specific layout</li>
+                                            <li><em>Tip: Many creators use slightly higher resolution (1024x1024) in Substance then export to 512x512</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Import Template as Mesh</h4>
+                                        <p>Use the template as a guide mesh:</p>
+                                        <ul>
+                                            <li>Create a simple mesh that matches the clothing template UV layout</li>
+                                            <li>Or import the template image as a reference on a simple plane</li>
+                                            <li><em>Alternative:</em> Use Substance's projection painting directly onto the template image</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Project Settings</h4>
+                                        <p>Configure for clothing texturing:</p>
+                                        <ul>
+                                            <li>Resolution: 1024x1024 (work in higher resolution for detail)</li>
+                                            <li>Template: PBR Metallic Roughness</li>
+                                            <li>Color Management: sRGB for color, Linear for data</li>
+                                            <li><em>Tip: Work at 1024x1024 then export to 512x512 for final Roblox upload</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating Shirts and Tops</h2>
+                            <p>Texturing upper body clothing:</p>
+
+                            <div class="subsection">
+                                <h3>Shirt Template Layout</h4>
+                                <p>Understanding the shirt template:</p>
+                                <p>The standard Roblox shirt template is 512x512 pixels with this layout:</p>
+                                <ul>
+                                    <li>Top: Torso front (128x128)</li>
+                                    <li>Bottom: Torso back (128x128)</li>
+                                    <li>Left: Torso left side (128x128)</li>
+                                    <li>Right: Torso right side (128x128)</li>
+                                    <li>Top-left: Left sleeve (128x128)</li>
+                                    <li>Top-right: Right sleeve (128x128)</li>
+                                </ul>
+                                <p><em>Note: This creates a "cross" layout when visualized</em></p>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating a Shirt Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Clothing Setup</h4>
+                                        <p>Establish fundamental clothing properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Main clothing color</li>
+                                            <li>Add variation for fabric texture or wear</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value</li>
+                                            <li>Add variation for weave texture</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set to 0.0 (clothing is not metallic)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Fabric Detail</h4>
+                                        <p>Create realistic fabric texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for weave pattern</li>
+                                            <li>Use grid or pattern generators for weave</li>
+                                            <li>Or use noise for fiber texture</li>
+                                            <li>Keep weave subtle but visible</li>
+                                            <li><em>Tip: Different fabrics have different weave patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Design Elements</h4>
+                                        <p>Graphics, logos, and decorations:</p>
+                                        <ul>
+                                            <li>Use Paint Layers for precise control</li>
+                                            <li>Or use stencils for repeating elements</li>
+                                            <li>Consider placement for visibility and aesthetics</li>
+                                            <li><em>Tip: Avoid placing important details in areas that will be stretched or covered</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Fading</h4>
+                                        <p>Where clothing shows use:</p>
+                                        <ul>
+                                            <li>Use masks to control where wear appears</li>
+                                            <li>Position mask for high-stress areas (elbows, seat, etc.)</li>
+                                            <li>Curvature mask for edge wear and fraying</li>
+                                            <li>Combine with painted details for patches and stains</li>
+                                            <li><em>Tip: Clothing wear should follow logical use patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Export for Roblox</h4>
+                                        <p>Prepare your clothing for upload:</p>
+                                        <ul>
+                                            <li>Export textures from Substance Painter</li>
+                                            <li>If working at 1024x1024, resize to 512x512</li>
+                                            <li>Ensure proper naming (typically just the image file)</li>
+                                            <li>Upload through Roblox website or Studio</li>
+                                            <li><em>Tip: Test how your clothing looks on different body types</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating Pants and Bottoms</h2>
+                            <p>Texturing lower body clothing:</p>
+
+                            <div class="subsection">
+                                <h3>Pants Template Layout</h4>
+                                <p>Understanding the pants template:</p>
+                                <p>The standard Roblox pants template is 512x512 pixels with this layout:</p>
+                                <ul>
+                                    <li>Top: Waistband and top of legs</li>
+                                    <li>Bottom: Bottom of legs and feet area</li>
+                                    <li>Left: Left leg front and back</li>
+                                    <li>Right: Right leg front and back</li>
+                                </ul>
+                                <p><em>Note: This creates a different layout optimized for leg wrapping</em></p>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Pants Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Clothing Setup</h4>
+                                        <p>Establish fundamental clothing properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Main clothing color</li>
+                                            <li>Add variation for fabric texture or wear</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value</li>
+                                            <li>Add variation for weave texture</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set to 0.0 (clothing is not metallic)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Fabric Detail</h4>
+                                        <p>Create realistic fabric texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for weave pattern</li>
+                                            <li>Use grid or pattern generators for weave</li>
+                                            <li>Or use noise for fiber texture</li>
+                                            <li>Keep weave subtle but visible</li>
+                                            <li><em>Tip: Different fabrics have different weave patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Design Elements</h4>
+                                        <p>Graphics, logos, and decorations:</p>
+                                        <ul>
+                                            <li>Use Paint Layers for precise control</li>
+                                            <li>Or use stencils for repeating elements</li>
+                                            <li>Consider placement for visibility and aesthetics</li>
+                                            <li><em>Tip: Avoid placing important details in areas that will be stretched or covered</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Fading</h4>
+                                        <p>Where clothing shows use:</p>
+                                        <ul>
+                                            <li>Use masks to control where wear appears</li>
+                                            <li>Position mask for high-stress areas (knees, seat, etc.)</li>
+                                            <li>Curvature mask for edge wear and fraying</li>
+                                            <li>Combine with painted details for patches and stains</li>
+                                            <li><em>Tip: Clothing wear should follow logical use patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Export for Roblox</h4>
+                                        <p>Prepare your pants for upload:</p>
+                                        <ul>
+                                            <li>Export textures from Substance Painter</li>
+                                            <li>If working at 1024x1024, resize to 512x512</li>
+                                            <li>Ensure proper naming (typically just the image file)</li>
+                                            <li>Upload through Roblox website or Studio</li>
+                                            <li><em>Tip: Test how your pants look with different shirts and shoes</em></li>
+                                        </ul>
+                                    </div>
+                                </div
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating Specialized Clothing</h2>
+                            <p>Texturing specific types of clothing:</p>
+
+                            <div class="subsection">
+                                <h3>Jackets and Hoodies</h4>
+                                <p>Upper body clothing with sleeves:</p>
+                                <div class="pro-tip">
+                                    <h4>Special Considerations:</h4>
+                                    <ul>
+                                        <li>Hoods add complexity to the back area</li>
+                                        <li>Zippers and zippers need special attention</li>
+                                        <li>Pockets and flaps create additional detail areas</li>
+                                        <li>Cuffs and hem bands often have different texture</li>
+                                        <li><em>Tip: Treat hood as separate area requiring special attention</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Dresses and Skirts</h4>
+                                <p>Lower body clothing items:</p>
+                                <div class="pro-tip">
+                                    <h4>Special Considerations:</h4>
+                                    <ul>
+                                        <li>Dresses combine top and bottom elements</li>
+                                        <li>Skirts focus on waist and leg coverage</li>
+                                        <li>Flow and movement are important considerations</li>
+                                        <li>Layering with leggings or shorts needs consideration</li>
+                                        <li><em>Tip: Consider how the garment will move and drape</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Sports and Athletic Wear</h4>
+                                <p>Performance-oriented clothing:</p>
+                                <div class="pro-tip">
+                                    <h4>Special Considerations:</h4>
+                                    <ul>
+                                        <li>Often tighter fitting and more elastic</li>
+                                        <li>May have mesh panels for ventilation</li>
+                                        <li>Frequently show sponsorship logos and numbers</li>
+                                        <li>Designed for movement and flexibility</li>
+                                        <li><em>Tip: Consider how the clothing will stretch during activity</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Optimization for Roblox Clothing</h2>
+                            <p>Balancing quality with performance and requirements:</p>
+
+                            <div class="callout">
+                                <h4>Clothing Optimization Guidelines:</h4>
+                                <ul>
+                                    <li><strong>Resolution:</strong> Standard is 512x512, but you can work higher and downscale</li>
+                                    <li><strong>File Size:</strong> Keep under 1MB for optimal loading</li>
+                                    <li><strong>Color Usage:</strong> Avoid excessive colors that increase file size</li>
+                                    <li><strong>Transparency:</strong> Use only when necessary (increases complexity)</li>
+                                    <li><strong>Testing:</strong> Always test on different avatar body types</li>
+                                </ul>
+                            </div>
+
+                            <div class="pro-tip">
+                                <h4>Creating Clothing Variants:</h4>
+                                <ul>
+                                    <li>Create color variants of popular designs</li>
+                                    <li>Create seasonal variations (summer/winter)</li>
+                                    <li>Create damage/worn variants of clothing</li>
+                                    <li><em>Tip: Use Smart Materials to quickly create variants</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your clothing creation expertise:</p>
+                            <ul>
+                                <li><a href="accessories.html">Learn About Roblox Accessories</a> - Creating hats, gear, and other attachments</li>
+                                <li><a href="../materials/fabric.html">Create Clothing Materials</a> - Apply fabric-specific texturing techniques</li>
+                                <li><a href="../advanced/baking.html">Learn Baking Techniques</a> - For transferring high-poly clothing details to low-poly</li>
+                                <li><a href="../advanced/hand-painted.html">Learn Advanced Hand-Painted Techniques</a> - For detailed clothing designs</li>
+                                <li><a href="../reference/faq.html">Check the Clothing Creation FAQ</a> - Answers to common clothing questions</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create Clothing Design Templates</h4>
+                                <p>Save time on repetitive clothing setups:</p>
+                                <ul>
+                                    <li>Create a clothing design configuration you use frequently</li>
+                                    <li>Example: "Basic T-Shirt Setup" (base color, simple design)</li>
+                                    <li>Example: "Hoodie Setup" (with hood, pockets, details)</li>
+                                    <li>Right-click the layer group in layer stack</li>
+                                    <li>Choose "Create Smart Material" or "Save as Preset"</li>
+                                    <li>Name it descriptively (e.g., "Sports Jersey Template", "Summer Dress Base")</li>
+                                    <li>Save to your shelf for instant access</li>
+                                    <li><em>Now you can drag-and-drop this setup onto any clothing project</em></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

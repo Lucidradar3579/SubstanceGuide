@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Procedural Texturing - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Undering Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li
+</li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li
+</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li
+</li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li
+</li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li
+</li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li
+</li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li
+</li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li
+</li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li
+</li>
+
+                    <li class="category-header">Advanced Techniques</li
+</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li
+</li>
+                    <li><a href="procedural-texturing.html" class="active">Procedural Texturing</a></li
+</li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li
+</li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li
+</li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li
+</li>
+                    <li><a href="../advanced/baking.html">Baking</a></li
+</li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li
+</li>
+
+                    <li class="category-header">Troubleshooting</li
+</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li
+</li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li
+</li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li
+</li>
+
+                    <li class="category-header">Reference</li
+</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li
+</li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li
+</li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li
+</li>
+                    <li><a href="../reference/faq.html">FAQ</a></li
+</li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Advanced Techniques > Procedural Texturing
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Mastering Procedural Texturing in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-secondary">Intermediate</span> → <span class="badge badge-primary">Advanced</span></span>
+                            <span>Time: 40 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>Procedural texturing is one of the most powerful aspects of Substance 3D Painter, allowing you to create infinitely detailed, resolution-independent textures using mathematical algorithms rather than image-based textures. Understanding how to use procedural techniques effectively can dramatically improve your texturing workflow, create materials that look great at any resolution, and enable you to build sophisticated smart materials. This guide will walk you through everything you need to know about procedural texturing in Substance 3D Painter, from basic concepts to advanced techniques, with practical examples for Roblox asset creation.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Procedural Texturing Matters for Roblox</h4>
+                            <p>Procedural textures are resolution-independent, meaning they look sharp at any texture size. This is invaluable for Roblox creation where you might need to use the same material on assets of different sizes or at different texture resolutions. Procedural textures also enable you to create smart materials that adapt to any base color or geometry, dramatically increasing your workflow efficiency.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding Procedural Texturing</h2>
+                            <p>What procedural texturing is and how it works:</p>
+
+                            <div class="pro-tip">
+                                <h4>Procedural Texturing Fundamentals:</h4>
+                                <ul>
+                                    <li><strong>Definition:</strong> Textures generated mathematically rather than from image files</li>
+                                    <li><strong>Resolution Independence:</strong> Look sharp at any texture resolution</li>
+                                    <li><strong>Infinite Detail:</strong> Can theoretically zoom in forever without losing detail</li>
+                                    <li><strong>Small File Size:</strong> Mathematical descriptions are much smaller than image files</li>
+                                    <li><strong>Parameter Control:</strong> Easily adjustable through exposed parameters</li>
+                                    <li><strong>Common Uses:</strong> Noise, patterns, waves, mathematical functions, fractals</li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Types of Procedural Generators in Substance Painter:</h4>
+                                <p>What you can create procedurally:</p>
+                                <ul>
+                                    <li><strong>Noise Generators:</strong> Perlin, Simplex, Value, White noise, etc.</li>
+                                    <li><strong>Pattern Generators:</strong> Bricks, Tiles, Checker, Honeycomb, etc.</li>
+                                    <li><strong>Shape Generators:</strong> Circles, Squares, Stars, etc.</li>
+                                    <li><strong>Mathematical Generators:</strong> Sine, Cosine, Linear, Radial gradients, etc.</li>
+                                    <li><strong>Flow Generators:</strong> Used for directional patterns like hair, fur, or fibers</li>
+                                    <li><strong>Combined Generators:</strong> Complex effects made by combining simpler ones</li>
+                                    <li><em>Tip: Each generator type serves different texturing purposes</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Basic Procedural Techniques</h2>
+                            <p>Getting started with procedural texturing:</p>
+
+                            <div class="subsection">
+                                <h3>Using Noise Generators</h4>
+                                <p>Creating basic procedural textures:</p>
+                                <div class="pro-tip">
+                                    <h4>Common Noise Generator Uses:</h4>
+                                    <ul>
+                                        <li>Perlin Noise: Organic, natural-looking variation</li>
+                                        <li>Simplex Noise: Similar to Perlin but with fewer artifacts</li>
+                                        <li>Value Noise: Basic geometric pattern</li>
+                                        <li>White Noise: Pure random variation</li>
+                                        <li>Common in: Surface texture, dirt, grime, organic variation</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Basic Noise Texture Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Set Up Your Base Material</h4>
+                                        <p>Create your base material:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Your base material color</li>
+                                            <li>Roughness Fill Layer: Base roughness value</li>
+                                            <li>Metalness Fill Layer: Base metalness value</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Procedural Noise Layer</h4>
+                                        <p>Create a procedural noise texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for procedural texture</li>
+                                            <li>Choose a noise generator (Perlin, Simplex, etc.)</li>
+                                            <li>Adjust scale to control feature size</li>
+                                            <li>Adjust contrast to control intensity</li>
+                                            <li>Adjust brightness to control overall level</li>
+                                            <li><em>Tip: Start with low contrast and increase gradually</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Apply the Noise to a Material Channel</h4>
+                                        <p>Decide how to use your procedural noise:</p>
+                                        <ul>
+                                            <li>For Base Color: Set layer to affect Base Color channel</li>
+                                            <li>For Roughness: Set layer to affect Roughness channel</li>
+                                            <li>For Height: Set layer to affect Height channel</li>
+                                            <li>For Normal: Use to generate normal map from height</li>
+                                            <li><em>Tip: Noise in different channels creates different effects</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Refine the Procedural Effect</h4>
+                                        <p>Fine-tune your procedural noise texture:</p>
+                                        <ul>
+                                            <li>Adjust scale, contrast, and brightness as needed</li>
+                                            <li>Try different noise types for different effects</li>
+                                            <li>Consider adding multiple noise layers for complexity</li>
+                                            <li>Adjust layer blending mode and opacity</li>
+                                            <li><em>Tip: Procedural noise works great for adding subtle variation</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Final Adjustments</h4>
+                                        <p>Complete your procedural noise material:</p>
+                                        <ul>
+                                            <li>Check how the noise looks at different zoom levels</li>
+                                            <li>Test on different parts of your model</li>
+                                            <li><em>Tip: Save as a smart material for reuse on other projects</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div
+                        </div>
+
+                        <section class="section">
+                            <h2>Using Pattern Generators</h4>
+                            <p>Creating repeating procedural patterns:</p>
+
+                            <div class="subsection">
+                                <h3>Using Brick and Tile Generators</h4>
+                                <p>Creating masonry and tiling patterns:</p>
+                                <div class="pro-tip">
+                                    <h4>Pattern Generator Applications:</h4>
+                                    <ul>
+                                        <li>Brick Generator: Create realistic brick walls</li>
+                                        <li>Tile Generator: Create floor and wall tiles</li>
+                                        <li>Checker Generator: Create checkerboard patterns</li>
+                                        <li>Honeycomb Generator: Create hexagonal patterns</li>
+                                        <li>Common in: Architectural elements, flooring, decorative surfaces</li>
+                                    </ul
+</li>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Brick Texture Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Set Up Your Base Material</h4>
+                                        <p>Create your base material:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Your base material color (mortar color)</li>
+                                            <li>Roughness Fill Layer: Base roughness value</li>
+                                            <li>Metalness Fill Layer: Base metalness value</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Brick Generator Layer</h4>
+                                        <p>Create a procedural brick pattern:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for brick pattern</li>
+                                            <li>Choose "Brick" generator</li>
+                                            <li>Adjust brick size to match your desired dimensions</li>
+                                            <li>Adjust brick height for vertical dimension</li>
+                                            <li>Adjust mortar size for grout lines</li>
+                                            <li><em>Tip: Real bricks have slight variations in size - add noise for realism</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Brick Color Variation</h4>
+                                        <p>Create realistic brick color variation:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for brick color</li>
+                                            <li>Choose a slightly different color for bricks</li>
+                                            <li>Use the same brick generator but invert or mask appropriately</li>
+                                            <li>This creates the distinction between bricks and mortar</li>
+                                            <li><em>Tip: Real bricks have color variation from firing and clay differences</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Surface Texture and Wear</h4>
+                                        <p>Add realism to your brick material:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for surface texture on bricks and mortar</li>
+                                            <li>Use noise generators for subtle texture variation</li>
+                                            <li>Add wear layers using curvature or position anchors</li>
+                                            <li><em>Tip: Real bricks show wear, chipping, and staining over time</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Final Adjustments</h4>
+                                        <p>Complete your brick material:</p>
+                                        <ul>
+                                            <li>Adjust brick and mortar colors as needed</li>
+                                            <li>Adjust brick size and mortar width for realism</li>
+                                            <li>Check how the pattern looks at different scales</li>
+                                            <li><em>Tip: Save as a smart material for reuse on other projects</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div
+                        </div>
+
+                        <section class="section">
+                            <h2>Using Mathematical Generators</h4>
+                            <p>Creating gradients, waves, and mathematical patterns:</p>
+
+                            <div class="subsection">
+                                <h3>Using Gradient Generators</h4>
+                                <p>Creating linear and radial gradients:</p>
+                                <div class="pro-tip">
+                                    <h4>Gradient Generator Applications:</h4>
+                                    <ul>
+                                        <li>Linear Gradient: Create smooth transitions between colors</li>
+                                        <li>Radial Gradient: Create circular or spherical transitions</li>
+                                        <li>Sine/Cosine Generators: Create wave patterns</li>
+                                        <li>Linear Generator: Create straight line transitions</li>
+                                        <li>Common in: Color transitions, masks, directional effects, procedural masks</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating a Linear Gradient Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Set Up Your Base Material</h4>
+                                        <p>Create your base material:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Your base material color</li>
+                                            <li>Roughness Fill Layer: Base roughness value</li>
+                                            <li>Metalness Fill Layer: Base metalness value</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Linear Gradient Layer</h4>
+                                        <p>Create a procedural linear gradient:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for linear gradient</li>
+                                            <li>Choose "Linear" generator</li>
+                                            <li>Set angle to control gradient direction (0° = horizontal, 90° = vertical)</li>
+                                            <li>Set start and end colors for the gradient</li>
+                                            <li>Adjust position and size to control gradient placement</li>
+                                            <li><em>Tip: Linear gradients are great for creating directional effects</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Apply the Gradient to a Material Channel</h4>
+                                        <p>Decide how to use your procedural gradient:</p>
+                                        <ul>
+                                            <li>For Base Color: Set layer to affect Base Color channel (creates color gradient)</li>
+                                            <li>For Roughness: Set layer to affect Roughness channel (creates roughness gradient)</li>
+                                            <li>For Height: Set layer to affect Height channel (creates height gradient)</li>
+                                            <li>For Mask: Use as a procedural mask to limit other effects</li>
+                                            <li><em>Tip: Gradients in masks are powerful for creating procedural limitations</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Refine the Gradient Effect</h4>
+                                        <p>Fine-tune your linear gradient:</p>
+                                        <ul>
+                                            <li>Adjust angle, start/end colors, position, and size as needed</li>
+                                            <li>Consider adding multiple gradients for complex effects</li>
+                                            <li>Try different gradient types (radial, etc.) for different effects</li>
+                                            <li>Adjust layer blending mode and opacity</li>
+                                            <li><em>Tip: Use gradients to create smooth transitions between materials</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Final Adjustments</h4>
+                                        <p>Complete your linear gradient material:</p>
+                                        <ul>
+                                            <li>Check how the gradient looks from different angles</li>
+                                            <li>Test how it affects your material channels</li>
+                                            <li><em>Tip: Save as a smart material for reuse on other projects</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div
+                        </div>
+
+                        <section class="section">
+                            <h2>Combining Procedural Techniques</h4>
+                            <p>Creating complex materials from simple procedures:</p>
+
+                            <div class="subsection">
+                                <h3>Layering Procedural Effects</h4>
+                                <p>Creating sophisticated materials:</p>
+                                <div class="pro-tip">
+                                    <h4>Procedural Layering Techniques:</h4>
+                                    <ul>
+                                        <li>Base Noise + Detail Noise: Multi-scale noise for realism</li>
+                                        <li>Pattern + Noise: Pattern with organic variation</li>
+                                        <li>Gradient + Noise: Gradient with texture variation</li>
+                                        <li>Multiple Noises: Complex, organic-looking textures</li>
+                                        <li>Noise + Mathematical: Noise shaped by mathematical functions</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Multi-Scale Noise Texture Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Set Up Your Base Material</h4>
+                                        <p>Create your base material:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Your base material color</li>
+                                            <li>Roughness Fill Layer: Base roughness value</li>
+                                            <li>Metalness Fill Layer: Base metalness value</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Large-Scale Noise Layer</h4>
+                                        <p>Create the base noise pattern:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for large-scale noise</li>
+                                            <li>Choose Perlin or Simplex noise generator</li>
+                                            <li>Set scale to large (low frequency) for broad variation</li>
+                                            <li>Set contrast to moderate for visible but not overwhelming effect</li>
+                                            <li>This creates the overall shape and form of your texture</li>
+                                            <li><em>Tip: Large-scale noise defines the overall composition</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Medium-Scale Noise Layer</h4>
+                                        <p>Add intermediate detail:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for medium-scale noise</li>
+                                            <li>Choose a different noise generator or same with different settings</li>
+                                            <li>Set scale to medium for intermediate features</li>
+                                            <li>Set contrast to low-medium for subtle detail</li>
+                                            <li>This adds intermediate scale variation</li>
+                                            <li><em>Tip: Medium-scale noise adds the "medium" details to your texture</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Small-Scale Noise Layer</h4>
+                                        <p>Add fine surface detail:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for small-scale noise</li>
+                                            <li>Choose a noise generator with high frequency</li>
+                                            <li>Set scale to small (high frequency) for fine detail</li>
+                                            <li>Set contrast to low for subtle surface noise</li>
+                                            <li>This adds the fine grain and surface texture</li>
+                                            <li><em>Tip: Small-scale noise adds the "fine" details that make textures feel real</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Refine and Balance the Layers</h4>
+                                        <p>Fine-tune your multi-scale noise texture:</p>
+                                        <ul>
+                                            <li>Adjust each noise layer's scale, contrast, and brightness</li>
+                                            <li>Balance the contributions of each scale</li>
+                                            <li>Consider using different noise types for each scale</li>
+                                            <li>Adjust layer blending modes and opacities</li>
+                                            <li><em>Tip: The key is subtlety - each layer should enhance, not overwhelm</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">6</div>
+                                    <div class="step-content">
+                                        <h4>Final Adjustments</h4>
+                                        <p>Complete your multi-scale noise material:</p>
+                                        <ul>
+                                            <li>Check how the texture looks at different zoom levels</li>
+                                            <li>Test on different parts of your model and different models</li>
+                                            <li><em>Tip: Save as a smart material for incredibly versatile reuse</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div
+                        </div>
+
+                        <section class="section">
+                            <h2>Roblox-Specific Procedural Applications</h4>
+                            <p>Using procedural texturing for Roblox asset creation:</p>
+
+                            <div class="callout">
+                                <h4>Procedural Texturing Applications for Roblox:</h4>
+                                <ul>
+                                    <li><strong>Resolution Independence:</strong> Create materials that look great at any texture size</li>
+                                    <li><strong>Smart Materials:</strong> Build reusable materials that adapt to any base color</li>
+                                    <li><strong>Surface Detail:</strong> Add realistic surface variation without texture seams</li>
+                                    <li><strong>Wear and Tear:</strong> Create procedural wear patterns that follow geometry</li>
+                                    <li><strong>Environmental Effects:</strong> Create procedural dirt, grime, and weathering</li>
+                                    <li><strong>Performance:</strong> Procedural textures can be more efficient than high-resolution image textures</li>
+                                    <li><strong>Consistency:</strong> Ensure consistent appearance across different assets</li>
+                                </ul>
+                            </div>
+
+                            <div class="pro-tip">
+                                <h4>Creating Roblox-Optimized Procedural Smart Materials:</h4>
+                                <ul>
+                                    <li>Create a "Roblox Base Noise" smart material for surface variation</li>
+                                    <li>Create a "Roblox Wear Noise" smart material using curvature-anchored noise</li>
+                                    <li>Create a "Roblox Pattern Base" smart material for tiles, bricks, etc.</li>
+                                    <li>Create a "Roblox Gradient Mask" smart material for procedural masking</li>
+                                    <li><em>Tip: Organize your procedural smart materials in a dedicated folder for easy access</em></li>
+                                </ul>
+                            </div
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

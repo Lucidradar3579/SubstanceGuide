@@ -1,0 +1,625 @@
+<!DOCTYPE>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masks - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="layers.html">Understanding Layers</a></li>
+                    <li><a href="smart-materials.html">Smart Materials</a></li>
+                    <li><a href="masks.html" class="active">Masks</a></li>
+                    <li><a href="generators.html">Generators</a></li>
+                    <li><a href="fill-layers.html">Fill Layers</a></li>
+                    <li><a href="paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Substance 3D Painter Basics > Masks
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Understanding Masks in Substance 3D Painter</h1>
+                        <div class="article-meta>
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span> → <span class="badge badge-danger">Advanced</span></span>
+                            <span>Time: 25 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: Essential</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Masks are what give you precise control over where layers appear in your texture. Mastering masks is essential for creating realistic, professional-looking materials for your Roblox assets. This guide covers everything from basic black and white masks to advanced procedural masking techniques.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Masks Matter for Roblox Workflows</h4>
+                            <p>Masks allow you to place details exactly where they belong - wear on edges, dirt in crevices, scratches on high-contact areas - creating believable materials that enhance your Roblox assets without looking procedural or fake.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Mask Fundamentals</h2>
+                            <p>Understanding the basics of how masks work:</p>
+
+                            <div class="pro-tip">
+                                <h4>How Masks Work:</h4>
+                                <ul>
+                                    <li>Masks are grayscale values (0-255 or 0.0-1.0)</li>
+                                    <li>Black (0) = Layer is invisible</li>
+                                    <li>White (255) = Layer is fully visible</li>
+                                    <li>Gray values = Partial transparency</li>
+                                    <li>Masks can be painted, procedurally generated, or imported</li>
+                                    <li><em>Roblox Tip: Think of masks as "stencils" that control where your material appears</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Mask Types in Substance 3D Painter:</h4>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Black Mask</h4>
+                                        <p>Starts completely hidden</p>
+                                        <p><em>Use when:</em> You want to add details selectively</p>
+                                        <p><em>Workflow:</em> Add Black Mask, then paint white where you want the layer to appear</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>White Mask</h4>
+                                        <p>Starts completely visible</p>
+                                        <p><em>Use when:</em> You want to remove details from specific areas</p>
+                                        <p><em>Workflow:</em> Add White Mask, then paint black where you want to hide the layer</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Additive Mask</h4>
+                                        <p>Combines with existing mask</p>
+                                        <p><em>Use when:</em> You want to add to an existing masked area</p>
+                                        <p><em>Example:</em> Adding extra wear to already masked scratch areas</p>
+                                    </div>
+                                </div>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Subtractive Mask</h4>
+                                        <p>Subtracts from existing mask</p>
+                                        <p><em>Use when:</em> You want to remove from an existing masked area</p>
+                                        <p><em>Example:</em> Creating clean areas within a dirty mask</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Procedural Mask</h4>
+                                        <p>Generated from mesh properties</p>
+                                        <p><em>Use when:</em> You want automatic, intelligent placement</p>
+                                        <p><em>Examples:</em> Curvature (edges), Position (height), Ambient Occlusion (crevices)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating and Editing Masks</h2>
+                            <p>How to create and modify masks for precise control:</p>
+
+                            <div class="steps">
+                                <h4>Working with Masks in the Layer Stack</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Adding a Mask to a Layer</h4>
+                                        <p>Every layer can have a mask:</p>
+                                        <ul>
+                                            <li>Select your layer in the layer stack</li>
+                                            <li>Click the "Add Mask" button (circle inside rectangle)</li>
+                                            <li>Choose Black Mask, White Mask, or Add Painted Mask</li>
+                                            <li>The mask appears as a white rectangle below your layer</li>
+                                            <li><em>Tip: You can also right-click layer > Add Black/White Mask</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Editing Masks in 2D View</h4>
+                                        <p>Paint directly on the UV layout:</p>
+                                        <ul>
+                                            <li>Click on the mask thumbnail in layer stack</li>
+                                            <li>It will highlight to show you're editing the mask</li>
+                                            <li>Switch to 2D view (press "2" or click UV icon)</li>
+                                            <li>Paint with white to reveal, black to hide</li>
+                                            <li>Use erasers, shapes, and other tools</li>
+                                            <li><em>Tip: Press "M" to toggle between editing layer content and mask</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Editing Masks in 3D View</h4>
+                                        <p>Paint directly on your 3D model:</p>
+                                        <ul>
+                                            <li>Click on the mask thumbnail in layer stack</li>
+                                            <li>Make sure you're in 3D view (press "3" or click mesh icon)</li>
+                                            <li>Paint with your brush - white reveals, black hides</li>
+                                            <li>All your 3D painting tools work on masks</li>
+                                            <li><em>Tip: Use projection modes for accurate placement</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Mask Properties and Controls</h4>
+                                        <p>Adjust mask behavior:</p>
+                                        <ul>
+                                            <li>Mask opacity controls overall strength</li>
+                                            <li>You can invert masks (click the invert button)</li>
+                                            <li>Mask properties include blur, contrast, levels, etc.</li>
+                                            <li>These affect how the mask transitions between black and white</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Procedural Masks: The Power of Intelligence</h2>
+                            <p>Let Substance Painter generate masks based on your mesh:</p>
+
+                            <div class="subsection">
+                                <h3>Common Procedural Masks for Roblox</h4>
+                                <p>The most useful procedurally generated masks:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Curvature Mask</h4>
+                                        <p>Detects edges and corners on your mesh</p>
+                                        <ul>
+                                            <li>White on convex/concave edges</li>
+                                            <li>Black on flat surfaces</li>
+                                            <li><em>Roblox Use:</em> Edge wear, scratches, paint chipping on corners</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Position Mask</h4>
+                                        <p>Based on height/position of vertices</p>
+                                        <ul>
+                                            <li>Can be set to highlight high points or low points</li>
+                                            <li>Great for dirt accumulation (low points) or wear (high points)</li>
+                                            <li><em>Roblox Use:</em> Dirt in crevices, wear on raised surfaces, snow accumulation</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Ambient Occlusion Mask</h4>
+                                        <p>Based on how much light reaches areas</p>
+                                        <ul>
+                                            <li>White in crevices and enclosed areas</li>
+                                            <li>Black on exposed, open areas</li>
+                                            <li><em>Roblox Use:</em> Dirt, grime, moss in corners and joints</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Thickness Mask</h4>
+                                        <p>Based on mesh thickness</p>
+                                        <ul>
+                                            <li>Thicker areas vs thinner areas</li>
+                                            <li>Useful for certain wear patterns</li>
+                                            <li><em>Roblox Use:</em> Edge highlighting on thin materials</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Normal Mask</h4>
+                                        <p>Based on surface normal direction</p>
+                                        <ul>
+                                            <li>Can isolate faces pointing in certain directions</li>
+                                            <li>Useful for directional effects</li>
+                                            <li><em>Roblox Use:</em> Water accumulation on flat surfaces</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Texture Map Mask</h4>
+                                        <p>Based on existing texture maps</p>
+                                        <ul>
+                                            <li>Use curvature map, position map, etc. as masks</li>
+                                            <li>Great for chaining effects</li>
+                                            <li><em>Roblox Use:</em> Using baked curvature map to drive wear in Substance</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Generating Procedural Masks</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Adding a Procedural Mask Generator</h4>
+                                        <p>Let Substance do the work:</p>
+                                        <ul>
+                                            <li>Add Black Mask to your layer</li>
+                                            <li>Click the mask thumbnail to select it</li>
+                                            <li>In Properties panel, click "Generate Mask"</li>
+                                            <li>Choose from Curvature, Position, AO, etc.</li>
+                                            <li>Adjust generator parameters for desired effect</li>
+                                            <li><em>Tip: You can stack multiple procedural masks</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Combining Procedural Masks</h4>
+                                        <p>Create complex mask logic:</p>
+                                        <ul>
+                                            <li>Add multiple generators to the same mask</li>
+                                            <li>Use Add/Subtract to combine them</li>
+                                            <li>Example: Curvature AND Position = edges that are also low points</li>
+                                            <li>Useful for very specific placement (e.g., rust on low edges)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Refining Procedural Masks</h4>
+                                        <p>Adjust the generated mask:</p>
+                                        <ul>
+                                            <li>After generating, you can still paint on the mask</li>
+                                            <li>Add levels adjustment to control range</li>
+                                            <li>Add blur to soften edges</li>
+                                            <li>Invert if needed</li>
+                                            <li><em>Tip: Generate at higher quality, then refine for best results</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Practical Mask Examples for Roblox Assets</h2>
+                            <p>Real-world examples of how to use masks effectively:</p>
+
+                            <div class="subsection">
+                                <h3>Character and Clothing Examples</h4>
+                                <p>Masking techniques for wearable items:</p>
+                                <div class="steps">
+                                    <h4>Adding Wear to Roblox Clothing</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Edge Wear on Sleeves and Hems</h4>
+                                            <p>Natural wear on fabric edges:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for wear (lighter/darker color)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Generate mask using Curvature (for edges)</li>
+                                                <li>Optionally combine with Position (for specific height)</li>
+                                                <li>Adjust opacity to 10-30% for subtle wear</li>
+                                                <li><em>Roblox Tip: Focus on areas that would bend or rub</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Dirt and Sweat Accumulation</h4>
+                                            <p>Where grime naturally collects:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for dirt (dark/brownish)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Generate mask using Position (low points)</li>
+                                                <li>Optionally combine with Ambient Occlusion (crevices)</li>
+                                                <li>Adjust opacity and blending (try Multiply at 15-25%)</li>
+                                                <li><em>Roblox Tip: Think about where sweat would collect during activity</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Elbow and Knee Wear</h4>
+                                            <p>Specific joint wear patterns:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for wear</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Use custom mask (paint or procedural)</li>
+                                                <li>Focus on outer edges of joints</li>
+                                                <li>Consider both curvature (edges) and position (prominent bones)</li>
+                                                <li><em>Roblox Tip: Reference real clothing or observe how joints bend</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Prop and Environment Examples</h4>
+                                <p>Masking techniques for objects and scenery:</p>
+                                <div class="steps">
+                                    <h4>Creating Realistic Metal Props</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Scratches and Edge Wear</h4>
+                                            <p>Where metal shows use:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for scratches (lighter metal)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Generate mask using Curvature (edges and corners)</li>
+                                                <li>Add Noise generator to mask for variation</li>
+                                                <li>Set blending to Normal or Overlay at 15-25% opacity</li>
+                                                <li><em>Roblox Tip: Vary scratch direction and length for realism</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Dirt and Grime Accumulation</h4>
+                                            <p>Where dirt naturally collects:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for dirt (dark/brown)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Generate mask using Position (low points)</li>
+                                                <li>Combine with Ambient Occlusion (crevices and joints)</li>
+                                                <li>Adjust opacity and blending (Multiply often works well)</li>
+                                                <li><em>Roblox Tip: Consider weather exposure and handling patterns</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Rust and Corrosion</h4>
+                                            <p>Where metal degrades:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for rust color (orange/brown)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Generate using Position (low points where moisture collects)</li>
+                                                <li>Combine with Curvature (edges where coating wears)</li>
+                                                <li>Adjust roughness where rust occurs</li>
+                                                <li><em>Roblox Tip: Rust follows water patterns - think about drainage</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Roblox-Specific Examples</h4>
+                                <p>Masking techniques for platform-specific needs:</p>
+                                <div class="steps">
+                                    <h4>Stud Wear and Handling Marks</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Connection Point Wear</h4>
+                                            <p>Where studs and connectors show use:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for wear (smoother/shinier)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Use procedural mask or paint mask</li>
+                                                <li>Focus on areas that experience friction</li>
+                                                <li>Consider both curvature (edges) and custom painting</li>
+                                                <li><em>Roblox Tip: Reference how players actually connect and disconnect items</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>UI Element Highlights</h4>
+                                            <p>For interactive elements:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for highlight (lighter color)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Create custom shape mask (button outlines, etc.)</li>
+                                                <li>Or use texture mask from UI design</li>
+                                                <li>Adjust opacity for subtle hover/active states</li>
+                                                <li><em>Roblox Tip: Test how highlights look in different lighting conditions</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Environmental Variation</h4>
+                                            <p>Avoiding the "too perfect" look:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for variation (slight color/noise change)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Use Noise generator with low contrast</li>
+                                                <li>Or use Texture Map mask from variation texture</li>
+                                                <li>Set blending to subtle mode (Overlay, Soft Light) at low opacity</li>
+                                                <li><em>Roblox Tip: Subtle variation prevents tiling look in large areas</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Advanced Masking Techniques</h2>
+                            <p>Pro-level mask control for complex materials:</p>
+
+                            <div class="subsection">
+                                <h3>Mask Stacking and Layering</h4>
+                                <p>Combining multiple masks for sophisticated control:</p>
+                                <ul>
+                                    <li>Add multiple masks to the same layer (stack them)</li>
+                                    <li>Each mask can be edited independently</li>
+                                    <li>Use blending modes between masks (Multiply, Add, etc.)</li>
+                                    <li><em>Example:</em> Base mask (curvature) + painted details (specific scratches)</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Animated and Dynamic Masks</h4>
+                                <p>For materials that change over time:</p>
+                                <ul>
+                                    <li>While Substance Painter is static, you can plan for animation</li>
+                                    <li>Create masks that can be animated externally (in shader or material)</li>
+                                    <li>Example: Mask for where snow accumulates that can be animated to melt</li>
+                                    <li><em>Roblox Note: For true animation, consider using multiple texture sets or shaders in Roblox</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Mask Presets and Libraries</h4>
+                                <p>Saving time with reusable masks:</p>
+                                <ul>
+                                    <li>Save frequently used mask configurations</li>
+                                    <li>Example: "Edge Wear Mask" (curvature + noise)</li>
+                                    <li>Example: "Dirt in Crevices Mask" (position + AO)</li>
+                                    <li>Save as smart materials or as layer configurations</li>
+                                    <li><em>Roblox Tip: Create a library of go-to masks for common wear patterns</em></p>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your masking expertise:</p>
+                            <ul>
+                                <li><a href="generators.html">Learn About Generators</a> - The procedural engines that power smart masks</li>
+                                <li><a href="fill-layers.html">Explore Fill Layers</a> - Learn how to add content that masks control</li>
+                                <li><a href="paint-layers.html">Master Paint Layers</a> - For hand-painted mask editing</li>
+                                <li><a href="../materials/metal.html">Apply Your Knowledge: Create Wear Patterns</a> - Practical project using masks</li>
+                                <li><a href="../advanced/baking.html">Learn Baking for Custom Maps</a> - Create your own curvature, position, and AO maps</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create a Masking Reference Sheet</h4>
+                                <p>Keep this guide handy for common masking scenarios:</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Effect</th>
+                                            <th>Best Mask Type</th>
+                                            <th>Parameters to Adjust</th>
+                                            <th>Typical Opacity</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Edge Wear/Scratches</td>
+                                            <td>Curvature + Noise</td>
+                                            <td>Curvature type, noise contrast</td>
+                                            <td>10-30%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Dirt in Crevices</td>
+                                            <td>Position (low) + AO</td>
+                                            <td>Position bias, AO distance</td>
+                                            <td>15-25%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Paint Chipping</td>
+                                            <td>Curvature (high) + Noise</td>
+                                            <td>Curvature threshold, noise scale</td>
+                                            <td>20-40%</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rust/Corrosion</td>
+                                            <td>Position (low) + Curvature</td>
+                                            <td>Position bias, curvature threshold</td>
+                                            <td>10-20% (color), adjust roughness</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fabric Fading</td>
+                                            <td>Position (high) + Curvature</td>
+                                            <td>Position bias, curvature threshold</td>
+                                            <td>15-35%</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p><em>Adjust values based on your specific mesh scale and detail level</em></p>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interface Overview - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="interface-overview.html" class="active">Interface Overview</a></li>
+                    <li><a href="basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Getting Started > Interface Overview
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Substance 3D Painter Interface Overview</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span></span>
+                            <span>Time: 20 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: Essential</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Understanding the Substance 3D Painter interface is crucial for efficient texturing workflows. This guide will walk you through all the main panels, tools, and workflow elements specifically relevant to Roblox asset creation.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Interface Knowledge Matters for Roblox</h4>
+                            <p>Knowing where to find and how to use each tool efficiently will significantly speed up your Roblox texturing workflow, allowing you to focus on creativity rather than hunting for menus.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Main Interface Layout</h2>
+                            <p>Substance 3D Painter follows a consistent layout designed for efficiency:</p>
+
+                            <div class="grid-3">
+                                <div class="feature-item">
+                                    <h3>Viewport (Center)</h3>
+                                    <p>The main 3D view where you see your textured model in real-time with all materials and lighting applied.</p>
+                                    <ul>
+                                        <li>Real-time PBR preview</li>
+                                        <li>Multiple lighting environments</li>
+                                        <li>Post-process effects (AO, bloom, etc.)</li>
+                                        <li>UV viewport mode</li>
+                                        <li>Orthographic/perspective views</li>
+                                    </ul>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>Toolbar (Top)</h3>
+                                    <p>Contains the most frequently used tools and operations.</p>
+                                    <ul>
+                                        <li>File operations (New, Open, Save)</li>
+                                        <li>Edit tools (Undo, Redo)</li>
+                                        <li>Paint tools (Brush, Eraser, Clone)</li>
+                                        <li>Projection tools</li>
+                                        <li>View controls</li>
+                                    </ul>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>Layer Stack (Right)</h3>
+                                    <p>The core of Substance 3D Painter's non-destructive workflow.</p>
+                                    <ul>
+                                        <li>Layer organization</li>
+                                        <li>Blending modes</li>
+                                        <li>Opacity and flow controls</li>
+                                        <li>Mask editing</li>
+                                        <li>Folder organization</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="grid-3">
+                                <div class="feature-item">
+                                    <h3>Properties Panel (Below Layer Stack)</h3>
+                                    <p>Context-sensitive panel showing settings for the selected tool or layer.</p>
+                                    <ul>
+                                        <li>Brush properties</li>
+                                        <li>Layer parameters</li>
+                                        <li>Generator settings</li>
+                                        <li>Filter parameters</li>
+                                        <li>Export settings</li>
+                                    </ul>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>Shelf (Left)</h3>
+                                    <p>Contains your libraries of materials, smart materials, brushes, and more.</p>
+                                    <ul>
+                                        <li>Smart Materials</li>
+                                        <li>Materials</li>
+                                        <li>Brushes</li>
+                                        <li>Stencils</li>
+                                        <li>Generators</li>
+                                        <li>Filters</li>
+                                        <li>Your custom shelves</li>
+                                    </ul>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>Texture Set List (Top Left of Layer Stack)</h3>
+                                    <p>Manages different material regions on your model.</p>
+                                    <ul>
+                                        <li>Material ID based separation</li>
+                                        <li>UV tile management (UDIM)</li>
+                                        <li>Texture set naming</li>
+                                        <li>Channel visibility</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Quick Interface Map</h2>
+                            <div class="image-card">
+                                <svg viewBox="0 0 820 420" role="img" aria-label="Substance Painter interface mockup">
+                                    <rect width="820" height="420" fill="#F8FAFC"/>
+                                    <rect x="20" y="20" width="780" height="380" rx="18" fill="#FFFFFF" stroke="#D4D4D8"/>
+                                    <rect x="20" y="20" width="780" height="42" rx="18" fill="#F3F4F6"/>
+                                    <rect x="32" y="30" width="130" height="18" rx="9" fill="#D4D4D8"/>
+                                    <rect x="664" y="30" width="120" height="18" rx="9" fill="#E5E7EB"/>
+                                    <rect x="20" y="62" width="150" height="338" rx="0" fill="#F5F5F4" stroke="#E5E7EB"/>
+                                    <rect x="170" y="62" width="430" height="338" rx="0" fill="#F9FAFB" stroke="#E5E7EB"/>
+                                    <rect x="600" y="62" width="200" height="338" rx="0" fill="#F5F5F4" stroke="#E5E7EB"/>
+                                    <rect x="184" y="84" width="402" height="160" rx="12" fill="#FFFFFF" stroke="#D4D4D8"/>
+                                    <rect x="184" y="260" width="402" height="118" rx="12" fill="#FFFFFF" stroke="#D4D4D8"/>
+                                    <rect x="34" y="80" width="122" height="20" rx="10" fill="#E5E7EB"/>
+                                    <rect x="34" y="112" width="122" height="20" rx="10" fill="#E5E7EB"/>
+                                    <rect x="34" y="144" width="122" height="20" rx="10" fill="#E5E7EB"/>
+                                    <rect x="34" y="178" width="122" height="20" rx="10" fill="#D4D4D8"/>
+                                    <rect x="612" y="84" width="176" height="18" rx="9" fill="#E5E7EB"/>
+                                    <rect x="612" y="118" width="176" height="84" rx="12" fill="#FFFFFF" stroke="#D4D4D8"/>
+                                    <rect x="612" y="216" width="176" height="120" rx="12" fill="#FFFFFF" stroke="#D4D4D8"/>
+                                    <circle cx="253" cy="132" r="32" fill="#D4D4D8"/>
+                                    <rect x="304" y="109" width="108" height="16" rx="8" fill="#E5E7EB"/>
+                                    <rect x="304" y="136" width="146" height="12" rx="6" fill="#E5E7EB"/>
+                                    <rect x="304" y="156" width="126" height="12" rx="6" fill="#E5E7EB"/>
+                                    <rect x="202" y="286" width="166" height="14" rx="7" fill="#E5E7EB"/>
+                                    <rect x="202" y="310" width="126" height="10" rx="5" fill="#D4D4D8"/>
+                                    <rect x="402" y="286" width="130" height="14" rx="7" fill="#E5E7EB"/>
+                                    <rect x="402" y="310" width="110" height="10" rx="5" fill="#D4D4D8"/>
+                                </svg>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Viewport Navigation and Controls</h2>
+                            <p>Mastering viewport navigation is essential for efficient texturing:</p>
+
+                            <div class="steps">
+                                <h4>Navigation Controls</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Camera Controls</h4>
+                                        <p>Navigate your 3D view efficiently:</p>
+                                        <ul>
+                                            <li><strong>Rotate:</strong> Alt + Left Mouse Button</li>
+                                            <li><strong>Pan:</strong> Alt + Middle Mouse Button</li>
+                                            <li><strong>Zoom:</strong> Alt + Right Mouse Button or Scroll Wheel</li>
+                                            <li><strong>Frame Selection:</strong> F key</li>
+                                            <li><strong>Frame All:</strong> A key</li>
+                                        </ul>
+                                        <p><em>Tip: Practice these until they become muscle memory for faster workflow.</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Viewport Modes</h4>
+                                        <p>Different viewport modes serve different purposes:</p>
+                                        <ul>
+                                            <li><strong>Lit (Default):</strong> PBR rendering with lights and materials</li>
+                                            <li><strong>Unlit:</strong> Flat color view (useful for checking base color)</li>
+                                            <li><strong>Wireframe:</strong> See topology underneath</li>
+                                            <li><strong>UV:</strong> View UV layout in 3D space</li>
+                                            <li><strong>Normal Map:</strong> Isolate normal map visualization</li>
+                                            <li><strong>Single Channel:</strong> View individual texture channels</li>
+                                        </ul>
+                                        <p><em>Tip: Use Unlit mode when checking base color accuracy, Lit mode for final material evaluation.</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Lighting Environment</h4>
+                                        <p>Change how your model is lit for better evaluation:</p>
+                                        <ul>
+                                            <li>Click the sphere icon in the viewport toolbar</li>
+                                            <li>Choose from HDRI environments</li>
+                                            <li>Rotate lighting to check from different angles</li>
+                                            <li>Adjust exposure and rotation</li>
+                                            <li><em>For Roblox: Use neutral lighting to avoid being misled by strong directional lights</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Layer Stack Deep Dive</h2>
+                            <p>The layer stack is where the magic happens - understanding it is key to mastering Substance 3D Painter:</p>
+
+                            <div class="subsection">
+                                <h3>Layer Types</h2>
+                                <p>Different layer types serve different purposes:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Fill Layers</h4>
+                                        <p>Uniform color, value, or procedural content across the entire texture set:</p>
+                                        <ul>
+                                            <li>Base color, roughness, metalness, etc.</li>
+                                            <li>Can be procedural (noise, gradients, etc.)</li>
+                                            <li>Non-destructive and infinitely editable</li>
+                                            <li><em>Roblox Tip: Use for setting base PBR values</em></p>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Paint Layers</h4>
+                                        <p>Hand-painted content using brushes:</p>
+                                        <ul>
+                                            <li>Freehand painting with brushes</li>
+                                            <li>Stencil-based painting</li>
+                                            <li>Clone and healing tools</li>
+                                            <li><em>Roblox Tip: Use for adding unique details like wear, dirt, or character-specific markings</em></p>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Layer Groups</h4>
+                                        <p>Organize layers hierarchically:</p>
+                                        <ul>
+                                            <li>Group related layers (e.g., all "wear" layers)</li>
+                                            <li>Apply masks to entire groups</li>
+                                            <li>Collapse/expand for organization</li>
+                                            <li><em>Roblox Tip: Group by material type or damage type for complex assets</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Blending Modes</h4>
+                                <p>Control how layers interact with layers below them:</p>
+                                <div class="pro-tip">
+                                    <h4>Most Useful Blending Modes for Roblox:</h4>
+                                    <ul>
+                                        <li><strong>Normal:</strong> Standard layering (default)</li>
+                                        <li><strong>Multiply:</strong> Darkens (great for dirt, grime, shadows)</li>
+                                        <li><strong>Overlay:</strong> Enhances contrast (good for wear, scratches)</li>
+                                        <li><strong>Screen:</strong> Lightens (good for scratches, highlights)</li>
+                                        <li><strong>Add (Linear Dodge):</strong> Adds values (use carefully for emissive)</li>
+                                    </ul>
+                                </div>
+                                <p><strong>Channel-Specific Blending:</strong></p>
+                                <p>Each channel (Base Color, Roughness, Metalness, etc.) can have different blending modes - this is powerful for creating complex materials.</p>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Masks and Masking</h4>
+                                <p>Masks control where layers are visible:</p>
+                                <ul>
+                                    <li><strong>Black Mask:</strong> Hides everything (start here, paint white to reveal)</li>
+                                    <li><strong>White Mask:</strong> Shows everything (start here, paint black to hide)</li>
+                                    <li><strong>Procedural Masks:</strong> Generated from curvature, position, etc. (great for smart materials)</li>
+                                    <li><strong>Texture Masks:</strong> Use grayscale textures as masks</li>
+                                    <li><strong>Editor Masks:</strong> Painted directly in 2D or 3D view</li>
+                                </ul>
+                                <p><em>Roblox Tip: Use curvature-based masks for automatic edge wear, position masks for dirt accumulation in crevices.</em></p>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Essential Toolbar Tools for Roblox</h2>
+                            <p>Focus on these tools for efficient Roblox texturing workflows:</p>
+
+                            <div class="grid-3">
+                                <div class="feature-item">
+                                    <h3>Brush Tools</h2>
+                                    <p>The primary painting tools:</p>
+                                    <ul>
+                                        <li><strong>Brush:</strong> Freehand painting</li>
+                                        <li><strong>Eraser:</strong> Removes paint</li>
+                                        <li><strong>Clone:</strong> Copies from one area to another</li>
+                                        <li><strong>Heal:</strong> Blends copied area with surroundings</li>
+                                        <li><strong>Shape:</strong> Draws shapes (lines, circles, rectangles)</li>
+                                    </ul>
+                                    <p><em>Tip: Right-click to quickly access brush settings like size, hardness, flow.</em></p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>Projection Tools</h2>
+                                    <p>Project 2D content onto 3D surfaces:</p>
+                                    <ul>
+                                        <li><strong>Projection:</strong> Projects paint through camera view</li>
+                                        <li><strong>Stencil Projection:</strong> Projects through a stencil mask</li>
+                                        <li><strong>Texture Projection:</strong> Projects images or textures</li>
+                                        <li><strong>Decal:</strong> Places individual decals with positioning controls</li>
+                                    </ul>
+                                    <p><em>Roblox Tip: Use decals for logos, labels, or repeated details like rivets or buttons.</em></p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>View and Display Tools</h2>
+                                    <p>Control how you see your work:</p>
+                                    <ul>
+                                        <li><strong>UV View:</strong> Switch to UV editing mode</li>
+                                        <li><strong>Mesh View:</strong> Return to 3D model view</li>
+                                        <li><strong>Solo:</strong> Isolate selected texture set</li>
+                                        <li><strong>Sync Views:</strong> Synchronize 2D and 3D views</li>
+                                        <li><strong>Fullscreen:</strong> Toggle viewport fullscreen</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Shelf and Library Management</h2>
+                            <p>Organize your assets for efficient Roblox workflows:</p>
+
+                            <div class="subsection">
+                                <h3>Smart Materials</h2>
+                                    <p>Pre-made material setups that you can drag and drop:</p>
+                                    <ul>
+                                        <li>Complex materials with multiple layers</li>
+                                        <li>Procedural generators that adapt to your mesh</li>
+                                        <li>Time-saving starting points</li>
+                                        <li><em>Roblox Tip: Create your own library of Roblox-optimized smart materials</em></p>
+                                    </ul>
+                                </div>
+
+                                <div class="subsection">
+                                    <h3>Materials</h2>
+                                    <p>Base materials that you can customize:</p>
+                                    <ul>
+                                        <li>Simple single-layer materials</li>
+                                        <li>Good for learning and testing</li>
+                                        <li>Can be dragged onto fill layers</li>
+                                        <li><em>Roblox Tip: Use as starting points for creating your custom Roblox materials</em></p>
+                                    </ul>
+                                </div>
+
+                                <div class="subsection">
+                                    <h3>Brushes</h2>
+                                    <p>Different brush tips for various effects:</p>
+                                    <ul>
+                                        <li>Hard round, soft round, textured brushes</li>
+                                        <li>Specialty brushes (scratches, leaks, grunge)</li>
+                                        <li>Custom brush creation</li>
+                                        <li><em>Roblox Tip: Create brushes for common Roblox textures like studs, fabric weave, or metal scratches</em></p>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="callout-warning">
+                                <h4>Organizing Your Shelf for Roblox Workflows</h4>
+                                <p>Create these custom shelves to stay organized:</p>
+                                <ul>
+                                    <li><strong>Roblox Materials:</strong> Your custom PBR materials optimized for Roblox</li>
+                                    <li><strong>Character Textures:</strong> Skin, clothing, accessories for avatars</li>
+                                    <li><strong>Environment Assets:</strong> Buildings, props, vehicles</li>
+                                    <li><strong>Wear and Damage:</strong> Scratches, dirt, rust, wear patterns</li>
+                                    <li><strong>Roblox Brands:</strong> Logos, trademarks, and brand-specific elements</li>
+                                    <li><strong>Your Library:</strong> Personal collection of go-to materials and effects</li>
+                                </ul>
+                                <p><em>Tip: Right-click in the shelf to create new folders and organize your content.</em></p>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Texture Set Management</h2>
+                            <p>Handling multiple materials on a single model:</p>
+
+                            <div class="pro-tip">
+                                <h4>When to Use Multiple Texture Sets:</h4>
+                                <ul>
+                                    <li>Different materials that don't blend (metal vs plastic)</li>
+                                    <li>UDIM workflows for high-resolution assets</li>
+                                    <li>Performance optimization (separate 1K vs 4K sets)</li>
+                                    <li>Different UV tiling requirements</li>
+                                </ul>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating and Managing Texture Sets</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Based on Material IDs</h4>
+                                        <p>The most common method:</p>
+                                        <ul>
+                                            <li>Assign different Material IDs in your 3D software</li>
+                                            <li>Substance automatically creates texture sets</li>
+                                            <li>Each set gets its own texture channels</li>
+                                            <li><em>Roblox Tip: Plan your Material ID layout in advance for complex characters</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Manual Texture Set Creation</h4>
+                                        <p>When you need more control:</p>
+                                        <ul>
+                                            <li>Right-click in Texture Set List</li>
+                                            <li>Choose "Add Texture Set"</li>
+                                            <li>Assign materials manually</li>
+                                            <li>Useful for UV tile-based workflows</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Texture Set Settings</h4>
+                                        <p>Configure each set individually:</p>
+                                        <ul>
+                                            <li>Resolution (can differ per set)</li>
+                                            <li>Channel naming and usage</li>
+                                            <li>Default values</li>
+                                            <li>Export presets</li>
+                                            <li><em>Roblox Tip: Keep consistent resolution across sets unless performance requires otherwise</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue exploring the interface and workflow:</p>
+                            <ul>
+                                <li><a href="basic-workflow.html">Learn the Basic Texturing Workflow</a> - Put your interface knowledge into practice</li>
+                                <li><a href="../basics/layers.html">Master Layers</a> - Deep dive into the layer stack functionality</li>
+                                <li><a href="../basics/smart-materials.html">Explore Smart Materials</a> - Learn how to use and create powerful material presets</li>
+                                <li><a href="../materials/metal.html">Start with Metal Texturing</a> - Apply your knowledge to create realistic metal materials</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create a Custom Workspace</h4>
+                                <p>Save your preferred panel layout for Roblox work:</p>
+                                <ul>
+                                    <li>Arrange panels how you like them</li>
+                                    <li>Go to Window > Workspace > Save Workspace</li>
+                                    <li>Name it "Roblox Texturing"</li>
+                                    <li>Now you can quickly return to this layout anytime</li>
+                                </ul>
+                                <p>Include these elements in your Roblox workspace:</p>
+                                <ul>
+                                    <li>Large viewport for detailed inspection</li>
+                                    <li>Layer stack visible for easy access</li>
+                                    <li>Properties panel for quick adjustments</li>
+                                    <li>Shelf with your Roblox libraries readily accessible</li>
+                                    <li>Texture set list visible if working with multi-material assets</li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

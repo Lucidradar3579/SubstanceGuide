@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substance 3D Painter for Roblox - Complete Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="basics/masks.html">Masks</a></li>
+                    <li><a href="basics/generators.html">Generators</a></li>
+                    <li><a href="basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="materials/metal.html">Metal</a></li>
+                    <li><a href="materials/plastic.html">Plastic</a></li>
+                    <li><a href="materials/leather.html">Leather</a></li>
+                    <li><a href="materials/fabric.html">Fabric</a></li>
+                    <li><a href="materials/wood.html">Wood</a></li>
+                    <li><a href="materials/skin.html">Skin</a></li>
+                    <li><a href="materials/glass.html">Glass</a></li>
+                    <li><a href="materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="advanced/baking.html">Baking</a></li>
+                    <li><a href="advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="reference/glossary.html">Glossary</a></li>
+                    <li><a href="reference/material-library.html">Material Library</a></li>
+                    <li><a href="reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    Home
+                </div>
+
+                <div class="hero">
+                    <div class="hero-copy">
+                        <h1>Welcome to the Substance 3D Painter for Roblox Guide</h1>
+                        <p>This comprehensive guide will teach you everything you need to know about texturing Roblox characters and assets using Substance 3D Painter. From basic concepts to advanced professional workflows, this resource covers it all.</p>
+                    </div>
+                    <div class="hero-visual" aria-label="Roblox texture workflow mockup">
+                        <svg viewBox="0 0 540 360" role="img" aria-label="Roblox texturing workflow diagram">
+                            <rect x="0" y="0" width="540" height="360" fill="#F8FAFC"/>
+                            <rect x="26" y="38" width="150" height="110" rx="12" fill="#111827"/>
+                            <rect x="38" y="64" width="126" height="18" rx="9" fill="#D4D4D8"/>
+                            <rect x="38" y="96" width="90" height="12" rx="6" fill="#E5E7EB"/>
+                            <rect x="38" y="116" width="108" height="12" rx="6" fill="#E5E7EB"/>
+
+                            <rect x="196" y="52" width="150" height="120" rx="12" fill="#FFFFFF" stroke="#D4D4D8"/>
+                            <rect x="214" y="74" width="112" height="18" rx="9" fill="#E5E7EB"/>
+                            <rect x="214" y="104" width="42" height="42" rx="8" fill="#D4D4D8"/>
+                            <rect x="266" y="104" width="56" height="42" rx="8" fill="#E5E7EB"/>
+                            <rect x="214" y="154" width="108" height="8" rx="4" fill="#D4D4D8"/>
+
+                            <rect x="366" y="48" width="150" height="130" rx="12" fill="#111827"/>
+                            <rect x="390" y="76" width="100" height="18" rx="9" fill="#F3F4F6"/>
+                            <rect x="390" y="108" width="102" height="48" rx="10" fill="#F5F5F4"/>
+                            <rect x="394" y="114" width="40" height="36" rx="8" fill="#D4D4D8"/>
+                            <rect x="442" y="114" width="42" height="36" rx="8" fill="#A1A1AA"/>
+
+                            <path d="M176 100 H196" stroke="#4B5563" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M346 110 H366" stroke="#4B5563" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M120 150 V206" stroke="#4B5563" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M120 206 H412" stroke="#4B5563" stroke-width="4" stroke-linecap="round"/>
+                            <path d="M412 206 V230" stroke="#4B5563" stroke-width="4" stroke-linecap="round"/>
+
+                            <rect x="94" y="230" width="314" height="92" rx="14" fill="#FFFFFF" stroke="#D4D4D8"/>
+                            <text x="112" y="264" font-size="16" font-family="Arial, sans-serif" fill="#111827" font-weight="700">Roblox Studio</text>
+                            <rect x="112" y="276" width="94" height="18" rx="9" fill="#E5E7EB"/>
+                            <rect x="220" y="276" width="144" height="18" rx="9" fill="#E5E7EB"/>
+                            <rect x="112" y="300" width="176" height="8" rx="4" fill="#D4D4D8"/>
+                            <circle cx="398" cy="275" r="25" fill="#111827"/>
+                            <circle cx="398" cy="275" r="12" fill="#F3F4F6"/>
+                        </svg>
+                    </div>
+                </div>
+
+                <div class="feature-cards">
+                    <div class="card">
+                        <h3>🚀 Getting Started</h3>
+                        <p>Learn the basics of Substance 3D Painter, installation, interface overview, and your first steps in texturing.</p>
+                        <a href="getting-started/installation.html" class="btn">Getting Started →</a>
+                    </div>
+                    <div class="card">
+                        <h3>🎨 Materials & Techniques</h3>
+                        <p>Master texturing for metal, plastic, leather, fabric, wood, skin, glass, and more with specific Roblox considerations.</p>
+                        <a href="materials/metal.html" class="btn">Materials →</a>
+                    </div>
+                    <div class="card">
+                        <h3>🤖 Roblox Workflow</h3>
+                        <p>Complete Blender → Substance Painter → Roblox Studio workflow with SurfaceAppearance integration.</p>
+                        <a href="roblox/character-workflow.html" class="btn">Roblox Workflow →</a>
+                    </div>
+                    <div class="card">
+                        <h3>⚡ Advanced Techniques</h3>
+                        <p>Learn anchor points, procedural texturing, smart materials, baking, UV unwrapping, and professional workflows.</p>
+                        <a href="advanced/anchors.html" class="btn">Advanced →</a>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>What You'll Learn</h2>
+                    <div class="info-grid">
+                        <div class="info-panel">
+                            <h3>Fundamentals</h3>
+                            <p>Layers, masks, generators, smart materials, and all core Substance 3D Painter concepts explained with Roblox-specific examples.</p>
+                        </div>
+                        <div class="info-panel">
+                            <h3>Material Mastery</h3>
+                            <p>Detailed guides for texturing every material type imaginable, from realistic metals to stylized fabrics and magical effects.</p>
+                        </div>
+                        <div class="info-panel">
+                            <h3>Roblox Integration</h3>
+                            <p>Complete workflow from Blender modeling to Roblox Studio implementation, including SurfaceAppearance setup and optimization.</p>
+                        </div>
+                        <div class="info-panel">
+                            <h3>Advanced Techniques</h3>
+                            <p>Professional workflows, procedural texturing, hand-painted details, baking, UV optimization, and troubleshooting.</p>
+                        </div>
+                        <div class="info-panel">
+                            <h3>Troubleshooting</h3>
+                            <p>Solve common issues with baking, normal maps, roughness, Roblox-specific problems, and export settings.</p>
+                        </div>
+                        <div class="info-panel">
+                            <h3>Optimization</h3>
+                            <p>Learn how to create high-quality textures while maintaining performance for Roblox platforms and mobile devices.</p>
+                        </div>
+                        <div class="info-panel">
+                            <h3>Reference Library</h3>
+                            <p>Glossary of terms, material library, texture references, and FAQ for quick lookups during your workflow.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Roblox Texturing Workflow</h2>
+                    <div class="workflow-grid">
+                        <div class="workflow-step">
+                            <div class="step-tag">Step 1</div>
+                            <h4>Model & UV</h4>
+                            <p>Create clean topology and a readable UV layout before painting.</p>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-tag">Step 2</div>
+                            <h4>Import to Painter</h4>
+                            <p>Set up PBR texture sets with realistic export naming for Roblox.</p>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-tag">Step 3</div>
+                            <h4>Paint & Refine</h4>
+                            <p>Use layers, masks, smart materials, and generators to build final detail.</p>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-tag">Step 4</div>
+                            <h4>Export Maps</h4>
+                            <p>Export Color, Normal, Roughness, and Metalness in the correct color space.</p>
+                        </div>
+                        <div class="workflow-step">
+                            <div class="step-tag">Step 5</div>
+                            <h4>Apply in Roblox</h4>
+                            <p>Use SurfaceAppearance on MeshParts and test materials in Studio.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="section">
+                    <h2>Must-Know Texture Checklist</h2>
+                    <ul class="checklist">
+                        <li>Use a clean UV layout with readable island spacing.</li>
+                        <li>Keep base color values believable under Roblox lighting.</li>
+                        <li>Export normal maps in OpenGL style for proper lighting response.</li>
+                        <li>Use roughness and metalness maps to control realism and performance.</li>
+                        <li>Test final materials with Studio lighting and mobile-appropriate texture sizes.</li>
+                        <li>Preserve readable detail without creating giant texture memory costs.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

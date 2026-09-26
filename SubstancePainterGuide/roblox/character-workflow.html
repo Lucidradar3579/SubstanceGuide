@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Character Workflow - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="character-workflow.html" class="active">Roblox Character Workflow</a></li>
+                    <li><a href="clothing.html">Roblox Clothing</a></li>
+                    <li><a href="accessories.html">Roblox Accessories</a></li>
+                    <li><a href="ugc.html">Roblox UGC</a></li>
+                    <li><a href="optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Roblox Specific > Roblox Character Workflow
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Roblox Character Workflow in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-secondary">Intermediate</span></span>
+                            <span>Time: 30 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Creating textures for Roblox characters presents unique challenges and opportunities. From skin tones and facial features to clothing and accessories, character texturing requires special attention to detail, consistency, and performance. This guide will walk you through the complete workflow for creating character textures that look great in Roblox while maintaining optimal performance.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Character Workflow Matters for Roblox</h4>
+                            <p>Characters are the most personal and expressive elements in Roblox experiences. Well-textured characters enhance player identity, immersion, and engagement, while poor character texturing can break immersion and reduce the quality of your experience.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding Roblox Character Structure</h2>
+                            <p>How Roblox characters are built and textured:</p>
+
+                            <div class="pro-tip">
+                                <h4>Roblox Character Systems:</h4>
+                                <ul>
+                                    <li><strong>R15:</strong> 15-part humanoid (standard for most avatars)</li>
+                                    <li><strong>Rthro:</strong> Proportionally scaled humanoid</li>
+                                    <li><strong>Custom:</strong> Non-humanoid characters and creatures</li>
+                                    <li><em>All use the same SurfaceAppearance system for texturing</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Character Texture Zones:</h4>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Head and Face</h4>
+                                        <p>Most expressive and detailed area</p>
+                                        <ul>
+                                            <li>Skin tone and texture</li>
+                                            <li>Facial features (eyes, nose, mouth)</li>
+                                            <li>Hair and headwear</li>
+                                            <li>Accessories (glasses, hats, etc.)</li>
+                                            <li><em>Challenge:</em> High detail needed in small area</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Torso and Upper Body</h4>
+                                        <p>Main clothing and armor area</p>
+                                        <ul>
+                                            <li>Chest, back, shoulders</li>
+                                            <li>Where shirts, jackets, armor go</li>
+                                            <li>Attachment points for accessories</li>
+                                            <li><em>Challenge:</em> Large area needing consistent texturing</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Arms and Hands</h4>
+                                        <p>Limbs and manipulation tools</p>
+                                        <ul>
+                                            <li>Upper arms, lower arms, hands</li>
+                                            <li>Where sleeves, gloves, weapons attach</li>
+                                            <li>Show wear from use and movement</li>
+                                            <li><em>Challenge:</em> Complex shapes with frequent deformation</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Legs and Feet</h4>
+                                        <p>Lower body and locomotion</p>
+                                        <ul>
+                                            <li>Upper legs, lower legs, feet</li>
+                                            <li>Where pants, shoes, boots go</li>
+                                            <li>Show wear from walking and movement</li>
+                                            <li><em>Challenge:</em> Large area with bending and flexing</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Attachment Points</h4>
+                                        <p>Where accessories connect</p>
+                                        <ul>
+                                            <li>Studs and connectors (standardized)</li>
+                                            <li>Specific attachment points for hats, faces, etc.</li>
+                                            <li>Need consistent texturing across accessories</li>
+                                            <li><em>Challenge:</em> Must match across character and accessories</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>UV Layout Considerations</h4>
+                                        <p>How UVs affect texturing quality</p>
+                                        <ul>
+                                            <li>UV island size affects texture resolution</li>
+                                            <li>Seams can cause visible artifacts</li>
+                                            <li>Symmetry can save texture space</li>
+                                            <li><em>Challenge:</em> Balancing detail with UV efficiency</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Setting Up Your Character Project</h2>
+                            <p>Preparing to texture Roblox characters:</p>
+
+                            <div class="steps">
+                                <h4>Character Project Setup Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Mesh Preparation</h4>
+                                        <p>Get your character mesh ready:</p>
+                                        <ul>
+                                            <li>Ensure proper UV layout (no overlapping islands unless intentional)</li>
+                                            <li>Check scale (1 unit = 1 cm in Roblox)</li>
+                                            <li>Verify mesh is clean (no duplicated vertices, proper normals)</li>
+                                            <li>Consider symmetry to save texture space</li>
+                                            <li><em>Tip: Use UV checker texture to verify UV quality</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Project Settings</h4>
+                                        <p>Configure for character texturing:</p>
+                                        <ul>
+                                            <li>Resolution: 1024 for most characters (balance detail/performance)</li>
+                                            <li>2048 for high-detail characters or close-up shots</li>
+                                            <li>Template: PBR Metallic Roughness</li>
+                                            <li>Color Management: sRGB for color, Linear for data</li>
+                                            <li><em>Tip: Start with 1024, upgrade to 2048 only if needed for detail</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Texture Set Planning</h4>
+                                        <p>Plan your texture set strategy:</p>
+                                        <ul>
+                                            <li>Single texture set for simple characters</li>
+                                            <li>Multiple texture sets for complex characters (head/body separation)</li>
+                                            <li>Consider UDIM for very high-detail characters</li>
+                                            <li><em>Tip: Most Roblox characters use single 1024 or 2048 texture set</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Skin Texturing Techniques</h2>
+                            <p>Creating realistic and expressive skin:</p>
+
+                            <div class="subsection">
+                                <h3>Base Skin Properties</h4>
+                                <p>Establishing fundamental skin characteristics:</p>
+                                <div class="pro-tip">
+                                    <h4>Skin Color Guidelines:</h4>
+                                    <ul>
+                                        <li>Skin is not one flat color - it has variation</li>
+                                        <li>Subsurface scattering approximation is key</li>
+                                        <li><em>Tip: Use color variation to simulate blood flow beneath skin</em></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pro-tip">
+                                    <h4>Skin Roughness Guidelines:</h4>
+                                    <ul>
+                                        <li>Skin has micro-texture from pores and fine lines</li>
+                                        <li>Typical roughness: 0.4-0.7 (varies by area and moisture)</li>
+                                        <li>Lips and wet areas: lower roughness (0.2-0.4)</li>
+                                        <li>Dry areas: higher roughness (0.6-0.8)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Realistic Skin</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Skin Setup</h4>
+                                        <p>Establish fundamental skin properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Skin tone color</li>
+                                            <li>Add variation with noise or gradient for subsurface simulation</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value (0.5 average)</li>
+                                            <li>Add variation for wet/dry areas</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set to 0.0 (skin is not metallic)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Skin Detail</h4>
+                                        <p>Create realistic skin texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for skin detail</li>
+                                            <li>Use noise generator (Perlin, Simplex) for pore texture</li>
+                                            <li>Or use painted details for freckles, moles, etc.</li>
+                                            <li>Keep detail subtle - skin should look natural</li>
+                                            <li><em>Tip: Use low opacity (10-25%) for skin detail layers</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Facial Features</h4>
+                                        <p>Eyes, eyebrows, lips, etc.:</p>
+                                        <ul>
+                                            <li>Use Paint Layers for precise control</li>
+                                            <li>Or use stencils for consistent shapes</li>
+                                            <li>Pay attention to symmetry and proportions</li>
+                                            <li><em>Tip: Create separate layers for each feature for easy adjustment</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Expression Lines</h4>
+                                        <p>Where skin shows use and expression:</p>
+                                        <ul>
+                                            <li>Use masks to control where lines appear</li>
+                                            <li>Position mask for areas that crease (mouth, eyes, forehead)</li>
+                                            <li>Curvature mask for fine lines and wrinkles</li>
+                                            <li>Combine with painted details for expression lines</li>
+                                            <li><em>Tip: Expression lines should follow muscle movement patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Hair and Headwear Texturing</h2>
+                            <p>Creating realistic and stylized hair:</p>
+
+                            <div class="subsection">
+                                <h3>Hair Material Properties</h4>
+                                <p>Understanding how hair interacts with light:</p>
+                                <div class="pro-tip">
+                                    <h4>Hair Color Guidelines:</h4>
+                                    <ul>
+                                        <li>Hair color varies from root to tip</li>
+                                        <li>Darker at roots, lighter at tips (sun bleaching)</li>
+                                        <li>Can have highlights, lowlights, and color treatments</li>
+                                        <li><em>Tip: Use gradient fills to simulate root-to-tip variation</em></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pro-tip">
+                                    <h4>Hair Roughness Guidelines:</h4>
+                                    <ul>
+                                        <li>Hair has micro-scale texture from cuticles</li>
+                                        <li>Typical roughness: 0.6-0.8 (varies by hair type and treatment)</li>
+                                        <li>Wet hair: lower roughness (0.3-0.5)</li>
+                                        <li>Damaged hair: higher roughness (0.8-0.9)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Realistic Hair</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Hair Setup</h4>
+                                        <p>Establish fundamental hair properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Root color</li>
+                                            <li>Add gradient fill for tip color variation</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value (0.7 average)</li>
+                                            <li>Add variation for wet/damaged areas</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set to 0.0 (hair is not metallic)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Hair Detail</h4>
+                                        <p>Create realistic hair texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for hair detail</li>
+                                            <li>Use noise or pattern generators for strand texture</li>
+                                            <li>Or use painted details for individual strands</li>
+                                            <li>Keep detail appropriate for viewing distance</li>
+                                            <li><em>Tip: Hair detail should read at a distance, not be overly complex</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Styling</h4>
+                                        <p>Where hair shows use and styling:</p>
+                                        <ul>
+                                            <li>Use masks to control where product appears</li>
+                                            <li>Position mask for areas that hold product (roots, tips)</li>
+                                            <li>Curvature mask for strand separation and flyaways</li>
+                                            <li>Combine with painted details for styling</li>
+                                            <li><em>Tip: Hair styling should follow logical application patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Clothing and Accessories Texturing</h2>
+                            <p>Creating wearable items that work with characters:</p>
+
+                            <div class="subsection">
+                                <h3>Clothing Material Considerations</h4>
+                                <p>Understanding fabric and clothing materials:</p>
+                                <div class="pro-tip">
+                                    <h4>Fabric Color Guidelines:</h4>
+                                    <ul>
+                                        <li>Fabrics show wear and fading with use</li>
+                                        <li>Darker colors show less visible wear than light colors</li>
+                                        <li>Consider how fabric will look after washing and wear</li>
+                                        <li><em>Tip: Create both "new" and "worn" versions of clothing</em></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pro-tip">
+                                    <h4>Fabric Roughness Guidelines:</h4>
+                                    <ul>
+                                        <li>Fabrics have texture from weave and fibers</li>
+                                        <li>Typical roughness: 0.6-0.9 (varies by fabric type)</li>
+                                        <li>Smooth fabrics (silk, satin): 0.3-0.5</li>
+                                        <li>Rough fabrics (burlap, wool): 0.8-0.9</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Clothing Items</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Clothing Setup</h4>
+                                        <p>Establish fundamental clothing properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Fabric color</li>
+                                            <li>Add variation for dye lots or wear</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value</li>
+                                            <li>Add variation for weave texture</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set to 0.0 (fabric is not metallic)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Fabric Detail</h4>
+                                        <p>Create realistic fabric texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for weave pattern</li>
+                                            <li>Use grid or pattern generators for weave</li>
+                                            <li>Or use noise for fiber texture</li>
+                                            <li>Keep weave subtle but visible</li>
+                                            <li><em>Tip: Different fabrics have different weave patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Fading</h4>
+                                        <p>Where clothing shows use:</p>
+                                        <ul>
+                                            <li>Use masks to control where wear appears</li>
+                                            <li>Position mask for high-stress areas (elbows, knees, seat)</li>
+                                            <li>Curvature mask for edge wear and fraying</li>
+                                            <li>Combine with painted details for patches and stains</li>
+                                            <li><em>Tip: Clothing wear should follow logical use patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Accessories and Details</h4>
+                                        <p>Buttons, zippers, logos, etc.:</p>
+                                        <ul>
+                                            <li>Use Paint Layers for precise control</li>
+                                            <li>Or use stencils for repeating elements</li>
+                                            <li>Consider material accuracy (metal buttons vs plastic)</li>
+                                            <li><em>Tip: Create accessories as separate texture sets when possible</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Optimization for Roblox Characters</h2>
+                            <p>Balancing quality with performance:</p>
+
+                            <div class="callout">
+                                <h4>Character Texture Optimization:</h4>
+                                <ul>
+                                    <li><strong>Resolution:</strong> 1024x1024 for most characters, 2048x2048 for high-detail</li>
+                                    <li><strong>Texture Sets:</strong> Single set preferred for performance</li>
+                                    <li><strong>Texture Reuse:</strong> Share textures between similar characters</li>
+                                    <li><strong>Normal Map Strength:</strong> Keep subtle to avoid lighting artifacts</li>
+                                    <li><strong>Character Count:</strong> More characters = lower texture resolution per character</li>
+                                </ul>
+                            </div>
+
+                            <div class="pro-tip">
+                                <h4>Level of Detail (LOD) Strategies:</h4>
+                                <ul>
+                                    <li>Create multiple texture resolutions for different distances</li>
+                                    <li>High detail (2048) for close-up viewing</li>
+                                    <li>Medium detail (1024) for medium distance</li>
+                                    <li>Low detail (512) for far distance or crowds</li>
+                                    <li><em>Roblox Tip: Use different texture sets based on camera distance</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your character texturing expertise:</p>
+                            <ul>
+                                <li><a href="clothing.html">Learn About Roblox Clothing Creation</a> - Specialized workflow for wearable items</li>
+                                <li><a href="accessories.html">Explore Roblox Accessories</a> - Creating hats, gear, and other attachments</li>
+                                <li><a href="../advanced/baking.html">Learn Baking Techniques</a> - For transferring high-poly character details to low-poly</li>
+                                <li><a href="../materials/skin.html">Create Realistic Skin Materials</a> - Apply character-specific skin texturing</li>
+                                <li><a href="../materials/fabric.html">Create Clothing Materials</a> - Apply fabric-specific texturing techniques</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create Character Texture Templates</h4>
+                                <p>Save time on repetitive character setups:</p>
+                                <ul>
+                                    <li>Create a character texture configuration you use frequently</li>
+                                    <li>Example: "Base Character Setup" (skin, clothing layers)</li>
+                                    <li>Example: "Male/Female Base Templates" (different body shapes)</li>
+                                    <li>Right-click the layer group in layer stack</li>
+                                    <li>Choose "Create Smart Material" or "Save as Preset"</li>
+                                    <li>Name it descriptively (e.g., "Roblox Base Character", "Avatar Skin Setup")</li>
+                                    <li>Save to your shelf for instant access</li>
+                                    <li><em>Now you can drag-and-drop this setup onto any character texture set</em></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

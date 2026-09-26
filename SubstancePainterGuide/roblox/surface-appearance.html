@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox SurfaceAppearance - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="surface-appearance.html" class="active">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Roblox Specific > Roblox SurfaceAppearance
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Understanding Roblox SurfaceAppearance</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Intermediate</span></span>
+                            <span>Time: 20-30 minutes</span>
+                            <span>Software: Roblox Studio</span>
+                            <span>Roblox Relevance: Essential</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Roblox SurfaceAppearance is the key component that brings your Substance 3D Painter textures to life in Roblox experiences. Understanding how SurfaceAppearance works is essential for creating assets that look exactly as intended when imported into Roblox.</p>
+
+                        <div class="callout-info">
+                            <h4>Why SurfaceAppearance Matters</h4>
+                            <p>SurfaceAppearance is Roblox's implementation of Physically Based Rendering (PBR) materials. It maps your texture maps to specific material properties that determine how light interacts with your assets in the Roblox engine.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>What is SurfaceAppearance?</h4>
+                            <p>SurfaceAppearance is a Roblox object that defines how a Part or MeshPart should render using PBR materials. It works by mapping texture files to specific material properties:</p>
+
+                            <div class="grid-3">
+                                <div class="feature-item">
+                                    <h3>PBR Foundation</h3>
+                                    <p>SurfaceAppearance uses the Metallic-Roughness PBR workflow, which is the same workflow used in Substance 3D Painter's default settings.</p>
+                                    <p>This means your textures created in Substance 3D Painter can be used directly in Roblox with minimal conversion.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>Component-Based</h3>
+                                    <p>SurfaceAppearance is a component that you attach to BasePart, Part, MeshPart, or UnionObject instances in Roblox Studio.</p>
+                                    <p>One SurfaceAppearance can be reused across multiple parts, making it efficient for instancing.</p>
+                                </div>
+
+                                <div class="feature-item">
+                                    <h3>Texture-Driven</h3>
+                                    <p>All material properties are driven by texture maps, allowing for detailed variation across the surface of an asset.</p>
+                                    <p>This enables complex materials like worn metal, dirty plastic, or fabric with weave variation.</li>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>SurfaceAppearance Texture Maps</h4>
+                            <p>SurfaceAppearance uses six texture maps, each controlling a specific aspect of the material's appearance:</p>
+
+                            <div class="subsection">
+                                <h3>ColorMap (Base Color)</h3>
+                                <p><strong>Purpose:</strong> Defines the base color of the material</p>
+                                <p><strong>Substance 3D Painter Equivalent:</strong> Base Color</p>
+                                <p><strong>Color Space:</strong> sRGB</p>
+                                <p><strong>File Format:</strong> PNG or JPG (PNG recommended for lossless)</li>
+                                <p><strong>Robox Behavior:</strong></p>
+                                <ul>
+                                    <li>At 0.0 metalness: This is the actual visible color</li>
+                                    <li>At 1.0 metalness: This tint colors the reflections (gold makes reflections yellowish)</li>
+                                    <li>Values between 0.0-1.0: Linear interpolation between dielectric and metallic behavior</li>
+                                </ul>
+                                <p><strong>Common Mistakes:</strong></p>
+                                <ul>
+                                    <li>Using Linear color space (causes colors to look washed out)</li>
+                                    <li>Using incorrect bit depth (8-bit is sufficient)</li>
+                                    <li>Having seams or mismatched edges</li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>NormalMap</h3>
+                                <p><strong>Purpose:</strong> Adds surface detail without increasing polygon count</p>
+                                <p><strong>Substance 3D Painter Equivalent:</strong> Normal</p>
+                                <p><strong>Color Space:</strong> Linear</p>
+                                <p><strong>File Format:</strong> PNG (lossless critical for normal data)</li>
+                                <p><strong>Robox Behavior:</strong></p>
+                                <ul>
+                                    <li>Encodes surface direction in RGB channels</li>
+                                    <li>Roblox expects OpenGL format by default</li>
+                                    <li>Can be inverted if imported incorrectly (lighting appears inverted)</li>
+                                    <li>Affects how light reflects across the surface</li>
+                                </ul>
+                                <p><strong>Technical Details:</strong></p>
+                                <ul>
+                                    <li>RGB values represent XYZ surface normals</li>
+                                    <li>Flat surface = (128,128,255) in 8-bit</li>
+                                    <li>Range: 0-255 for each channel</li>
+                                    <li>Values remapped to -1 to 1 range in shader</li>
+                                </ul>
+                                <p><strong>Common Mistakes:</strong></p>
+                                <ul>
+                                    <li>Importing as sRGB instead of Linear</li>
+                                    <li>Using wrong format (DirectX vs OpenGL)</li>
+                                    <li>Flipping Y axis incorrectly</li>
+                                    <li>Using low bit depth causing banding</li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>RoughnessMap</h3>
+                                <p><strong>Purpose:</strong> Controls microsurface detail and reflection sharpness</p>
+                                <p><strong>Substance 3D Painter Equivalent:</strong> Roughness</p>
+                                <p><strong>Color Space:</strong> Linear</p>
+                                <p><strong>File Format:</strong> PNG or JPG</li>
+                                <p><strong>Robox Behavior:</strong></p>
+                                <ul>
+                                    <li>0.0 = perfectly smooth/mirror-like reflection</li>
+                                    <li>1.0 = completely rough/diffuse reflection</li>
+                                    <li>Controls the spread and intensity of specular highlights</li>
+                                    <li>Affects both diffuse and specular reflection quality</li>
+                                </ul>
+                                <p><strong>Important Note:</strong> In roughness maps, BLACK = smooth (0.0), WHITE = rough (1.0)</p>
+                                <p><strong>Common Mistakes:</strong></p>
+                                <ul>
+                                    <li>Inverting the roughness map (making smooth areas rough and vice versa)</li>
+                                    <li>Using sRGB color space</li>
+                                    <li>Having insufficient contrast for visible variation</li>
+                                    <li>Using JPEG compression causing artifacts</li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>MetalnessMap</h3>
+                                <p><strong>Purpose:</strong> Defines whether areas are metallic or non-metallic</p>
+                                <p><strong>Substance 3D Painter Equivalent:</strong> Metalness</p>
+                                <p><strong>Color Space:</strong> Linear</p>
+                                <p><strong>File Format:</strong> PNG or JPG</li>
+                                <p><strong>Robox Behavior:</strong></p>
+                                <ul>
+                                    <li>0.0 = dielectric (non-metallic: plastic, wood, stone, fabric)</li>
+                                    <li>1.0 = metallic (metal: gold, silver, iron, aluminum)</li>
+                                    <li>Values between 0.0-1.0 = interpolated behavior (useful for painted metals, corroded metal)</li>
+                                    <li>Directly affects how Base Color influences reflections</li>
+                                </ul>
+                                <p><strong>Common Mistakes:</strong></p>
+                                <ul>
+                                    <li>Using values outside 0.0-1.0 range</li>
+                                    <li>Using sRGB color space</li>
+                                    <li>Making metalness too uniform (missing painted/chipped areas)</li>
+                                    <li>Confusing with reflectance or specular maps</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Additional SurfaceAppearance Properties</h4>
+                            <p>Beyond the four main PBR maps, SurfaceAppearance includes two additional texture maps:</p>
+
+                            <div class="subsection">
+                                <h3>OccupancyMap (Ambient Occlusion)</h3>
+                                <p><strong>Purpose:</strong> Adds contact shadowing in crevices and corners</p>
+                                <p><strong>Substance 3D Painter Equivalent:</strong> Ambient Occlusion</p>
+                                <p><strong>Color Space:</strong> Linear</p>
+                                <p><strong>File Format:</strong> PNG or JPG</li>
+                                <p><strong>Robox Behavior:</strong></p>
+                                <ul>
+                                    <li>Multiplies with ambient lighting to darken enclosed areas</li>
+                                    <li>0.0 = no occlusion (fully lit)</li>
+                                    <li>1.0 = full occlusion (fully shadowed in ambient light)</li>
+                                    <li>Does NOT affect direct lighting from light sources</li>
+                                    <li>Works best when combined with proper lighting in your experience</li>
+                                </ul>
+                                <p><strong>Common Mistakes:</strong></p>
+                                <ul>
+                                    <li>Using sRGB color space</li>
+                                    <li>Having AO too strong (makes assets look dirty)</li>
+                                    <li>Not baking AO from high-poly source</li>
+                                    <li>Using low resolution causing banding</li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>EmissiveMap</h3>
+                                <p><strong>Purpose:</strong> Adds self-illumination to materials</p>
+                                <p><strong>Substance 3D Painter Equivalent:</strong> Emissive</p>
+                                <p><strong>Color Space:</strong> sRGB</p>
+                                <p><strong>File Format:</strong> PNG or JPG</li>
+                                <p><strong>Robox Behavior:</strong></p>
+                                <ul>
+                                    <li>Adds light emission on top of other lighting</li>
+                                    <li>0.0 = no emission</li>
+                                    <li>1.0 = full emission (bright white)</li>
+                                    <li>Color determines emission color</li>
+                                    <li>Does NOT cast light on other objects (no light baking)</li>
+                                    <li>Useful for screens, signs, energy effects, magic, etc.</li>
+                                </ul>
+                                <p><strong>Common Mistakes:</strong></p>
+                                <ul>
+                                    <li>Using Linear color space</li>
+                                    <li>Making emissive too bright (can look blown out)</li>
+                                    <li>Not considering performance impact of many emissive objects</li>
+                                    <li>Forgetting emissive doesn't actually illuminate surroundings</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Step-by-Step: Applying SurfaceAppearance in Roblox Studio</h4>
+                            <p>Follow these steps to correctly apply your Substance 3D Painter textures to Roblox assets:</p>
+
+                            <div class="steps">
+                                <h4>SurfaceAppearance Setup Process</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Prepare Your Textures</h4>
+                                        <p>Ensure your exported textures from Substance 3D Painter are correctly formatted:</p>
+                                        <ul>
+                                            <li>Base Color: PNG, sRGB</li>
+                                            <li>Normal Map: PNG, Linear, OpenGL format</li>
+                                            <li>Roughness Map: PNG, Linear</li>
+                                            <li>Metalness Map: PNG, Linear</li>
+                                            <li>Ambient Occlusion: PNG, Linear (optional)</li>
+                                            <li>Emissive: PNG, sRGB (optional)</li>
+                                        </ul>
+                                        <p><em>Tip: Use consistent naming like:</em></p>
+                                        <ul>
+                                            <li>assetname_BaseColor.png</li>
+                                            <li>assetname_Normal.png</li>
+                                            <li>assetname_Roughness.png</li>
+                                            <li>assetname_Metalness.png</li>
+                                            <li>assetname_Occlusion.png</li>
+                                            <li>assetname_Emissive.png</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Import Textures to Roblox</h4>
+                                        <p>In Roblox Studio:</p>
+                                        <ul>
+                                            <li>Open the Asset Browser (View > Asset Browser)</li>
+                                            <li>Click the "Import" button</li>
+                                            <li>Select all your texture files</li>
+                                            <li>Wait for upload to complete</li>
+                                            <li>Verify they appear in your inventory</li>
+                                        </ul>
+                                        <p><em>Tip: Create a folder in your inventory for each asset to keep textures organized.</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Create and Configure SurfaceAppearance</h4>
+                                        <p>In the Explorer panel:</p>
+                                        <ul>
+                                            <li>Select the Part or MeshPart you want to texture</li>
+                                            <li>In the Properties window, scroll down to SurfaceAppearance</li>
+                                            <li>Click the "+" button to add a SurfaceAppearance component</li>
+                                            <li>Click on the new SurfaceAppearance property to expand it</li>
+                                            <li>For each texture property (ColorMap, NormalMap, etc.), click the corresponding button</li>
+                                            <li>Select the appropriate texture from your inventory</li>
+                                            <li>Repeat for all maps you wish to use</li>
+                                        </ul>
+                                        <p><em>Tip: You can leave unused properties as "None" - Roblox will use default values.</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Verify and Adjust</h4>
+                                        <p>After applying textures:</p>
+                                        <ul>
+                                            <li>View your asset in different lighting conditions</li>
+                                            <li>Check for seams or mismatched edges</li>
+                                            <li>Verify normal map direction (lighting should look correct)</li>
+                                            <li>Test metalness transitions if applicable</li>
+                                            <li>Check roughness behavior (smooth vs rough areas)</li>
+                                        </ul>
+                                        <p><em>Tip: Use a turntable or orbit camera to view your asset from all angles.</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Save and Reuse</h4>
+                                        <p>To reuse your SurfaceAppearance:</p>
+                                        <ul>
+                                            <li>Right-click on the SurfaceAppearance in the Explorer</li>
+                                            <li>Select "Copy"</li>
+                                            <li>Paste onto other parts that should use the same material</li>
+                                            <li>Or save the entire part as a template in your inventory</li>
+                                        </ul>
+                                        <p><em>Tip: Create a "Material Library" folder in your inventory with pre-configured SurfaceAppearance instances for common materials.</em></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Common SurfaceAppearance Issues and Solutions</h4>
+
+                            <div class="callout-danger">
+                                <h4>Problem: Asset Looks Completely Wrong Colors</h4>
+                                <p><strong>Most Likely Cause:</strong> Color space mismatch</p>
+                                <p><strong>Diagnosis:</strong></p>
+                                <ul>
+                                    <li>Base Color looks washed out or neon?</li>
+                                    <li>Are you seeing the wrong colors entirely?</li>
+                                    <li>Does it look correct in Substance 3D Painter but wrong in Roblox?</li>
+                                </ul>
+                                <p><strong>Solution:</strong></p>
+                                <ul>
+                                    <li>Re-export Base Color as PNG, sRGB color space</li>
+                                    <li>Verify Normal, Roughness, Metalness are exported as Linear</li>
+                                    <li>Check that you're not accidentally using sRGB for data maps</li>
+                                    <li>In Roblox, double-check each texture is assigned to the correct property</li>
+                                </ul>
+                            </div>
+
+                            <div class="callout-danger">
+                                <h4>Problem: Lighting Looks Inverted or Wrong</h4>
+                                <p><strong>Most Likely Cause:</strong> Normal map issues</p>
+                                <p><strong>Diagnosis:</strong></p>
+                                <ul>
+                                    <li>Do bumps look like dents and vice versa?</li>
+                                    <li>Does lighting come from the wrong direction?</li>
+                                    <li>Are edges highlighted when they should be recessed?</li>
+                                    <li>Does the asset look "inside out"?</li>
+                                </ul>
+                                <p><strong>Solution:</strong></p>
+                                <ul>
+                                    <li>Check that you exported Normal map as Linear color space</li>
+                                    <li>Verify you used OpenGL format (not DirectX)</li>
+                                    <li>In Substance 3D Painter, check your project settings</li>
+                                    <li>Try flipping the Y axis in your image editor if needed</li>
+                                    <li>Test with a simple normal map gradient to verify direction</li>
+                                </ul>
+                            </div>
+
+                            <div class="callout-danger">
+                                <h4>Problem: Metal Parts Don't Look Metallic</h4>
+                                <p><strong>Most Likely Cause:</strong> Metalness map issues</p>
+                                <p><strong>Diagnosis:</strong></p>
+                                <ul>
+                                    <li>Does the asset look like plastic or painted metal when it should be bare metal?</li>
+                                    <li>Are reflections missing or too weak?</li>
+                                    <li>Does the base color show through where it shouldn't?</li>
+                                </ul>
+                                <p><strong>Solution:</strong></p>
+                                <ul>
+                                    <li>Verify Metalness map is exported as Linear color space</li>
+                                    <li>Check that values are in 0.0-1.0 range (not 0-255 integers)</li>
+                                    <li>Ensure metallic areas are close to 1.0 (not 0.5 or lower)</li>
+                                    <li>Check that non-metallic areas are close to 0.0</li>
+                                    <li>Test with a pure black (dielectric) and pure white (metal) metalness map</li>
+                                </ul>
+                            </div>
+
+                            <div class="callout-danger">
+                                <h4>Problem: Reflections Are Too Sharp or Blurry</h4>
+                                <p><strong>Most Likely Cause:</strong> Roughness map issues</p>
+                                <p><strong>Diagnosis:</strong></p>
+                                <ul>
+                                    <li>Do metallic areas look like mirrors when they should be brushed?</li>
+                                    <li>Do rough areas look unnaturally sharp?</li>
+                                    <li>Does the asset lack micro-detail variation?</li>
+                                </ul>
+                                <p><strong>Solution:</strong></p>
+                                <ul>
+                                    <li>Verify Roughness map is exported as Linear color space</li>
+                                    <li>Remember: BLACK = smooth (0.0), WHITE = rough (1.0)</li>
+                                    <li>Check that your roughness values make sense for the material</li>
+                                    <li>Test with uniform roughness values to isolate the issue</li>
+                                    <li>Consider that Roblox's SSR may require slightly different roughness than offline renderers</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Optimizing SurfaceAppearance for Roblox</h4>
+                            <p>Get the best performance and visual quality:</p>
+
+                            <div class="callout">
+                                <h4>Texture Size Recommendations</h4>
+                                <p>Balance quality with performance:</p>
+                                <ul>
+                                    <li><strong>Small Parts (screws, rivets, etc.):</strong> 256x256</li>
+                                    <li><strong>Medium Parts (tools, accessories):</strong> 512x512</li>
+                                    <li><strong>Character Parts (limbs, torso, head):</strong> 1024x1024</li>
+                                    <li><strong>Large Props (vehicles, furniture):</strong> 2048x2048</li>
+                                    <li><strong>Hero Assets/UGC:</strong> Up to 4096x4096 (use sparingly)</li>
+                                </ul>
+                                <p><em>Tip: Start lower and only increase resolution if you see pixelation or blurriness in-game.</em></p>
+                            </div>
+
+                            <div class="callout">
+                                <h4>File Format and Compression</h4>
+                                <p>Choose the right format for each map type:</p>
+                                <ul>
+                                    <li><strong>Base Color:</strong> PNG (lossless) or high-quality JPG (Q=90+)</li>
+                                    <li><strong>Normal Map:</strong> PNG (lossless critical)</li>
+                                    <li><strong>Roughness/Metalness/Occlusion:</strong> PNG or high-quality JPG</li>
+                                    <li><strong>Emissive:</strong> PNG or high-quality JPG</li>
+                                </ul>
+                                <p><em>Tip: Avoid low-quality JPG compression as it can cause visible artifacts, especially in normal maps.</em></p>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Channel Packing for Advanced Users</h4>
+                                <p>Reduce texture count by combining maps (requires custom shaders or material overrides):</p>
+                                <ul>
+                                    <li>Pack Roughness (R), Metalness (G), Occlusion (B) into one RGB texture</li>
+                                    <li>Keep Base Color and Normal as separate textures (they need full channels)</li>
+                                    <li>Emissive can share with packed texture if needed</li>
+                                    <p><em>Note: This requires custom materials or material overrides in Roblox, not standard SurfaceAppearance.</em></p>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h4>
+                            <p>Continue your Roblox texturing journey:</p>
+                            <ul>
+                                <li><a href="../roblox/pbr-workflow.html">Learn the Complete Roblox PBR Workflow</a> - From Blender to Roblox Studio</li>
+                                <li><a href="../roblox/character-workflow.html">Master Roblox Character Texturing</a> - Specific techniques for avatars and NPCs</li>
+                                <li><a href="../advanced/baking.html">Learn Advanced Baking Techniques</a> - Create high-quality details from sculpts</li>
+                                <li><a href="../advanced/uv-unwrapping.html">Master UV Unwrapping</a> - Essential for quality texturing</li>
+                                <li><a href="../reference/glossary.html">Consult the Glossary</a> - Look up any unfamiliar terms</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create a SurfaceAppearance Test Scene</h4>
+                                <p>Build a simple test scene in Roblox Studio to quickly validate your materials:</p>
+                                <ul>
+                                    <li>Create a sphere, cube, and cylinder</li>
+                                    <li>Apply your test SurfaceAppearance to all three</li>
+                                    <li>Add a directional light and ambient light</li>
+                                    <li>Add a turntable script to rotate the camera</li>
+                                    <li>Save this as a template for quick material testing</li>
+                                </ul>
+                                <p>This lets you iterate on materials quickly without building full assets each time.</p>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

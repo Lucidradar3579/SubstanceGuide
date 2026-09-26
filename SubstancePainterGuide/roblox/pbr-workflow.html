@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox PBR Workflow - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="pbr-workflow.html" class="active">Roblox PBR Workflow</a></li>
+                    <li><a href="character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="clothing.html">Roblox Clothing</a></li>
+                    <li><a href="accessories.html">Roblox Accessories</a></li>
+                    <li><a href="ugc.html">Roblox UGC</a></li>
+                    <li><a href="optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Roblox Specific > Roblox PBR Workflow
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Roblox PBR Workflow in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span> → <span class="badge badge-secondary">Intermediate</span></span>
+                            <span>Time: 25 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: Essential</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Understanding how Physically Based Rendering (PBR) works in Roblox and how to create textures that work perfectly with the Roblox engine is crucial for creating professional-quality assets. This guide will walk you through the Roblox PBR workflow, from setting up your Substance 3D Painter project to exporting textures that work seamlessly with Roblox's SurfaceAppearance system.</p>
+
+                        <div class="callout-info">
+                            <h4>Why PBR Workflow Matters for Roblox</h4>
+                            <p>Roblox uses a Physically Based Rendering system that simulates how light interacts with materials in the real world. Creating textures that follow PBR principles ensures your assets look correct under all lighting conditions and maintain visual consistency across different Roblox experiences.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding Roblox's PBR System</h2>
+                            <p>How Roblox implements Physically Based Rendering:</p>
+
+                            <div class="pro-tip">
+                                <h4>Roblox's PBR Implementation:</h4>
+                                <ul>
+                                    <li>Uses Metallic-Roughness workflow (same as Substance 3D Painter default)</li>
+                                    <li>Base Color = Albedo color (diffuse reflectance)</li>
+                                    <li>Metalness = Whether material is metallic (0 = non-metal, 1 = metal)</li>
+                                    <li>Roughness = Surface microsmoothness (0 = smooth, 1 = rough)</li>
+                                    <li>Normal Map = Surface detail for lighting simulation</li>
+                                    <li><em>Key Difference:</em> Roblox combines your AO map with its own SSAO</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Roblox SurfaceAppearance Channels:</h4>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>ColorMap</h4>
+                                        <p>Base color/albedo of the material</p>
+                                        <p><em>Source:</em> Base Color channel from Substance Painter</p>
+                                        <p><em>Format:</em> sRGB color space</p>
+                                        <p><em>Format:</em> PNG (lossless recommended)</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>MetalnessMap</h4>
+                                        <p>Metallic property of the material</p>
+                                        <p><em>Source:</em> Metalness channel from Substance Painter</p>
+                                        <p><em>Value:</em> 0.0 = non-metal, 1.0 = metal</p>
+                                        <p><em>Format:</em> Grayscale, linear color space</p>
+                                        <p><em>Format:</em> PNG (lossless recommended)</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>RoughnessMap</h4>
+                                        <p>Surface roughness/smoothness</p>
+                                        <p><em>Source:</em> Roughness channel from Substance Painter</p>
+                                        <p><em>Value:</em> 0.0 = smooth, 1.0 = rough</p>
+                                        <p><em>Format:</em> Grayscale, linear color space</p>
+                                        <p><em>Format:</em> PNG (lossless recommended)</p>
+                                    </div>
+                                </div>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>NormalMap</h4>
+                                        <p>Surface normal detail for lighting</p>
+                                        <p><em>Source:</em> Normal channel from Substance Painter</p>
+                                        <p><em>Format:</em> OpenGL format (Y axis may need inversion)</p>
+                                        <p><em>Roblox Tip:</em> Test in Studio - lighting should look correct from above</em></p>
+                                        <p><em>Format:</em> PNG (lossless essential for normals)</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>ColorMap (Alpha)</h4>
+                                        <p>Transparency/opacity</p>
+                                        <p><em>Source:</em> Alpha channel from Substance Painter</p>
+                                        <p><em>Value:</em> 0.0 = transparent, 1.0 = opaque</p>
+                                        <p><em>Format:</em> Grayscale, linear color space</p>
+                                        <p><em>Format:</em> PNG (lossless recommended)</p>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>OcclusionMap</h4>
+                                        <p>Ambient occlusion/contact shadowing</p>
+                                        <p><em>Source:</em> Ambient Occlusion channel from Substance Painter</p>
+                                        <p><em>Note:</em> Roblox combines this with its own SSAO</em></p>
+                                        <p><em>Format:</em> Grayscale, linear color space</p>
+                                        <p><em>Format:</em> PNG (lossless recommended)</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Setting Up Your Substance Project for Roblox</h2>
+                            <p>Configuring Substance 3D Painter for optimal Roblox compatibility:</p>
+
+                            <div class="steps">
+                                <h4>Project Configuration Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Color Management Settings</h4>
+                                        <p>Ensure correct color spaces:</p>
+                                        <ul>
+                                            <li>Edit > Settings > Color Management</li>
+                                            <li><strong>Color Space:</strong> Set to "sRGB" for all texture types</li>
+                                            <li><strong>Viewport Color Space:</strong> Set to "sRGB"</li>
+                                            <li><strong>Export Color Space:</strong> Set to "sRGB" for Base Color, Emissive, and Opacity maps</li>
+                                            <li><strong>Data Color Space:</strong> Set to "Linear" for Normal, Roughness, Metalness, Height, and Ambient Occlusion maps</li>
+                                            <li><em>Why:</em> Roblox expects sRGB for color data and Linear for data maps</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Default Project Settings</h4>
+                                        <p>Set up efficient defaults:</p>
+                                        <ul>
+                                            <li>Edit > Settings > Default Project</li>
+                                            <li><strong>Document Resolution:</strong> Set to 2048 (good balance for most Roblox assets)</li>
+                                            <li><strong>Document Size:</strong> 2048 x 2048 pixels</li>
+                                            <li><strong>Default Preset:</strong> Choose "PBR Metallic Roughness"</li>
+                                            <li><strong>Normal Map Format:</strong> OpenGL (matches Roblox expectation)</li>
+                                            <li><em>Why:</em> 2048 resolution provides good detail while keeping file sizes manageable</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Creating Your Project</h4>
+                                        <p>Start with the right foundation:</p>
+                                        <ul>
+                                            <li>File > New Project</li>
+                                            <li>Select your mesh (FBX, OBJ, etc.)</li>
+                                            <li>Keep resolution at 2048 (or adjust based on asset type)</li>
+                                            <li>Ensure "PBR Metallic Roughness" template is selected</li>
+                                            <li>Click "OK" to create the project</li>
+                                            <li><em>Tip: Verify your mesh has proper UVs and is scaled correctly (1 unit = 1 cm in Roblox)</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating PBR-Compliant Materials</h2>
+                            <p>Creating materials that work correctly with Roblox's lighting:</p>
+
+                            <div class="subsection">
+                                <h3>Understanding PBR Values</h4>
+                                <p>Creating physically plausible materials:</p>
+                                <div class="pro-tip">
+                                    <h4>Metalness Guidelines:</h4>
+                                    <ul>
+                                        <li>Should be 0.0 or 1.0 for most materials</li>
+                                        <li>Values in-between (0.1-0.9) are for mixed materials like rusted metal</li>
+                                        <li><em>Examples:</em> Plastic=0.0, Wood=0.0, Glass=0.0, Metal=1.0, Rusted Metal=0.3-0.7</em></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pro-tip">
+                                    <h4>Roughness Guidelines:</h4>
+                                    <ul>
+                                        <li>0.0-0.2: Very smooth (polished metal, glass, ice)</li>
+                                        <li>0.2-0.5: Smooth to medium (unpolished metal, plastic, wood)</li>
+                                        <li>0.5-0.8: Medium to rough (stone, concrete, unvarnished wood)</li>
+                                        <li>0.8-1.0: Rough (fabric, burlap, coarse sand)</li>
+                                        <li><em>Tip: Use real-world references for accurate values</em></li>
+                                    </ul>
+                                </div>
+
+                                <div class="pro-tip">
+                                    <h4>Color Guidelines:</h4>
+                                    <ul>
+                                        <li>Base color should represent true diffuse reflectance</li>
+                                        <li>For metals: Base color is the specular color</li>
+                                        <li>For non-metals: Base color is the diffuse color</li>
+                                        <li><em>Tip: Use color picking from reference photos under neutral lighting</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating a PBR Material Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Establish Base PBR Properties</h4>
+                                        <p>Set up your fundamental material properties:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for Base Color</li>
+                                            <li>Set to appropriate color (use eyedropper from reference)</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set to appropriate grayscale value (0.0 or 1.0 for pure materials)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Surface Detail</h4>
+                                        <p>Create realistic surface variation:</p>
+                                        <ul>
+                                            <li>Add Fill Layer or Paint Layer for base color variation</li>
+                                            <li>Use generators (noise, patterns) for subtle variation</li>
+                                            <li>Keep variation subtle - PBR materials should be mostly uniform</li>
+                                            <li><em>Tip: Use low opacity (10-30%) for variation layers</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Damage</h4>
+                                        <p>Where the material shows use:</p>
+                                        <ul>
+                                            <li>Use masks to control where wear appears</li>
+                                            <li>Curvature mask for edge wear</li>
+                                            <li>Position mask for dirt in crevices</li>
+                                            <li>Combine masks for complex wear patterns</li>
+                                            <li>Adjust roughness and metalness where wear occurs</li>
+                                            <li><em>Tip: Wear should follow logical patterns based on use case</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Surface Detail (Normal Map)</h4>
+                                        <p>If you have/detail to add:</p>
+                                        <ul>
+                                            <li>Either bake from high-poly mesh</li>
+                                            <li>Or use generators to create procedural normals</li>
+                                            <li>For most Roblox assets, subtle normal detail is sufficient</li>
+                                            <li><em>Tip: Don't overdo normal map strength - subtle is often better</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Exporting Textures for Roblox</h2>
+                            <p>Getting your textures ready to use in Roblox Studio:</p>
+
+                            <div class="steps">
+                                <h4>Export Configuration Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Choose Export Format</h4>
+                                        <p>Select appropriate file formats:</p>
+                                        <ul>
+                                            <li>Format: PNG (lossless, essential for normal maps)</li>
+                                            <li>Bit Depth: 8-bit is sufficient for most cases</li>
+                                            <li>Do NOT use JPEG for normal maps (artifact city)</li>
+                                            <li><em>Tip: Use PNG for all channels to ensure quality</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Set Up Export Preset</h4>
+                                        <p>Configure your export channels:</p>
+                                        <ul>
+                                            <li>File > Export Textures</li>
+                                            <li>Click "+" to add export preset</li>
+                                            <li>Name it "Roblox PBR"</li>
+                                            <li>Configure channels:</li>
+                                            <ul>
+                                                <li>Base Color → ColorMap.png</li>
+                                                <li>Metalness → MetalnessMap.png</li>
+                                                <li>Roughness → RoughnessMap.png</li>
+                                                <li>Normal → NormalMap.png</li>
+                                                <li>Ambient Occlusion → OcclusionMap.png</li>
+                                                <li>Opacity (if used) → ColorMap.png (alpha channel)</li>
+                                            </ul>
+                                            <li>Set output format to PNG for all channels</li>
+                                            <li>Set color space:</li>
+                                            <ul>
+                                                <li>sRGB for Base Color (and Occlusion if used as color)</li>
+                                                <li>Linear for Metalness, Roughness, Normal</li>
+                                            </ul>
+                                            <li><em>Tip: Save this preset for reuse on all Roblox projects</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Export Your Textures</h4>
+                                        <p>Generate the final texture files:</p>
+                                        <ul>
+                                            <li>Click "Export" button</li>
+                                            <li>Choose output folder</li>
+                                            <li>Substance will generate your texture files</li>
+                                            <li><em>Tip: Verify files were created correctly in output folder</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Verify Texture Naming</h4>
+                                        <p>Ensure files are named correctly for Roblox:</p>
+                                        <ul>
+                                            <li>ColorMap.png (Base Color)</li>
+                                            <li>MetalnessMap.png (Metalness)</li>
+                                            <li>RoughnessMap.png (Roughness)</li>
+                                            <li>NormalMap.png (Normal)</li>
+                                            <li>OcclusionMap.png (Ambient Occlusion)</li>
+                                            <li><em>Tip: Roblox will automatically use these names if placed in correct folder</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Testing in Roblox Studio</h2>
+                            <p>Verifying your textures work correctly in Roblox:</p>
+
+                            <div class="steps">
+                                <h4>Testing Procedure</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Import Textures into Roblox Studio</h4>
+                                        <ul>
+                                            <li>In Roblox Studio, select your Part or MeshPart</li>
+                                            <li>In Properties window, find SurfaceAppearance</li>
+                                            <li>If not present, add SurfaceAppearance component</li>
+                                            <li>Click each texture property and select your exported texture</li>
+                                            <li>ColorMap → ColorMap property</li>
+                                            <li>MetalnessMap → MetalnessMap property</li>
+                                            <li>RoughnessMap → RoughnessMap property</li>
+                                            <li>NormalMap → NormalMap property</li>
+                                            <li>OcclusionMap → OcclusionMap property</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Test in Different Lighting</h4>
+                                        <ul>
+                                            <li>Change lighting environment in Studio</li>
+                                            <li>Test in Outdoor, Indoor, and custom lighting</li>
+                                            <li>Check that material looks correct in all conditions</li>
+                                            <li><em>Tip: Pay attention to how specular highlights look on metallic surfaces</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Check for Common Issues</h4>
+                                        <ul>
+                                            <li><strong>Too Dark/Light:</strong> Check Base Color values</li>
+                                            <li><strong>Wrong Specular:</strong> Check Metalness and Roughness values</li>
+                                            <li><strong>Flipped Normals:</strong> Check if lighting comes from wrong direction</li>
+                                            <li><strong>Missing Details:</strong> Check if textures are properly connected</li>
+                                            <li><strong>Seams or Stretching:</strong> Check UV layout and texture repetition</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Iterate and Improve</h4>
+                                        <ul>
+                                            <li>Based on testing, go back to Substance Painter</li>
+                                            <li>Adjust values, masks, or details as needed</li>
+                                            <li>Re-export and re-test</li>
+                                            <li><em>Tip: Keep notes on what you changed for future reference</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your Roblox PBR expertise:</p>
+                            <ul>
+                                <li><a href="character-workflow.html">Learn Roblox Character Workflow</a> - Special considerations for avatars and wearables</li>
+                                <li><a href="clothing.html">Explore Roblox Clothing Creation</a> - Creating shirts, pants, and accessories</li>
+                                <li><a href="../advanced/baking.html">Learn Baking Techniques</a> - For transferring high-poly details to low-poly models</li>
+                                <li><a href="../materials/metal.html">Create Roblox Metal Materials</a> - Apply PBR principles to create realistic metals</li>
+                                <li><a href="../reference/faq.html">Check the Roblox PBR FAQ</a> - Answers to common PBR questions</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create a PBR Reference Guide</h4>
+                                <p>Keep this handy for quick reference:</p>
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Material Type</th>
+                                            <th>Base Color (sRGB)</th>
+                                            <th>Metalness</th>
+                                            <th>Roughness</th>
+                                            <th>Notes</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Polished Metal</td>
+                                            <td>#FFFFFF</td>
+                                            <td>1.0</td>
+                                            <td>0.1-0.3</td>
+                                            <td>Very reflective, sharp highlights</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Brushed Metal</td>
+                                            <td>#CCCCCC</td>
+                                            <td>1.0</td>
+                                            <td>0.3-0.5</td>
+                                            <td>Directional wear pattern</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Rusted Metal</td>
+                                            <td>#8B7355</td>
+                                            <td>0.3-0.7</td>
+                                            <td>0.6-0.8</td>
+                                            <td>Mix of metal and corrosion</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Plastic</td>
+                                            <td>#FFFFFF</td>
+                                            <td>0.0</td>
+                                            <td>0.2-0.5</td>
+                                            <td>Varies by finish (glossy/matte)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Wood</td>
+                                            <td>#8B4513</td>
+                                            <td>0.0</td>
+                                            <td>0.4-0.6</td>
+                                            <td>Varies by wood type and finish</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Fabric</td>
+                                            <td>#FFFFFF</td>
+                                            <td>0.0</td>
+                                            <td>0.6-0.9</td>
+                                            <td>Varies by weave and material</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Glass</td>
+                                            <td>#FFFFFF</td>
+                                            <td>0.0</td>
+                                            <td>0.0-0.2</td>
+                                            <td>Highly transparent, smooth</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Concrete</td>
+                                            <td>#959595</td>
+                                            <td>0.0</td>
+                                            <td>0.6-0.8</td>
+                                            <td>Rough, porous surface</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p><em>Values are starting points - adjust based on specific material references</em></p>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

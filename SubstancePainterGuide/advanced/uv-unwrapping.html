@@ -1,0 +1,1332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UV Unwrapping - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="uv-unwrapping.html" class="active">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Advanced Techniques > UV Unwrapping
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Mastering UV Unwrapping for Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Advanced</span></span>
+                            <span>Time: 40 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>UV unwrapping is the process of flattening a 3D model's surface onto a 2D plane so that textures can be applied correctly. Proper UV unwrapping is crucial for successful texturing in Substance 3D Painter, as it determines how textures will appear on your model, affects baking quality, and impacts texture efficiency. Poor UVs can lead to stretching, seams, overlapping islands, and wasted texture space. This guide will walk you through the principles of good UV unwrapping, common techniques, and best practices specifically for preparing models for Substance 3D Painter and Roblox.</p>
+
+                        <div class="callout-info">
+                            <h4>Why UV Unwrapping Matters for Roblox</h4>
+                            <p>Good UV unwrapping ensures your textures appear correctly without distortion, maximizes texture resolution efficiency, prevents baking artifacts, and creates clean, professional-looking assets. For Roblox creation, where texture resolution is often limited, efficient UV packing is especially important to get the most detail out of your textures.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding UV Fundamentals</h2>
+                            <p>What UVs are and how they work:</p>
+
+                            <div class="pro-tip">
+                                <h4>UV Mapping Fundamentals:</h4>
+                                <ul>
+                                    <li><strong>Definition:</strong> UVs are 2D coordinates that map 3D model surfaces to 2D texture space</li>
+                                    <li><strong>U and V:</strong> The horizontal and vertical axes in texture space (X and Y are used for 3D space)</li>
+                                    <li><strong>UV Island:</strong> A connected piece of the UV layout</li>
+                                    <li><strong>UV Space:</strong> Typically ranges from 0 to 1 in both U and V directions</li>
+                                    <li><strong>Texture Repeating:</strong> Coordinates outside 0-1 range cause texture repetition (tiling)</li>
+                                    <li><em>Tip: Think of UVs as a "peel" of your 3D model laid flat for texturing</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Goals of Good UV Unwrapping:</h4>
+                                <p>What makes a UV layout effective:</p>
+                                <ul>
+                                    <li><strong>No Stretching:</strong> Uniform texel density across the model</li>
+                                    <li><strong>Minimal Seams:</strong> Fewer and less visible texture seams</li>
+                                    <li><strong>Efficient Packing:</strong> Optimal use of UV space (0-1 range)</li>
+                                    <li><strong>Logical Organization:</strong> Related parts grouped together</li>
+                                    <li><strong>Proper Orientation:</strong> UVs aligned correctly for texture detail</li>
+                                    <li><strong>No Overlaps:</strong> Unless intentional for tiling textures</li>
+                                    <li><em>Tip: The best UVs are invisible - they let your textures shine without technical issues</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>UV Issues and Their Effects:</h4>
+                                <p>Common UV problems and what they cause:</p>
+                                <ul>
+                                    <li><strong>Stretching:</strong> Textures appear distorted or pulled</li>
+                                    <li><strong>Compression:</strong> Textures appear squished or low resolution</li>
+                                    <li><strong>Seams:</strong> Visible lines where UV islands meet</li>
+                                    <li><strong>Overlaps:</strong> Multiple UV islands occupying same texture space</li>
+                                    <li><strong>Wasted Space:</strong> Inefficient packing lowering effective resolution</li>
+                                    <li><strong>Flipped UVs:</strong> Textures appearing mirrored or inverted</li>
+                                    <li><em>Tip: Always check your UVs with a checker texture before texturing</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>UV Unwrapping Principles</h2>
+                            <p>Core concepts for effective UV layout:</p>
+
+                            <div class="subsection">
+                                <h3>Texel Density</h4>
+                                <p>Maintaining consistent texture resolution:</p>
+                                <div class="pro-tip">
+                                    <h4>Texel Density Guidelines:</h4>
+                                    <ul>
+                                        <li><strong>Definition:</strong> Number of texture pixels per unit of 3D space</li>
+                                        <li><strong>Consistency:</strong> Similar texel density across all parts of model</li>
+                                        <li><strong>Measurement:</strong> Usually measured in pixels per meter or pixels per centimeter</li>
+                                        <li><strong>Roblox Consideration:</strong> Balance quality with texture size limits</li>
+                                        <li><em>Tip: Use a checker texture to visually inspect texel density uniformity</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Seam Placement</h4>
+                                <p>Strategic placement of UV seams:</p>
+                                <div class="pro-tip">
+                                    <h4>Seam Placement Rules:</h4>
+                                    <ul>
+                                        <li>Hide seams in less visible areas (underarms, inside legs, back)</li>
+                                        <li>Place seams along hard edges or natural breaks</li>
+                                        <li>Avoid placing seams across curved surfaces where distortion is noticeable</li>
+                                        <li>Consider symmetry - mirror UVs can reduce seams</li>
+                                        <li>Keep seams away from areas with fine detail or text</li>
+                                        <li><em>Tip: Think like a clothing designer - where would you sew the garment?</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>UV Island Organization</h4>
+                                <p>Organizing your UV layout logically:</p>
+                                <div class="pro-tip">
+                                    <h4>Organization Strategies:</h4>
+                                    <ul>
+                                        <li>Group similar materials together (all metal parts, all fabric, etc.)</li>
+                                        <li>Orient islands consistently (all facing same direction when possible)</li>
+                                        <li>Leave appropriate padding between islands (typically 2-4 pixels)</li>
+                                        <li>Scale islands by importance (more visible areas get more UV space)</li>
+                                        <li>Consider texture directionality (wood grain, fabric weave, etc.)</li>
+                                        <li><em>Tip: Organization makes texturing much easier and more efficient</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>UV Unwrapping Workflow</h2>
+                            <p>Step-by-step approach to creating good UVs:</p>
+
+                            <div class="steps">
+                                <h4>UV Unwrapping Process Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Analyze Your Model</h4>
+                                        <p>Understand what you're working with:</p>
+                                        <ul>
+                                            <li>Identify symmetrical parts that can be mirrored</li>
+                                            <li>Determine logical break points for seams</li>
+                                            <li>Identify high-detail areas that need more resolution</li>
+                                            <li>Note any parts with special texture requirements (logs, text, etc.)</li>
+                                            <li><em>Tip: Spend time planning before you start unwrapping</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Clean Up Your Geometry</h4>
+                                        <p>Prepare your model for unwrapping:</p>
+                                        <ul>
+                                            <li>Remove unnecessary geometry (hidden interiors, etc.)</li>
+                                            <li>Ensure proper edge flow for deformations (if applicable)</li>
+                                            <li>Fix any non-manifold geometry or holes</li>
+                                            <li>Apply transformations (reset scale, rotation, position)</li>
+                                            <li><em>Tip: Clean geometry unwraps much better than messy geometry</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Choose Your Unwrapping Method</h4>
+                                        <p>Select appropriate technique for each part:</p>
+                                        <ul>
+                                            <li>Planar projection: Best for flat surfaces</li>
+                                            <li>Cylindrical projection: Best for tube-like shapes</li>
+                                            <li>Spherical projection: Best for ball-like shapes</li>
+                                            <li>Unwrap from existing seams: Builds on your planned seam locations</li>
+                                            <li>Peel/stitch methods: Organic unwrapping for complex shapes</li>
+                                            <li><em>Tip: Different parts of your model may need different unwrapping approaches</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Initial Unwrap and Relax</h4>
+                                        <p>Create initial UV layout and improve it:</p>
+                                        <ul>
+                                            <li>Apply chosen projection methods</li>
+                                            <li>Use relaxation algorithms to reduce stretching</li>
+                                            <li>Iteratively relax and adjust until stretching is minimized</li>
+                                            <li>Check with checker texture throughout process</li>
+                                            <li><em>Tip: Multiple relaxation passes often yield better results than one aggressive pass</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Adjust and Optimize</h4>
+                                        <p>Refine your UV layout:</p>
+                                        <ul>
+                                            <li>Move, rotate, and scale islands for better packing</li>
+                                            <li>Fix any remaining stretching or compression issues</li>
+                                            <li>Ensure proper padding between islands (2-4 pixels typically)</li>
+                                            <li>Consider rotating islands to better fill space</li>
+                                            <li><em>Tip: UV optimization is like solving a puzzle - take your time</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">6</div>
+                                    <div class="step-content">
+                                        <h4>Final Checks and Validation</h4>
+                                        <p>Verify your UVs are ready for texturing:</p>
+                                        <ul>
+                                            <li>Check with checker texture for stretching/compression</li>
+                                            <li>Verify no unwanted overlaps (unless intentional for tiling)</li>
+                                            <li>Check texel density consistency across model</li>
+                                            <li>Ensure seams are placed appropriately</li>
+                                            <li>Verify UVs are within 0-1 space (unless tiling intended)</li>
+                                            <li><em>Tip: Bake a quick normal map to check for UV-related artifacts</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">7</div>
+                                    <div class="step-content">
+                                        <h4>Export and Import to Substance Painter</h4>
+                                        <p>Get your UVs into Substance Painter:</p>
+                                        <ul>
+                                            <li>Export your model with UVs intact (FBX, OBJ, etc.)</li>
+                                            <li>Import into Substance Painter as your low-poly mesh</li>
+                                            <li>Verify UVs look correct in Substance Painter viewport</li>
+                                            <li>Test with a simple material to confirm no issues</li>
+                                            <li><em>Tip: Always double-check UVs after import - sometimes export settings can affect them</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

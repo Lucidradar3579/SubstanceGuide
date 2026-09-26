@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baking Problems - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="bake-problems.html" class="active">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Troubleshooting > Baking Problems
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Solving Baking Issues in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Advanced</span></span>
+                            <span>Time: 40 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>Baking is one of the most powerful features in Substance 3D Painter, but it can also be one of the most frustrating when things go wrong. This guide focuses specifically on common baking problems, their causes, and step-by-step solutions to get your bakes working perfectly for Roblox assets.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Baking Troubleshooting Matters</h4>
+                            <p>Successful baking is essential for creating detailed, performant Roblox assets. Understanding how to fix baking issues saves time and ensures your assets maintain high quality while meeting platform requirements.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Common Baking Artifacts</h2>
+                            <p>Identifying and fixing visual issues in baked maps:</p>
+
+                            <div class="subsection">
+                                <h3>Black Spots or Holes in Normal Maps</h4>
+                                <p>Causes and solutions for missing data in bakes:</p>
+                                <div class="pro-tip">
+                                    <h4>Black Spot Solutions:</h4>
+                                    <ul>
+                                        <li>Increase max tracing distance in baker settings</li>
+                                        <li>Check for interfering geometry between high and low poly</li>
+                                        <li>Ensure models share the same origin and are properly aligned</li>
+                                        <li>Use a cage to control ray casting distance</li>
+                                        <li><em>Tip: Black spots occur when rays can't reach the high poly</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Wavy or Distorted Normals</h4>
+                                <p>Fixing wavy normal map issues:</p>
+                                <div class="pro-tip">
+                                    <h4>Wavy Normal Solutions:</h4>
+                                    <ul>
+                                        <li>Check that your low poly has sufficient geometry</li>
+                                        <li>Ensure your UVs have proper padding (2-4 pixels)</li>
+                                        <li>Try baking with a lower resolution first to test</li>
+                                        <li>Verify your high poly doesn't have extremely thin geometry</li>
+                                        <li><em>Tip: Wavy normals often indicate UV or mesh issues</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Seams in Baked Maps</h4>
+                                <p>Eliminating visible seams in your bakes:</p>
+                                <div class="pro-tip">
+                                    <h4>Seam Elimination:</h4>
+                                    <ul>
+                                        <li>Increase padding between UV islands</li>
+                                        <li>Check for UV island overlaps or flipped UVs</li>
+                                        <li>Ensure your models are properly sealed (no holes)</li>
+                                        <li>Try using a hard edge workflow for problematic areas</li>
+                                        <li><em>Tip: Seams usually come from UV issues, not baking settings</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Low Contrast or Flat Bakes</h4>
+                                <p>Increasing detail in your baked maps:</p>
+                                <div class="pro-tip">
+                                    <h4>Low Contrast Solutions:</h4>
+                                    <ul>
+                                        <li>Check that your high poly actually has the detail you expect</li>
+                                        <li>Verify your low poly matches the silhouette of your high poly</li>
+                                        <li>Increase baking resolution if working with fine detail</li>
+                                        <li>Consider splitting your mesh into multiple texture sets</li>
+                                        <li><em>Tip: Baking can only transfer detail that exists on the high poly</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Technical Baking Problems</h2>
+                            <p>Software and technical issues during baking:</p>
+
+                            <div class="subsection">
+                                <h3>Baking Fails or Crashes</h4>
+                                <p>Solutions for when the bake process won't complete:</p>
+                                <div class="pro-tip">
+                                    <h4>Baking Failure Solutions:</h4>
+                                    <ul>
+                                        <li>Reduce document resolution and try again</li>
+                                        <li>Bake fewer map types at once to reduce memory usage</li>
+                                        <li>Check for non-manifold geometry or holes in your meshes</li>
+                                        <li>Ensure you have sufficient disk space and RAM</li>
+                                        <li><em>Tip: Try baking a simple test scene first to isolate the issue</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Long Baking Times</h4>
+                                <p>Speeding up the baking process:</p>
+                                <div class="pro-tip">
+                                    <h4>Baking Speed Optimization:</h4>
+                                    <ul>
+                                        <li>Use an SSD for your project files and cache</li>
+                                        <li>Close unnecessary applications to free up system resources</li>
+                                        <li>Consider baking at lower resolutions for preview work</li>
+                                        <li>Use simpler collision meshes if using complex ones for baking</li>
+                                        <li><em>Tip: Baking time increases exponentially with resolution</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Inconsistent Baking Results</h4>
+                                <p>Getting reliable, repeatable bakes:</p>
+                                <div class="pro-tip">
+                                    <h4>Consistency Solutions:</h4>
+                                    <ul>
+                                        <li>Always use the same baker settings for similar projects</li>
+                                        <li>Save your baker presets for reuse</li>
+                                        <li>Ensure your scene setup is identical between bakes</li>
+                                        <li>Check for accidental movement of high or low poly meshes</li>
+                                        <li><em>Tip: Small changes in setup can lead to big differences in results</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Roblox-Specific Baking Considerations</h4>
+                            <p>Optimizing bakes for Roblox platforms:</p>
+
+                            <div class="subsection">
+                                <h3>Baking for Roblox Performance</h4>
+                                <p>Creating efficient bakes for Roblox:</p>
+                                <div class="pro-tip">
+                                    <h4>Roblox Baking Guidelines:</h4>
+                                    <ul>
+                                        <li>Consider your target platform (PC, mobile, console)</li>
+                                        <li>Balance quality with texture size and memory usage</li>
+                                        <li>Test your baked assets in Roblox Studio early</li>
+                                        <li>Use appropriate texture compression for your target platform</li>
+                                        <li><em>Tip: Mobile Roblox has stricter texture limits than PC</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Normal Map Format for Roblox</h4>
+                                <p>Ensuring your normal maps work correctly in Roblox:</p>
+                                <div class="pro-tip">
+                                    <h4>Normal Map Format:</h4>
+                                    <ul>
+                                        <li>Roblox typically expects OpenGL normal map format</li>
+                                        <li>Check your project settings when creating a new project</li>
+                                        <li>Verify the green channel direction in your normal map</li>
+                                        <li>Test normal maps in Roblox Studio to confirm direction</li>
+                                        <li><em>Tip: Incorrect normal map format causes lighting to look wrong</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Step-by-Step Baking Troubleshooting Workflow</h4>
+                            <p>Systematic approach to solving baking issues:</p>
+
+                            <div class="steps">
+                                <h4>Baking Troubleshooting Process</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Identify the Problem</h4>
+                                        <p>Clearly define what's wrong with your bake:</p>
+                                        <ul>
+                                            <li>Which map type is affected (normal, AO, curvature, etc.)?</li>
+                                            <li>Where exactly is the problem occurring?</li>
+                                            <li>Is it consistent or random?</li>
+                                            <li>Does it affect the entire map or specific areas?</li>
+                                            <li><em>Tip: Take screenshots to document the issue</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Check the Basics</h4>
+                                        <p>Verify your fundamental setup:</p>
+                                        <ul>
+                                            <li>Are your high and low poly properly aligned?</li>
+                                            <li>Do they share the same origin?</li>
+                                            <li>Is your low poly UV unwrapped correctly?</li>
+                                            <li>Do you have sufficient padding between UV islands?</li>
+                                            <li><em>Tip: 80% of baking issues stem from basic setup problems</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Isolate Variables</h4>
+                                        <p>Test one change at a time:</p>
+                                        <ul>
+                                            <li>Start with default baker settings</li>
+                                            <li>Change only one parameter at a time</li>
+                                            <li>Bake a small test area first when possible</li>
+                                            <li>Keep detailed notes of what you change and the results</li>
+                                            <li><em>Tip: Scientific method works great for troubleshooting</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Apply Solutions Systematically</h4>
+                                        <p>Work through potential fixes:</p>
+                                        <ul>
+                                            <li>Start with the most likely causes (UV issues, alignment)</li>
+                                            <li>Move to more complex solutions if needed</li>
+                                            <li>Don't give up after one failed attempt</li>
+                                            <li>Consider alternative approaches (different projection methods, etc.)</li>
+                                            <li><em>Tip: Sometimes the solution is combining multiple approaches</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Verify and Document</h4>
+                                        <p>Confirm your solution works:</p>
+                                        <ul>
+                                            <li>Test the fix on your full project</li>
+                                            <li>Check that you haven't introduced new problems</li>
+                                            <li>Document what worked for future reference</li>
+                                            <li>Save your successful baker settings as a preset</li>
+                                            <li><em>Tip: Prevention is better than fixing the same issue repeatedly</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+</article>
+</div>
+</div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

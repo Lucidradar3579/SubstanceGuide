@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylized Texturing - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html" class="active">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Advanced Techniques > Stylized Texturing
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Mastering Stylized Texturing in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-secondary">Intermediate</span> → <span class="badge badge-primary">Advanced</span></span>
+                            <span>Time: 45 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>Stylized texturing focuses on creating expressive, artistic textures that prioritize visual appeal and readability over strict realism. This approach is extremely popular in Roblox development, where unique visual styles help games stand out in a crowded marketplace. Stylized textures can range from cute and cartoony to bold and graphic, often using exaggerated proportions, simplified details, and creative color choices to create memorable assets.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Stylized Texturing Matters for Roblox</h4>
+                            <p>Stylized art styles allow Roblox creators to develop distinctive visual identities that make their games instantly recognizable. These styles often perform better than photorealistic approaches since they can convey detail through clever artistic techniques rather than relying on high polygon counts or texture resolutions. Stylized textures also age better and maintain their appeal across different hardware capabilities.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding Stylized Texturing</h2>
+                            <p>What defines the stylized approach:</p>
+
+                            <div class="pro-tip">
+                                <h4>Stylized Texturing Characteristics:</h4>
+                                <ul>
+                                    <li><strong>Exaggeration:</strong> Emphasizing key features and simplifying others</li>
+                                    <li><strong>Readability:</strong> Designing for clear recognition at various distances</li>
+                                    <li><strong>Personality:</strong> Strong visual character and charm</li>
+                                    <li><strong>Consistency:</strong> Unified style across all assets in a game</li>
+                                    <li><strong>Efficiency:</strong> Achieving visual impact with modest resources</li>
+                                    <li><strong>Expression:</strong> Conveying mood, tone, and artistic vision</li>
+                                    <li><em>Tip: The best stylized work feels intentional, not like a failed attempt at realism</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Popular Stylized Approaches for Roblox:</h4>
+                                <p>Common stylistic directions in Roblox creation:</p>
+                                <ul>
+                                    <li><strong>Cartoon/Comic:</strong> Bold outlines, flat colors, expressive shapes</li>
+                                    <li><strong>Chibi/Kawaii:</strong> Cute, exaggerated proportions, soft features</li>
+                                    <li><strong>Low Poly/Pixel Art:</strong> Geometric simplicity, limited color palettes</li>
+                                    <li><strong>Handcrafted/Toy:</strong> Visible seams, stitches, and handmade qualities</li>
+                                    <li><strong>Graphic/Bold:</strong> Strong shapes, limited detailing, impactful silhouettes</li>
+                                    <li><strong>Fantasy/Whimsical:</strong> Magical elements, unusual proportions, creative designs</li>
+                                    <li><em>Tip: Study successful Roblox games to see what stylistic approaches work well</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Core Principles of Stylized Texturing</h2>
+                            <p>Fundamental concepts that guide effective stylization:</p>
+
+                            <div class="subsection">
+                                <h3>Silhouette and Readability</h4>
+                                <p>Ensuring your assets are recognizable:</p>
+                                <div class="pro-tip">
+                                    <h4>Silhouette Guidelines:</h4>
+                                    <ul>
+                                        <li>Assets should be recognizable from their silhouette alone</li>
+                                        <li>Important details should be visible in the silhouette</li>
+                                        <li>Avoid cluttering silhouettes with unnecessary complexity</li>
+                                        <li>Use positive and negative space effectively</li>
+                                        <li>Test silhouettes at various distances and angles</li>
+                                        <li><em>Tip: If you can't tell what it is in silhouette, it needs more work</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Color Theory for Stylization</h4>
+                                <p>Using color effectively in stylized work:</p>
+                                <div class="pro-tip">
+                                    <h4>Stylized Color Principles:</h4>
+                                    <ul>
+                                        <li>Limited palettes often work better than complex ones</li>
+                                        <li>Use color to convey mood and personality</li>
+                                        <li>Consider color harmony and contrast relationships</li>
+                                        <li>Use brighter colors for focal points and important details</li>
+                                        <li>Consider cultural and psychological color associations</li>
+                                        <li><em>Tip: A well-chosen limited palette can be more powerful than unlimited colors</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Detail Hierarchy</h4>
+                                <p>Prioritizing what gets detailed and what stays simple:</p>
+                                <div class="pro-tip">
+                                    <h4>Detail Prioritization Guidelines:</h4>
+                                    <ul>
+                                        <li>Focus detail on areas that convey function or personality</li>
+                                        <li>Simplify areas that don't contribute to recognition or appeal</li>
+                                        <li>Use detail to guide the viewer's eye to important features</li>
+                                        <li>Consider what players will actually notice during gameplay</li>
+                                        <li>Balance detailed areas with simpler resting areas for the eye</li>
+                                        <li><em>Tip: Not every surface needs equal detail - prioritize strategically</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Stylized Texturing Techniques</h2>
+                            <p>Specific approaches for creating stylized effects:</p>
+
+                            <div class="subsection">
+                                <h3>Exaggeration and Simplification</h4>
+                                <p>Playing with proportions and detail levels:</p>
+                                <div class="pro-tip">
+                                    <h4>Exaggeration Techniques:</h4>
+                                    <ul>
+                                        <li>Enlarge important features (eyes, wheels, weapons, etc.)</li>
+                                        <li>Simplify or remove less important details</li>
+                                        <li>Play with proportions to create cute, powerful, or funny effects</li>
+                                        <li>Use baby schema principles (large eyes, small nose/chin) for cuteness</li>
+                                        <li>Consider what exaggerations serve your game's tone and gameplay</li>
+                                        <li><em>Tip: Exaggeration should serve a purpose, not be random</em></li>
+                                    </ul>
+                                </div>
+
+                                <h4>Simplification Techniques:</h4>
+                                <ul>
+                                    <li>Reduce complex shapes to their essential forms</li>
+                                    <li>Use basic geometric shapes as building blocks</li>
+                                    <li>Remove unnecessary bolts, seams, and textures</li>
+                                    <li>Create repeating patterns instead of unique details</li>
+                                    <li>Use symmetry and repetition to create order</li>
+                                    <li><em>Tip: Simplification makes assets read better and often perform better</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Outline and Border Techniques</h4>
+                                <p>Using lines to define and enhance shapes:</p>
+                                <div class="pro-tip">
+                                    <h4>Outline Applications:</h4>
+                                    <ul>
+                                        <li>Solid outlines: Classic cartoon/comic book look</li>
+                                        <li>Varied width outlines: More dynamic, hand-drawn feel</li>
+                                        <li>Color outlines: Outlines that contrast or complement fill colors</li>
+                                        <li>Soft outlines: Subtle definition without harsh lines</li>
+                                        <li>No outlines: Clean, modern look relying on color and shading</li>
+                                        <li><em>Tip: Outline style should match your overall artistic direction</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Texture Simulation in Stylized Work</h4>
+                                <p>Creating material impressions stylistically:</p>
+                                <div class="pro-tip">
+                                    <h4>Stylized Texture Approaches:</h4>
+                                    <ul>
+                                        <li>Suggest texture rather than replicating it exactly</li>
+                                        <li>Use pattern and repetition to imply material qualities</li>
+                                        <li>Paint texture in a way that matches your overall style</li>
+                                        <li>Consider how texture reads in silhouette and at distance</li>
+                                        <li>Use texture to add personality, not just realism</li>
+                                        <li><em>Tip: In stylized work, texture is often more about feeling than accuracy</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Lighting and Shadow in Stylized Work</h4>
+                                <p>Stylized approaches to illumination:</p>
+                                <div class="pro-tip">
+                                    <h4>Stylized Lighting Techniques:</h4>
+                                    <ul>
+                                        <li>Cell shading: Sharp transitions between light and shadow</li>
+                                        <li>Flat lighting: Minimal shading with consistent base color</li>
+                                        <li>Directional lighting: Strong light from one clear direction</li>
+                                        <li>Ambient lighting: Even lighting with minimal shadows</li>
+                                        <li>Expressive lighting: Using light to convey mood and time of day</li>
+                                        <li><em>Tip: Lighting style greatly influences the overall feel of your stylized work</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Stylized Texturing Workflow</h2>
+                            <p>Step-by-step approach to creating stylized textures:</p>
+
+                            <div class="steps">
+                                <h4>Stylized Texturing Process Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Define Your Stylistic Direction</h4>
+                                        <p>Establish the artistic goals for your project:</p>
+                                        <ul>
+                                            <li>Gather reference images that capture your desired style</li>
+                                            <li>Create a mood board defining key characteristics</li>
+                                            <li>Define your color palette early in the process</li>
+                                            <li>Determine your level of exaggeration and simplification</li>
+                                            <li>Decide on outline, lighting, and texture approaches</li>
+                                            <li><em>Tip: A clear stylistic direction prevents inconsistent results</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Block in Base Shapes and Colors</h4>
+                                        <p>Establish the foundational elements:</p>
+                                        <ul>
+                                            <li>Create fill layers for base colors per material area</li>
+                                            <li>Block in exaggerated proportions if applicable</li>
+                                            <li>Apply your chosen color palette consistently</li>
+                                            <li>Set up any outline effects you plan to use</li>
+                                            <li><em>Tip: Get the foundations right before adding details</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div <|tool_calls_section_begin|>3</div>
+                                    <div class="step-content">
+                                        <h4>Apply Stylized Lighting and Shadow</h4>
+                                        <p>Create dimensionality through your chosen lighting approach:</p>
+                                        <ul>
+                                            <li>Apply your selected lighting style (cell shaded, flat, etc.)</li>
+                                            <li>Paint shadows and highlights according to your lighting rules</li>
+                                            <li>Keep lighting consistent across all assets in your project</li>
+                                            <li>Consider how lighting affects readability and mood</li>
+                                            <li><em>Tip: Consistent lighting makes your world feel cohesive</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Stylized Details and Texture</h4>
+                                        <p>Apply details that enhance your stylistic direction:</p>
+                                        <ul>
+                                            <li>Add details that support exaggeration and readability</li>
+                                            <li>Simplify or remove details that conflict with your style</li>
+                                            <li>Apply texture in a way that matches your stylistic approach</li>
+                                            <li>Use details to guide the eye and enhance personality</li>
+                                            <li><em>Tip: Every detail should serve your overall stylistic goal</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Refine and Unify</h4>
+                                        <p>Ensure consistency and polish your stylized work:</p>
+                                        <ul>
+                                            <li>Check all assets for stylistic consistency</li>
+                                            <li>Adjust colors, details, and effects to match your direction</li>
+                                            <li>Ensure outlines, lighting, and texture approaches are unified</li>
+                                            <li>Test assets together to see how they work as a set</li>
+                                            <li><em>Tip: Consistency is what makes a collection feel intentionally designed</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">6</div>
+                                    <div class="step-content">
+                                        <h4>Finalize and Export</h4>
+                                        <p>Prepare your stylized assets for use:</p>
+                                        <ul>
+                                            <li>Make final adjustments to color, contrast, and readability</li>
+                                            <li>Ensure all textures export correctly with proper settings</li>
+                                            <li>Test in Roblox Studio to confirm appearance and performance</li>
+                                            <li>Consider creating stylized smart materials for reuse</li>
+                                            <li><em>Tip: Document your stylistic choices for future reference</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

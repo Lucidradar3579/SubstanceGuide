@@ -1,0 +1,598 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generators - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="layers.html">Understanding Layers</a></li>
+                    <li><a href="smart-materials.html">Smart Materials</a></li>
+                    <li><a href="masks.html">Masks</a></li>
+                    <li><a href="generators.html" class="active">Generators</a></li>
+                    <li><a href="fill-layers.html">Fill Layers</a></li>
+                    <li><a href="paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Substance 3D Painter Basics > Generators
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Understanding Generators in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span> → <span class="badge badge-secondary">Intermediate</span></span>
+                            <span>Time: 30 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Generators are procedural algorithms that create textures and patterns based on your mesh's geometry. They are the engines behind Smart Materials and intelligent masking, allowing you to create complex, adaptive details that automatically respond to your model's shape. This guide covers all major generator types and how to use them effectively for Roblox asset creation.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Generators Matter for Roblox Workflows</h4>
+                            <p>Generators allow you to create details that automatically adapt to your mesh - wear on edges, dirt in crevices, scratches on high-contact areas - without manual painting. This saves tremendous time and ensures consistency across similar assets.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Generator Fundamentals</h2>
+                            <p>Understanding how generators work:</p>
+
+                            <div class="pro-tip">
+                                <h4>How Generators Work:</h4>
+                                <ul>
+                                    <li>Generators analyze your mesh geometry (curvature, position, normals, etc.)</li>
+                                    <li>They create procedural textures based on this analysis</li>
+                                    <li>Output is typically grayscale values suitable for masks</li>
+                                    <li>Can be used in Fill Layers, Paint Layers, or to drive masks</li>
+                                    <li><em>Roblox Tip: Think of generators as "smart brushes" that know where to apply effects based on your model's shape</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Generator Categories:</h4>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Geometry-Based</h4>
+                                        <p>Based on mesh shape and topology</p>
+                                        <ul>
+                                            <li>Curvature - Edge and corner detection</li>
+                                            <li>Position - Height and depth information</li>
+                                            <li>Normal - Surface orientation</li>
+                                            <li>Ambient Occlusion - Light occlusion in crevices</li>
+                                            <li>Thickness - Mesh thickness variation</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Noise-Based</h4>
+                                        <p>Procedural noise patterns</p>
+                                        <ul>
+                                            <li>Gaussian Noise - Classic grain</li>
+                                            <li>Perlin Noise - Organic patterns</li>
+                                            <li>Simplex Noise - Efficient Perlin alternative</li>
+                                            <li>White Noise - Random values</li>
+                                            <li>Crackle Noise - Cracked surface patterns</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Pattern-Based</h4>
+                                        <p>Structured patterns and designs</p>
+                                        <ul>
+                                            <li>Grids - Lines and intersections</li>
+                                            <li>Bricks - Masonry patterns</li>
+                                            <li>Tiles - Regular repeating patterns</li>
+                                            <li>Circles - Radial and circular patterns</li>
+                                            <li>Shapes - Geometric shapes (triangles, hexagons, etc.)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Filter-Based</h4>
+                                        <p>Modified versions of other maps</p>
+                                        <ul>
+                                            <li>Blur - Smoothing</li>
+                                            <li>Sharpen - Edge enhancement</li>
+                                            <li>Gradient - Directional changes</li>
+                                            <li>Histogram - Value remapping</li>
+                                            <li>Levels - Contrast and brightness</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Special Purpose</h4>
+                                        <p>Unique and specialized generators</p>
+                                        <ul>
+                                            <li>From Mesh - Use existing texture maps</li>
+                                            <li>User Grayscale - Import custom masks</li>
+                                            <li>Color to Grayscale - Convert color information</li>
+                                            <li>Interpolate - Blend between two inputs</li>
+                                            <li>Histogram Scan - Advanced value analysis</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Geometry-Based Generators</h2>
+                            <p>The most useful generators for intelligent, adaptive detailing:</p>
+
+                            <div class="subsection">
+                                <h3>Curvature Generator</h4>
+                                <p>Detects edges, corners, and crevices:</p>
+                                <div class="pro-tip">
+                                    <h4>Curvature Types:</h4>
+                                    <ul>
+                                        <li><strong>Mean Curvature:</strong> Average of all curvatures (best for wear detection)</li>
+                                        <li><strong>Gaussian Curvature:</strong> Product of curvatures (good for sharp corners)</li>
+                                        <li><strong>Maximum Curvature:</strong> Highest curvature value</li>
+                                        <li><strong>Minimum Curvature:</strong> Lowest curvature value</li>
+                                    </ul>
+                                </div>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Type:</strong> Which curvature algorithm to use</li>
+                                    <li><strong>Distance:</strong> How far to sample for curvature calculation</li>
+                                    <li><strong>Balance:</strong> Shift the output range (0-1)</li>
+                                    <li><strong>Contrast:</strong> Increase difference between high and low values</li>
+                                    <li><em>Roblox Use:</em> Edge wear, scratches, paint chipping on corners and edges</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Position Generator</h4>
+                                <p>Based on vertex height/depth:</p>
+                                <div class="pro-tip">
+                                    <h4>Position Modes:</h4>
+                                    <ul>
+                                        <li><strong>Absolute:</strong> Actual world position</li>
+                                        <li><strong>Relative:</strong> Position within object's bounding box</li>
+                                        <li><strong>Normalized:</strong> 0-1 range within object</li>
+                                    </ul>
+                                </div>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Axis:</strong> X, Y, or Z axis to measure</li>
+                                    <li><strong>Direction:</strong> Positive or negative direction</li>
+                                    <li><strong>Tolerance:</strong> How strict the selection is</li>
+                                    <li><strong>Blur:</strong> Soften the transition</li>
+                                    <li><em>Roblox Use:</em> Dirt in crevices (low points), wear on high points, snow accumulation</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Ambient Occlusion Generator</h4>
+                                <p>Simulates light occlusion in crevices:</p>
+                                <div class="pro-tip">
+                                    <h4>AO Types:</h4>
+                                    <ul>
+                                        <li><strong>Ray-Based:</strong> Accurate but slower</li>
+                                        <li><strong>Vertex-Based:</strong> Faster approximation</li>
+                                        <li><strong>Multi-Bounce:</strong> Multiple light bounces for realism</li>
+                                    </ul>
+                                </div>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Distance:</strong> Max ray distance for occlusion check</li>
+                                    <li><strong>Subdivision:</strong> Mesh subdivision for quality</li>
+                                    <li><strong>Spread:</strong> How far AO influence spreads</li>
+                                    <li><strong>Substance:</strong> How much to darken occluded areas</li>
+                                    <li><em>Roblox Use:</em> Dirt, grime, moss in corners, joints, and enclosed areas</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Normal Generator</h4>
+                                <p>Based on surface normal direction:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Axis:</strong> X, Y, or Z component to isolate</li>
+                                    <li><strong>Direction:</strong> Positive or negative direction</li>
+                                    <li><strong>Tolerance:</strong> How close to axis to consider</li>
+                                    <li><em>Roblox Use:</em> Isolating tops of surfaces (water accumulation), sides (directional wear)</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Thickness Generator</h4>
+                                <p>Based on mesh thickness:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Mode:</strong> Absolute or relative thickness</li>
+                                    <li><strong>Invert:</strong> Thin vs thick areas</li>
+                                    <li><strong>Blur:</strong> Soften transitions</li>
+                                    <li><em>Roblox Use:</em> Edge highlighting on thin materials, wear pattern variation</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Noise-Based Generators</h2>
+                            <p>Creating organic, random patterns:</p>
+
+                            <div class="subsection">
+                                <h3>Gaussian Noise</h4>
+                                <p>Classic statistical noise:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Balance:</strong> Shift the range (0-1)</li>
+                                    <li><strong>Contrast:</strong> Increase difference between values</li>
+                                    <li><strong>Scale:</strong> Size of noise features</li>
+                                    <li><em>Roblox Use:</em> Base noise for materials, variation in uniform surfaces</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Perlin and Simplex Noise</h4>
+                                <p>Organic, coherent noise patterns:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Scale:</strong> Size of noise features</li>
+                                    <li><strong>Offset:</strong> Move the noise pattern</li>
+                                    <li><strong>Octaves:</strong> Complexity (more = more detail)</li>
+                                    <li><strong>Persistence:</strong> How much each octave contributes</li>
+                                    <li><em>Roblox Use:</em> Organic textures like stone, wood grain, fabric</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Crackle Noise</h4>
+                                <p>Creates cracked surface patterns:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Scale:</strong> Size of crack features</li>
+                                    <li><strong>Stretch:</strong> Distort the pattern</li>
+                                    <li><strong>Offset:</strong> Move the pattern</li>
+                                    <li><strong>Relaxation:</strong> How much to smooth cracks</li>
+                                    <li><em>Roblox Use:</em> Dry earth, cracked paint, aged ceramics</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>White Noise</h4>
+                                <p>Pure random values:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Scale:</strong> Size of noise features</li>
+                                    <li><strong>Offset:</strong> Move the pattern</li>
+                                    <li><em>Roblox Use:</em> Television static, certain metal finishes, deliberate randomness</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Pattern-Based Generators</h2>
+                            <p>Creating structured, repeating patterns:</p>
+
+                            <div class="subsection">
+                                <h3>Grid Generator</h4>
+                                <p>Creates intersecting lines:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Scale:</strong> Size of grid cells</li>
+                                    <li><strong>Offset:</strong> Move the grid pattern</li>
+                                    <li><strong>Angle:</strong> Rotate the grid</li>
+                                    <li><strong>Thickness:</strong> Width of grid lines</li>
+                                    <li><em>Roblox Use:</em> Technical surfaces, flooring, industrial designs</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Bricks Generator</h4>
+                                <p>Creates masonry patterns:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Scale:</strong> Size of bricks</li>
+                                    <li><strong>Offset:</strong> Move the pattern</li>
+                                    <li><strong>Angle:</strong> Rotate the pattern</li>
+                                    <li><strong>Row Offset:</strong> Stagger rows (brick bond)</li>
+                                    <li><strong>Mortar Size:</strong> Width of mortar lines</li>
+                                    <li><em>Roblox Use:</em> Walls, floors, paths, construction elements</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Tiles Generator</h4>
+                                <p>Creates regular repeating patterns:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Scale:</strong> Size of tiles</li>
+                                    <li><strong>Offset:</strong> Move the pattern</li>
+                                    <li><strong>Angle:</strong> Rotate the pattern</li>
+                                    <li><strong>Aspect Ratio:</strong> Width to height ratio</li>
+                                    <li><em>Roblox Use:</em> Bathroom tiles, kitchen backsplashes, flooring</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Circles Generator</h4>
+                                <p>Creates radial and circular patterns:</p>
+                                <p><strong>Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Scale:</strong> Size of circles</li>
+                                    <li><strong>Offset:</strong> Move the pattern</li>
+                                    <li><strong>Angle:</strong> Rotate the pattern</li>
+                                    <li><strong>Thickness:</strong> Width of circle lines</li>
+                                    <li><strong>Fill:</strong> Solid circles vs outlines</li>
+                                    <li><em>Roblox Use:</em> Dials, gauges, decorative elements, mechanical parts</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Practical Generator Examples for Roblox</h2>
+                            <p>Real-world examples of how to use generators effectively:</p>
+
+                            <div class="subsection">
+                                <h3>Metal Material Examples</h4>
+                                <p>Creating realistic metal materials:</p>
+                                <div class="steps">
+                                    <h4>Brushed Metal</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Directional Brushing Effect</h4>
+                                            <p>Create brushed metal appearance:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for roughness variation</li>
+                                                <li>Set content to "Gradient" generator</li>
+                                                <li>Set gradient to Linear</li>
+                                                <li>Set angle to desired brushing direction (e.g., 0° for horizontal)</li>
+                                                <li>Adjust balance and contrast for subtle effect</li>
+                                                <li><em>Roblox Tip: Use low contrast (10-20%) for subtle brushing</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Adding Edge Wear</h4>
+                                            <p>Where metal shows use:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for wear (lighter metal)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Generate mask using Curvature (Mean Curvature)</li>
+                                                <li>Adjust balance and contrast for edge detection</li>
+                                                <li>Optionally add Noise to mask for variation</li>
+                                                <li>Set blending to Normal or Overlay at 15-25% opacity</li>
+                                                <li><em>Roblox Tip: Test on both flat and curved surfaces</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Adding Random Scratches</h4>
+                                            <p>Non-directional surface damage:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for scratches</li>
+                                                <li>Set content to "Crackle Noise" or "Gaussian Noise"</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Optionally mask by curvature to focus on edges</li>
+                                                <li>Adjust scale, balance, and contrast</li>
+                                                <li>Set blending to Normal or Lighten at low opacity (5-15%)</li>
+                                                <li><em>Roblox Tip: Combine with curvature mask for edge-focused scratches</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Organic Material Examples</h4>
+                                <p>Creating wood, fabric, and stone materials:</p>
+                                <div class="steps">
+                                    <h4>Wood Grain Material</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Creating Wood Grain Pattern</h4>
+                                            <p>Generate realistic wood grain:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for base color variation</li>
+                                                <li>Set content to "Perlin Noise" generator</li>
+                                                <li>Set scale to create grain-like features</li>
+                                                <li>Set offset to vary the pattern</li>
+                                                <li>Use anisotropic scaling (different X/Y scale) for grain direction</li>
+                                                <li>Adjust balance and contrast for subtle variation</li>
+                                                <li><em>Roblox Tip: Combine with gradient for heartwood/sapwood variation</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Adding Wood Wear and Damage</h4>
+                                            <p>Where wood shows use:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for wear (darker/lighter)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Generate mask using Curvature (for edges and corners)</li>
+                                                <li>Combine with Position (for high/low points)</li>
+                                                <li>Adjust mask parameters for desired wear placement</li>
+                                                <li>Set blending to Multiply or Overlay at appropriate opacity</li>
+                                                <li><em>Roblox Tip: Wood wear is often combination of edge wear and surface abrasion</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Adding Knots and Imperfections</h4>
+                                            <p>Natural wood characteristics:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for knot color variation</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Use "From Mesh" generator if you have knot map</li>
+                                                <li>Or use Crackle Noise with specific parameters</li>
+                                                <li>Position knots where appropriate (not uniformly)</li>
+                                                <li><em>Roblox Tip: Knots should follow wood grain and be less frequent on visible faces</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Fabric and Clothing Examples</h4>
+                                <p>Creating realistic fabric materials:</p>
+                                <div class="steps">
+                                    <h4>Woven Fabric Material</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Creating Weave Pattern</h4>
+                                            <p>Generate realistic fabric weave:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for base color</li>
+                                                <li>Set to solid color for base fabric</li>
+                                                <li>Add Fill Layer for weave variation</li>
+                                                <li>Set content to "Grid" generator</li>
+                                                <li>Set scale to create thread-sized features</li>
+                                                <li>Adjust thickness for thread width</li>
+                                                <li>Set blending to Overlay or Soft Light at low opacity</li>
+                                                <li><em>Roblox Tip: Vary scale for different fabric types (fine cotton vs coarse burlap)</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Adding Fabric Wear and Fading</h4>
+                                            <p>Where fabric shows use:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for wear/fading (lighter color)</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Generate mask using Position (high points)</li>
+                                                <li>Combine with Curvature (for edges and folds)</li>
+                                                <li>Adjust parameters for natural wear placement</li>
+                                                <li>Set blending to Normal at 10-30% opacity</li>
+                                                <li><em>Roblox Tip: Think about where fabric would rub or stretch during use</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Adding Stains and Spots</h4>
+                                            <p>Where accidents happen:</p>
+                                            <ul>
+                                                <li>Add Fill Layer for stain color</li>
+                                                <li>Add Black Mask</li>
+                                                <li>Use "User Grayscale" or import stain texture</li>
+                                                <li>Or use Crackle Noise with specific parameters for spots</li>
+                                                <li>Position stains randomly or in logical locations</li>
+                                                <li><em>Roblox Tip: Stains should look accidental, not patterned</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your generator expertise:</p>
+                            <ul>
+                                <li><a href="fill-layers.html">Explore Fill Layers</a> - Learn how to add content that generators can drive</li>
+                                <li><a href="masks.html">Master Masks</a> - Essential for controlling where generator output appears</li>
+                                <li><a href="smart-materials.html">See Generators in Action</a> - How Smart Materials use generators intelligently</li>
+                                <li><a href="../materials/metal.html">Apply Your Knowledge: Create Metal Materials</a> - Practical project using generators</li>
+                                <li><a href="../advanced/procedural-texturing.html">Learn Advanced Procedural Techniques</a> - Combine generators for complex effects</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create Generator Presets</h4>
+                                <p>Save time on frequently used setups:</p>
+                                <ul>
+                                    <li>Create a generator configuration you use frequently</li>
+                                    <li>Right-click the generator in Properties panel</li>
+                                    <li>Choose "Create Preset" or "Save as Preset"</li>
+                                    <li>Name it descriptively (e.g., "Edge Wear Curvature", "Fabric Weave Grid")</li>
+                                    <li>Save to your shelf for instant access</li>
+                                    <li><em>Now you can drag-and-drop these presets onto any layer or mask</em></p>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leather Texturing - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+        <div class="main-content">
+            <nav class="sidebar" aria-label="Guide categories">
+                <h2>Categories</h2>
+                <ul class="category-list"><li class="category-header">Getting Started</li><li><a href="../getting-started/installation.html">Installation &amp; Setup</a></li><li><a href="../getting-started/interface-overview.html">Interface Overview</a></li><li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+<li class="category-header">Substance 3D Painter Basics</li><li><a href="../basics/layers.html">Understanding Layers</a></li><li><a href="../basics/smart-materials.html">Smart Materials</a></li><li><a href="../basics/masks.html">Masks</a></li><li><a href="../basics/generators.html">Generators</a></li><li><a href="../basics/fill-layers.html">Fill Layers</a></li><li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+<li class="category-header">Materials</li><li><a href="metal.html">Metal</a></li><li><a href="plastic.html">Plastic</a></li><li><a href="leather.html" class="active" aria-current="page">Leather</a></li><li><a href="fabric.html">Fabric</a></li><li><a href="wood.html">Wood</a></li><li><a href="skin.html">Skin</a></li><li><a href="glass.html">Glass</a></li><li><a href="stone.html">Stone</a></li>
+<li class="category-header">Roblox Specific</li><li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li><li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li><li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li><li><a href="../roblox/clothing.html">Roblox Clothing</a></li><li><a href="../roblox/accessories.html">Roblox Accessories</a></li><li><a href="../roblox/ugc.html">Roblox UGC</a></li><li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+<li class="category-header">Advanced Techniques</li><li><a href="../advanced/anchors.html">Anchor Points</a></li><li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li><li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li><li><a href="../advanced/stylized.html">Stylized Texturing</a></li><li><a href="../advanced/realistic.html">Realistic Texturing</a></li><li><a href="../advanced/baking.html">Baking</a></li><li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+<li class="category-header">Troubleshooting</li><li><a href="../troubleshooting/common-issues.html">Common Issues</a></li><li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li><li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+<li class="category-header">Reference</li><li><a href="../reference/glossary.html">Glossary</a></li><li><a href="../reference/material-library.html">Material Library</a></li><li><a href="../reference/texture-reference.html">Texture Reference Library</a></li><li><a href="../reference/faq.html">FAQ</a></li></ul>
+            </nav>
+            <main class="content">
+                <div class="breadcrumb"><a href="../index.html">Home</a> &gt; <a href="../reference/material-library.html">Materials</a> &gt; Leather</div>
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Leather Texturing in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span><strong>Difficulty:</strong> Intermediate</span>
+                            <span><strong>Time:</strong> 30-50 minutes</span>
+                            <span><strong>Software:</strong> Substance 3D Painter</span>
+                            <span><strong>Roblox relevance:</strong> High</span>
+                        </div>
+                    </header>
+                    <div class="article-content">
+                        <p>Leather is useful for bags, belts, seats, gloves, armor details, and fashion accessories. Grain size, finish, and wear should match the scale and intended quality of the object.</p>
+                        <div class="callout-info"><h4>Roblox workflow note</h4><p>Keep leather dielectric with metalness 0. Use controlled roughness variation for polished contact areas and finer normal detail for grain. On small Roblox assets, broad color and shape cues matter more than tiny pores.</p></div>
+                        <section class="section">
+                            <h2>Material Properties</h2>
+                            <div class="grid-3"><div class="feature-item"><h3>Grain</h3><p>Fine and irregular for smooth leather; larger, softer marks for suede.</p></div>
+<div class="feature-item"><h3>Roughness</h3><p>Moderate for finished leather and higher for suede or worn untreated surfaces.</p></div>
+<div class="feature-item"><h3>Wear</h3><p>Creases and polished edges follow bends, seams, and frequent contact.</p></div></div>
+                        </section>
+                        <section class="section">
+                            <h2>Starting Reference Values</h2>
+                            <p>Use these as practical starting points, then tune the result under the target lighting and at the final in-game viewing distance.</p>
+                            <div class="table-wrap"><table>
+                                <thead><tr><th>Material</th><th>Color direction</th><th>Roughness</th><th>Metalness</th><th>Typical use</th></tr></thead>
+                                <tbody><tr><td>Full-grain leather</td><td>Tan to deep brown</td><td>0.35-0.55</td><td>0.0</td><td>Premium bags and seats</td></tr>
+<tr><td>Aniline leather</td><td>Rich natural dye</td><td>0.30-0.50</td><td>0.0</td><td>Soft, natural finish</td></tr>
+<tr><td>Suede</td><td>Muted warm colors</td><td>0.60-0.80</td><td>0.0</td><td>Soft accessories and clothing</td></tr>
+<tr><td>Patent leather</td><td>Often deep saturated color</td><td>0.10-0.25</td><td>0.0</td><td>Glossy fashion pieces</td></tr></tbody>
+                            </table></div>
+                            <p class="small-note">Roughness values are approximate authoring ranges, not universal physical measurements. Keep metalness at 0 for non-metallic surfaces.</p>
+                        </section>
+                        <section class="section">
+                            <h2>Painter Workflow</h2>
+                            <div class="steps"><div class="step"><div class="step-number">1</div><div class="step-content"><h4>Set the hide tone</h4><p>Start with the main dye color and keep variation broad rather than speckled.</p></div></div>
+<div class="step"><div class="step-number">2</div><div class="step-content"><h4>Add grain at the right scale</h4><p>Use a fine grain pattern for leather and check it on the final UV scale to avoid visible tiling.</p></div></div>
+<div class="step"><div class="step-number">3</div><div class="step-content"><h4>Place folds and wear</h4><p>Mask creases along bends and seams. Add gentle polishing on high-contact edges.</p></div></div>
+<div class="step"><div class="step-number">4</div><div class="step-content"><h4>Protect the silhouette</h4><p>On small accessories, prioritize color blocking, seam placement, and edge highlights over pore detail.</p></div></div></div>
+                        </section>
+                        <section class="section">
+                            <h2>Export and Quality Check</h2>
+                            <ul>
+                                <li>Keep base color in sRGB; treat roughness, metalness, and normal maps as linear data.</li>
+                                <li>Use the Roblox SurfaceAppearance export preset or confirm each channel is packed and named as expected.</li>
+                                <li>Check UV seams, texture scale, compression, and the material under more than one lighting condition.</li>
+                                <li>Import into Roblox Studio and compare at the actual camera distance before increasing texture detail.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

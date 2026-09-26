@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glass Texturing - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+        <div class="main-content">
+            <nav class="sidebar" aria-label="Guide categories">
+                <h2>Categories</h2>
+                <ul class="category-list"><li class="category-header">Getting Started</li><li><a href="../getting-started/installation.html">Installation &amp; Setup</a></li><li><a href="../getting-started/interface-overview.html">Interface Overview</a></li><li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+<li class="category-header">Substance 3D Painter Basics</li><li><a href="../basics/layers.html">Understanding Layers</a></li><li><a href="../basics/smart-materials.html">Smart Materials</a></li><li><a href="../basics/masks.html">Masks</a></li><li><a href="../basics/generators.html">Generators</a></li><li><a href="../basics/fill-layers.html">Fill Layers</a></li><li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+<li class="category-header">Materials</li><li><a href="metal.html">Metal</a></li><li><a href="plastic.html">Plastic</a></li><li><a href="leather.html">Leather</a></li><li><a href="fabric.html">Fabric</a></li><li><a href="wood.html">Wood</a></li><li><a href="skin.html">Skin</a></li><li><a href="glass.html" class="active" aria-current="page">Glass</a></li><li><a href="stone.html">Stone</a></li>
+<li class="category-header">Roblox Specific</li><li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li><li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li><li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li><li><a href="../roblox/clothing.html">Roblox Clothing</a></li><li><a href="../roblox/accessories.html">Roblox Accessories</a></li><li><a href="../roblox/ugc.html">Roblox UGC</a></li><li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+<li class="category-header">Advanced Techniques</li><li><a href="../advanced/anchors.html">Anchor Points</a></li><li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li><li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li><li><a href="../advanced/stylized.html">Stylized Texturing</a></li><li><a href="../advanced/realistic.html">Realistic Texturing</a></li><li><a href="../advanced/baking.html">Baking</a></li><li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+<li class="category-header">Troubleshooting</li><li><a href="../troubleshooting/common-issues.html">Common Issues</a></li><li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li><li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+<li class="category-header">Reference</li><li><a href="../reference/glossary.html">Glossary</a></li><li><a href="../reference/material-library.html">Material Library</a></li><li><a href="../reference/texture-reference.html">Texture Reference Library</a></li><li><a href="../reference/faq.html">FAQ</a></li></ul>
+            </nav>
+            <main class="content">
+                <div class="breadcrumb"><a href="../index.html">Home</a> &gt; <a href="../reference/material-library.html">Materials</a> &gt; Glass</div>
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Glass Materials for Roblox in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span><strong>Difficulty:</strong> Intermediate</span>
+                            <span><strong>Time:</strong> 25-40 minutes</span>
+                            <span><strong>Software:</strong> Substance 3D Painter</span>
+                            <span><strong>Roblox relevance:</strong> High</span>
+                        </div>
+                    </header>
+                    <div class="article-content">
+                        <p>Glass is used for windows, bottles, lenses, display cases, and effects. In Roblox, transparency and reflections are primarily configured on the part or mesh and through scene lighting, not created by a base-color texture alone.</p>
+                        <div class="callout-info"><h4>Roblox workflow note</h4><p>SurfaceAppearance maps cover color, metalness, normal, and roughness; they are not a transmission/refraction setup. Configure transparency on the Roblox object or use the Glass material where appropriate, then use textures for tint, dirt, and surface detail.</p></div>
+                        <section class="section">
+                            <h2>Material Properties</h2>
+                            <div class="grid-3"><div class="feature-item"><h3>Transparency</h3><p>Set in the Roblox object/material workflow, not painted as ordinary base color.</p></div>
+<div class="feature-item"><h3>Roughness</h3><p>Low for clean glass; higher for frosted or etched surfaces.</p></div>
+<div class="feature-item"><h3>Edge cues</h3><p>Bevels, reflections, tint, and controlled dirt help thin glass read in-game.</p></div></div>
+                        </section>
+                        <section class="section">
+                            <h2>Starting Reference Values</h2>
+                            <p>Use these as practical starting points, then tune the result under the target lighting and at the final in-game viewing distance.</p>
+                            <div class="table-wrap"><table>
+                                <thead><tr><th>Material</th><th>Color direction</th><th>Roughness</th><th>Metalness</th><th>Typical use</th></tr></thead>
+                                <tbody><tr><td>Clear window</td><td>Near white with subtle tint</td><td>0.05-0.20</td><td>0.0</td><td>Windows and clean panels</td></tr>
+<tr><td>Tinted glass</td><td>Subtle blue, green, or smoke tint</td><td>0.05-0.25</td><td>0.0</td><td>Vehicle glass and displays</td></tr>
+<tr><td>Frosted glass</td><td>Soft neutral tint</td><td>0.35-0.65</td><td>0.0</td><td>Privacy panels and lamps</td></tr>
+<tr><td>Dirty glass</td><td>Subtle color variation</td><td>0.15-0.45</td><td>0.0</td><td>Abandoned or used environments</td></tr></tbody>
+                            </table></div>
+                            <p class="small-note">Roughness values are approximate authoring ranges, not universal physical measurements. Keep metalness at 0 for non-metallic surfaces.</p>
+                        </section>
+                        <section class="section">
+                            <h2>Painter Workflow</h2>
+                            <div class="steps"><div class="step"><div class="step-number">1</div><div class="step-content"><h4>Set Roblox transparency first</h4><p>Choose the Roblox part transparency or Glass material behavior before authoring texture detail.</p></div></div>
+<div class="step"><div class="step-number">2</div><div class="step-content"><h4>Keep the texture subtle</h4><p>Paint fingerprints, dust, tint, and edge grime on separate layers; avoid dark opaque base colors.</p></div></div>
+<div class="step"><div class="step-number">3</div><div class="step-content"><h4>Model edge cues</h4><p>Use bevels and thickness where practical. Thin flat planes need careful lighting and framing to read as glass.</p></div></div>
+<div class="step"><div class="step-number">4</div><div class="step-content"><h4>Check overlap and sorting</h4><p>Test multiple transparent objects in Roblox Studio because transparency ordering and reflections can differ from Painter.</p></div></div></div>
+                        </section>
+                        <section class="section">
+                            <h2>Export and Quality Check</h2>
+                            <ul>
+                                <li>Keep base color in sRGB; treat roughness, metalness, and normal maps as linear data.</li>
+                                <li>Use the Roblox SurfaceAppearance export preset or confirm each channel is packed and named as expected.</li>
+                                <li>Check UV seams, texture scale, compression, and the material under more than one lighting condition.</li>
+                                <li>Import into Roblox Studio and compare at the actual camera distance before increasing texture detail.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

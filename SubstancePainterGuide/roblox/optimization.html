@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Optimization - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="accessories.html">Roblox Accessories</a></li>
+                    <li><a href="ugc.html">Roblox UGC</a></li>
+                    <li><a href="optimization.html" class="active">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Roblox Specific > Roblox Optimization
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Optimizing Roblox Creations for Performance and Quality</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-secondary">Intermediate</span> → <span class="badge badge-primary">Advanced</span></span>
+                            <span>Time: 40 minutes</span>
+                            <span>Software: Substance 3D Painter, Roblox Studio</span>
+                            <span>Roblox Relevance: Essential</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>Optimization is crucial for creating successful Roblox experiences. Well-optimized textures and assets load faster, perform better on lower-end devices, and provide a smoother experience for all players. This guide will teach you how to optimize your Substance 3D Painter workflow specifically for Roblox, balancing visual quality with performance considerations.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Optimization Matters for Roblox</h4>
+                            <p>Roblox is played on a wide range of devices from high-end PCs to mobile phones and tablets. Optimization ensures your creations are accessible to the widest possible audience while maintaining visual quality. Poorly optimized assets can cause long load times, frame rate drops, and even crashes on less powerful devices.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding Roblox Performance Considerations</h2>
+                            <p>What affects performance in Roblox:</p>
+
+                            <div class="pro-tip">
+                                <h4>Key Performance Factors:</h4>
+                                <ul>
+                                    <li><strong>Texture Resolution:</strong> Higher resolution = more memory usage</li>
+                                    <li><strong>Texture Count:</strong> More textures = more draw calls</li>
+                                    <li><strong>Mesh Complexity:</strong> Higher polygon count = more processing</li>
+                                    <li><strong>Draw Calls:</strong> Each material/texture change = performance cost</li>
+                                    <li><strong>Shader Complexity:</strong> More complex materials = more GPU work</li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Roblox Device Tiers:</h4>
+                                <p>Target your optimization for these device levels:</p>
+                                <ul>
+                                    <li><strong>High-End:</strong> Gaming PCs, recent consoles</li>
+                                    <li><strong>Mid-Range:</strong> Most laptops, recent smartphones</li>
+                                    <li><strong>Low-End:</strong> Older laptops, budget smartphones, tablets</li>
+                                    <li><strong>Very Low-End:</strong> Very old devices, low-spec hardware</li>
+                                    <li><em>Tip: Aim for good performance on mid-range devices as your baseline</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Texture Optimization Strategies</h2>
+                            <p>Getting the most visual quality from your textures:</p>
+
+                            <div class="subsection">
+                                <h3>Resolution Optimization</h4>
+                                <p>Choosing the right texture sizes:</p>
+                                <div class="pro-tip">
+                                    <h4>Recommended Texture Resolutions:</h4>
+                                    <ul>
+                                        <li><strong>Small Props/Accessories:</strong> 256x256 or 512x512</li>
+                                        <li><strong>Medium Props/Character Parts:</strong> 512x512 or 1024x1024</li>
+                                        <li><strong>Large Props/Environment Assets:</strong> 1024x1024 or 2048x2048</li>
+                                        <li><strong>UI Elements:</strong> 512x512 or smaller (often power-of-2)</li>
+                                        <li><strong>Very Small Details:</strong> 128x128 or 256x256</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Texture Resolution Optimization Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Analyze Your Asset</h4>
+                                        <p>Determine appropriate resolution:</p>
+                                        <ul>
+                                            <li>Consider viewing distance (how close will players typically get?)</li>
+                                            <li>Consider asset size in the world</li>
+                                            <li>Consider importance to overall experience</li>
+                                            <li>Consider device target audience</li>
+                                            <li><em>Tip: When in doubt, start lower and increase only if needed</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Use Appropriate Resolution in Substance Painter</h4>
+                                        <p>Set up your project correctly:</p>
+                                        <ul>
+                                            <li>Choose resolution based on analysis above</li>
+                                            <li>Consider using non-square textures when appropriate (e.g., 1024x512 for wide assets)</li>
+                                            <li>Remember that Roblox prefers power-of-2 dimensions</li>
+                                            <li><em>Tip: You can always export at lower resolution than your working resolution</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Consider Texture Atlasing</h4>
+                                        <p>Combining multiple textures:</p>
+                                        <ul>
+                                            <li>For small props, consider combining multiple textures into one atlas</li>
+                                            <li>This reduces draw calls at the cost of flexibility</li>
+                                            <li>Plan your UV layout to accommodate atlasing</li>
+                                            <li><em>Tip: Atlasing works best for assets that always appear together</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Texture Format and Compression</h2>
+                            <p>Choosing the right formats for Roblox:</p>
+
+                            <div class="subsection">
+                                <h3>Recommended Texture Formats</h4>
+                                <p>What works best with Roblox:</p>
+                                <div class="pro-tip">
+                                    <h4>Optimal Formats for Roblox:</h4>
+                                    <ul>
+                                        <li><strong>PNG:</strong> Lossless, good for most textures</li>
+                                        <li><strong>JPEG:</strong> Good for Base Color only when file size is critical</li>
+                                        <li><strong>TIFF:</strong> Lossless but larger file size (less common)</li>
+                                        <li><strong>PSD/BMP:</strong> Generally not recommended for final assets</li>
+                                    </ul>
+                                    <h4>Channel-Specific Recommendations:</h4>
+                                    <ul>
+                                        <li><strong>Base Color:</strong> PNG (or JPEG if file size critical)</li>
+                                        <li><strong>Normal Map:</strong> PNG (must be lossless to preserve detail)</li>
+                                        <li><strong>Roughness/Metalness:</strong> PNG (8-bit grayscale is sufficient)</li>
+                                        <li><strong>Ambient Occlusion:</strong> PNG (8-bit grayscale is sufficient)</li>
+                                        <li><strong>Emissive:</strong> PNG (or JPEG if file size critical)</li>
+                                        <li><strong>Opacity/Mask:</strong> PNG (with alpha channel)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Texture Export Optimization Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Export Settings in Substance Painter</h4>
+                                        <p>Optimize your exports:</p>
+                                        <ul>
+                                            <li>Use PNG format for most textures</li>
+                                            <li>Enable compression in export settings (Zlib or LZW)</li>
+                                            <li>Export only needed channels (don't export empty channels)</li>
+                                            <li>Consider bit depth (8-bit is usually sufficient for grayscale)</li>
+                                            <li><em>Tip: Test different compression levels to find optimal balance</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Post-Export Optimization</h4>
+                                        <p>Further reduce file sizes:</p>
+                                        <ul>
+                                            <li>Use image optimization tools (TinyPNG, ImageOptim, etc.)</li>
+                                            <li>Consider converting to WebP for web-based Roblox experiences</li>
+                                            <li>Remove unnecessary metadata from PNG files</li>
+                                            <li><em>Tip: Always verify that optimization doesn't introduce visual artifacts</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Normal Map Optimization</h4>
+                                        <p>Special considerations for normal maps:</p>
+                                        <ul>
+                                            <li>Normal maps must be lossless to preserve detail</li>
+                                            <li>Consider swizzling channels for better compression (if engine supports)</li>
+                                            <li>Roblox expects standard tangent-space normal maps</li>
+                                            <li><em>Tip: Normal maps often compress poorly - focus on resolution optimization instead</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Material Optimization in Substance Painter</h2>
+                            <p>Creating efficient materials:</p>
+
+                            <div class="subsection">
+                                <h3>Smart Material Optimization</h4>
+                                <p>Creating efficient smart materials:</p>
+                                <div class="pro-tip">
+                                    <h4>Efficient Smart Material Practices:</h4>
+                                    <ul>
+                                        <li><strong>Limit Generator Use:</strong> Each generator adds processing cost</li>
+                                        <li><strong>Use Procedural Wisely:</strong> Procedural textures are resolution-independent but can be costly</li>
+                                        <li><strong>Bake When Possible:</strong> Convert procedural to baked textures for runtime efficiency</li>
+                                        <li><strong>Optimize Layer Stack:</strong> Fewer layers = better performance</li>
+                                        <li><strong>Use Instancing:</strong> Share smart materials between similar assets</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Material Optimization Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Analyze Your Material Needs</h4>
+                                        <p>Determine what complexity is necessary:</p>
+                                        <ul>
+                                            <li>Consider viewing distance and importance</li>
+                                            <li>Determine if procedural detail is actually visible</li>
+                                            <li>Consider if baked textures would suffice</li>
+                                            <li>Evaluate performance vs. visual quality trade-off</li>
+                                            <li><em>Tip: Start simple and add complexity only where it matters</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Optimize Your Layer Stack</h4>
+                                        <p>Reduce unnecessary complexity:</p>
+                                        <ul>
+                                            <li>Combine similar layers when possible</li>
+                                            <li>Remove layers that don't contribute meaningfully</li>
+                                            <li>Use layer groups to organize and enable/disable for testing</li>
+                                            <li>Consider using smart masks instead of complex layer setups</li>
+                                            <li><em>Tip: Each additional layer adds to export time and file complexity</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Use Appropriate Generator Settings</h4>
+                                        <p>Balance quality and performance:</p>
+                                        <ul>
+                                            <li>Lower generator quality settings when high detail isn't needed</li>
+                                            <li>Reduce octaves in noise generators when fine detail isn't visible</li>
+                                            <li>Consider using simpler generators for background details</li>
+                                            <li><em>Tip: Test your material at different zoom levels to see where detail matters</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Roblox-Specific Optimization Techniques</h2>
+                            <p>Optimizing for the Roblox platform:</p>
+
+                            <div class="subsection">
+                                <h3>SurfaceAppearance Optimization</h4>
+                                <p>Getting the most from Roblox's PBR system:</p>
+                                <div class="pro-tip">
+                                    <h4>SurfaceAppearance Best Practices:</h4>
+                                    <ul>
+                                        <li><strong>Use All Four Maps:</strong> ColorMap, NormalMap, RoughnessMap, MetalnessMap</li>
+                                        <li><strong>Consistent Resolution:</strong> Keep all maps at same resolution</li>
+                                        <li><strong>Proper Normal Map Format:</strong> Ensure tangent-space, DirectX format</li>
+                                        <li><strong>Appropriate Roughness/Metalness:</strong> Use full 0-1 range for best results</li>
+                                        <li><strong>Consider AO Map:</strong> While not part of standard SurfaceAppearance, can be used in custom shaders</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Roblox Optimization Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Optimize for Roblox's Rendering Pipeline</h4>
+                                        <p>Understanding how Roblox renders:</p>
+                                        <ul>
+                                            <li>Roblox uses a modified PBR pipeline</li>
+                                            <li>Texture sampling is a major performance factor</li>
+                                            <li>State changes (texture switches) are expensive</li>
+                                            <li>Batch similar materials when possible</li>
+                                            <li><em>Tip: Minimize texture swaps in your scenes</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Level of Detail (LOD) Strategies</h4>
+                                        <p>Creating multiple quality levels:</p>
+                                        <ul>
+                                            <li>Create high, medium, and low detail versions</li>
+                                            <li>Use simple distance-based switching</li>
+                                            <li>Consider imposters for very distant objects</li>
+                                            <li>For textures: create mipmap-friendly designs</li>
+                                            <li><em>Tip: LOD is most effective for assets seen at various distances</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Optimize for Mobile and Low-End Devices</h4>
+                                        <p>Special considerations for weaker hardware:</p>
+                                        <ul>
+                                            <li>Reduce texture resolution more aggressively</li>
+                                            <li>Simplify materials (fewer texture samples)</li>
+                                            <li>Consider using flat colors where gradients aren't needed</li>
+                                            <li>Test on actual low-end devices when possible</li>
+                                            <li><em>Tip: What looks good on PC might be too heavy for mobile</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Optimization Workflow in Substance Painter</h2>
+                            <p>Integrating optimization into your creative process:</p>
+
+                            <div class="steps">
+                                <h4>Optimized UGC Creation Workflow</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Planning Phase</h4>
+                                        <p>Optimization considerations before you start:</p>
+                                        <ul>
+                                            <li>Define target devices and performance goals</li>
+                                            <li>Research similar successful items on Roblox</li>
+                                            <li>Plan texture resolution based on asset importance and size</li>
+                                            <li>Decide on material complexity level</li>
+                                            <li><em>Tip: Create an optimization checklist for your project</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Creation Phase</h4>
+                                        <p>Optimization during asset creation:</p>
+                                        <ul>
+                                            <li>Work at appropriate resolution from the start</li>
+                                            <li>Use placeholder textures to test performance early</li>
+                                            <li>Regularly check your asset in Roblox Studio</li>
+                                            <li>Optimize your layer stack as you go</li>
+                                            <li><em>Tip: Create optimization versions of your smart materials</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div
+</div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Export and Validation Phase</h4>
+                                        <p>Final optimization checks:</p>
+                                        <ul>
+                                            <li>Export at multiple resolutions for testing</li>
+                                            <li>Test performance impact in Roblox Studio</li>
+                                            <li>Use optimization tools on final textures</li>
+                                            <li>Verify visual quality is acceptable at target resolution</li>
+                                            <li><em>Tip: Create optimization reports comparing different settings</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Testing and Validation</h2>
+                            <p>Ensuring your optimizations work:</p>
+
+                            <div class="callout">
+                                <h4>Optimization Testing Checklist:</h4>
+                                <ul>
+                                    <li><strong>Visual Quality:</strong> Check that important details are preserved</li>
+                                    <li><strong>Load Times:</strong> Measure asset loading performance</li>
+                                    <li><strong>Frame Rates:</strong> Test in scenes with multiple instances</li>
+                                    <li><strong>Memory Usage:</strong> Monitor texture memory consumption</li>
+                                    <li><strong>Device Testing:</strong> Test on target device range</li>
+                                    <li><strong>File Sizes:</strong> Verify final asset sizes are acceptable</li>
+                                </ul>
+                            </div>
+
+                            <div class="pro-tip">
+                                <h4>Creating Optimization Variants:</h4>
+                                <ul>
+                                    <li>Create high, medium, and low optimization presets</li>
+                                    <li>Example: "High Quality" (2048x2048, full material complexity)</li>
+                                    <li>Example: "Medium Quality" (1024x1024, moderate complexity)</li>
+                                    <li>Example: "Low Quality" (512x512, simplified materials)</li>
+                                    <li><em>Tip: Use these presets for different asset types or importance levels</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your optimization expertise:</p>
+                            <ul>
+                                <li><a href="../advanced/baking.html">Learn Baking Techniques</a> - For creating optimized baked textures</li>
+                                <li><a href="../advanced/uv-unwrapping.html">Learn UV Unwrapping</a> - For efficient texture space usage</li>
+                                <li><a href="../advanced/procedural-texturing.html">Learn Procedural Texturing</a> - For resolution-independent details</li>
+                                <li><a href="../materials/metal.html">Create Optimized Metal Assets</a> - Apply metal-specific optimization techniques</li>
+                                <li><a href="../materials/fabric.html">Create Optimized Fabric Assets</a> - Apply fabric-specific optimization techniques</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create Optimization Templates</h4>
+                                <p>Save time on repetitive optimization setups:</p>
+                                <ul>
+                                    <li>Create an optimization configuration you use frequently</li>
+                                    <li>Example: "Roblox Mobile Optimization" (reduced resolution, simplified materials)</li>
+                                    <li>Example: "Roblox High-End Optimization" (full resolution, full materials)</li>
+                                    <li>Example: "Roblox UGC Optimization" (balanced for marketplace)</li>
+                                    <li>Right-click the layer group in layer stack</li>
+                                    <li>Choose "Create Smart Material" or "Save as Preset"</li>
+                                    <li>Name it descriptively (e.g., "Mobile Optimized Metal", "UGC Standard Fabric")</li>
+                                    <li>Save to your shelf for instant access</li>
+                                    <li><em>Now you can drag-and-drop this optimization setup onto any project</em></li>
+                                    <li><em>This ensures consistency in your optimization approach and speeds up your workflow</em></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

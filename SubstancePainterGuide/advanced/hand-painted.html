@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand-Painted Texturing - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html" class="active">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Advanced Techniques > Hand-Painted Texturing
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Mastering Hand-Painted Texturing in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Advanced</span></span>
+                            <span>Time: 50 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>Hand-painted texturing is an artistic approach where textures are created primarily through manual painting rather than relying solely on procedural generators or photo-sourced materials. This technique allows for unique, stylized looks that can range from cute and cartoony to detailed and painterly. In Substance 3D Painter, hand-painted texturing combines the power of the software's advanced brush engine with traditional painting techniques to create distinctive assets that stand out in Roblox experiences.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Hand-Painted Texturing Matters for Roblox</h4>
+                            <p>Hand-painted textures allow you to create unique, artistic assets that stand out from the typical photorealistic look. This approach is particularly popular in Roblox for games with stylized art styles, enabling creators to develop a distinctive visual identity. Hand-painted textures also perform well since they often rely on clever artistic techniques rather than high-resolution detail.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding Hand-Painted Texturing</h2>
+                            <p>What defines the hand-painted approach:</p>
+
+                            <div class="pro-tip">
+                                <h4>Hand-Painted Texturing Characteristics:</h4>
+                                <ul>
+                                    <li><strong>Artistic Control:</strong> Direct manual control over every detail</li>
+                                    <li><strong>Stylization:</strong> Expressive, non-photorealistic approaches</li>
+                                    <li><strong>Efficiency:</strong> Often achieves great results with lower texture resolutions</li>
+                                    <li><strong>Personality:</strong> Unique artist touch that makes assets memorable</li>
+                                    <li><strong>Flexibility:</strong> Works well for both characters and environments</li>
+                                    <li><strong>Iterative Process:</strong> Easy to refine and adjust throughout creation</li>
+                                    <li><em>Tip: Hand-painted doesn't mean "low quality" - it means artistically crafted</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>When to Use Hand-Painted Techniques:</h4>
+                                <p>Ideal scenarios for hand-painted texturing:</p>
+                                <ul>
+                                    <li>Stylized or cartoonish art styles</li>
+                                    <li>Assets requiring strong personality or character</li>
+                                    <li>Projects with limited texture budgets</li>
+                                    <li>When you want full artistic control over the look</li>
+                                    <li>Creating assets that need to read well at a distance</li>
+                                    <li>Games with cohesive, artist-driven visual styles</li>
+                                    <li><em>Tip: Even realistic games often use hand-painted touches for specific details</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Setting Up for Hand-Painted Success</h2>
+                            <p>Preparing your workspace and model for painting:</p>
+
+                            <div class="subsection">
+                                <h3>Brush Engine Fundamentals</h4>
+                                <p>Understanding Substance Painter's powerful brush system:</p>
+                                <div class="pro-tip">
+                                    <h4>Key Brush Engine Features:</h4>
+                                    <ul>
+                                        <li><strong>Brush Shapes:</strong> Customizable tips for different effects</li>
+                                        <li><strong>Brush Settings:</strong> Size, hardness, flow, opacity, spacing</li>
+                                        <li><strong>Stamp and Stencil Modes:</strong> For precise placement and repetition</li>
+                                        <li><strong>Pressure Sensitivity:</strong> Responds to tablet pressure for natural feel</li>
+                                        <li><strong>Brush Spacing and Jitter:</strong> Controls brush stroke characteristics</li>
+                                        <li><strong>Brush Alphas:</strong> Texture masks that shape the brush tip</li>
+                                        <li><em>Tip: Spend time exploring brush presets before starting to paint</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Layer Setup for Painting</h4>
+                                <p>Organizing your layers for efficient hand-painting:</p>
+                                <div class="pro-tip">
+                                    <h4>Recommended Layer Structure:</h4>
+                                    <ul>
+                                        <li><strong>Base Color Layers:</strong> Flat color blocking per material type</li>
+                                        <li><strong>Detail Painting Layers:</strong> Where most hand work happens</li>
+                                        <li><strong>Shadow/Light Layers:</strong> For painting illumination effects</li>
+                                        <li><strong>Effect Layers:</strong> For wear, dirt, grime, and special effects</li>
+                                        <li><strong>Adjustment Layers:</strong> For color correction and filtering</li>
+                                        <li><strong>Folder Organization:</strong> Group layers by material or body part</li>
+                                        <li><em>Tip: Use layer folders to keep complex projects manageable</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Reference and Preparation</h4>
+                                <p>Gathering what you need before you start painting:</p>
+                                <div class="pro-tip">
+                                    <h4>Essential Preparation Steps:</h4>
+                                    <ul>
+                                        <li>Gather reference images for your desired style</li>
+                                        <li>Create or gather color palettes</li>
+                                        <li>Plan your lighting approach (where light/shadow will be painted)</li>
+                                        <li>Consider what details will be painted vs. generated</li>
+                                        <li>Set up your workspace with comfortable brush sizes</li>
+                                        <li><em>Tip: Good preparation prevents frustration during the painting process</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Hand-Painted Techniques</h2>
+                            <p>Specific approaches for creating hand-painted effects:</p>
+
+                            <div class="subsection">
+                                <h3>Flat Color Blocking</h4>
+                                <p>Starting with solid color foundations:</p>
+                                <div class="pro-tip">
+                                    <h4>Flat Blocking Workflow:</h4>
+                                    <ul>
+                                        <li>Create fill layers for each major material/color area</li>
+                                        <li>Block in base colors with minimal detail</li>
+                                        <li>Focus on getting the right color relationships</li>
+                                        <li>Use hard edges or simple gradients for transitions</li>
+                                        <li><em>Tip: Think of this as your "coloring book" stage</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Painting Shadows and Light</h4>
+                                <p>Creating dimension through painted lighting:</p>
+                                <div class="pro-tip">
+                                    <h4>Lighting Painting Techniques:</h4>
+                                    <ul>
+                                        <li>Determine your light source direction and intensity</li>
+                                        <li>Paint shadows in cool colors (blues, purples) for realism</li>
+                                        <li>Paint highlights in warm colors (yellows, whites) or lighter tints</li>
+                                        <li>Use soft brushes for gradual transitions</li>
+                                        <li>Use hard brushes for sharp, stylized shadows</li>
+                                        <li>Consider ambient occlusion as a base for shadow painting</li>
+                                        <li><em>Tip: Less is often more - subtle lighting reads better than extreme contrast</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Adding Texture and Detail</h4>
+                                <p>Creating surface interest through hand details:</p>
+                                <div class="pro-tip">
+                                    <h4>Detail Painting Approaches:</h4>
+                                    <ul>
+                                        <li>Use texture brushes to simulate fabric, stone, wood grain, etc.</li>
+                                        <li>Paint wear patterns where objects would naturally receive use</li>
+                                        <li>Add stitching, seams, bolts, and other small details</li>
+                                        <li>Paint decorative elements that enhance storytelling</li>
+                                        <li>Use clipping masks to confine details to specific areas</li>
+                                        <li><em>Tip: Study real-world references for how details actually look</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Creating Stylized Effects</h4>
+                                <p>Achieving specific artistic looks:</p>
+                                <div class="pro-tip">
+                                    <h4>Stylization Techniques:</h4>
+                                    <ul>
+                                        <li>Cell shading: Sharp transitions between light and shadow</li>
+                                        <li>Painterly effects: Visible brush strokes and texture</li>
+                                        <li>Flat design: Minimal shading with bold colors</li>
+                                        <li>Outline effects: Borders or edges painted in contrasting colors</li>
+                                        <li>Texture simplification: Reducing detail to essential shapes</li>
+                                        <li><em>Tip: Look at your favorite animated films or games for stylization inspiration</em></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Hand-Painted Workflow</h2>
+                            <p>Step-by-step approach to creating hand-painted textures:</p>
+
+                            <div class="steps">
+                                <h4>Hand-Painted Texturing Process Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Project Setup and Base Layers</h4>
+                                        <p>Prepare your project for painting:</p>
+                                        <ul>
+                                            <li>Import your model with proper UVs</li>
+                                            <li>Set up base color fill layers for major material areas</li>
+                                            <li>Block in approximate colors for each section</li>
+                                            <li>Create a neutral gray or mid-tone base if needed</li>
+                                            <li>Set up your painting layers with appropriate blending modes</li>
+                                            <li><em>Tip: Lock transparency on base layers to prevent painting outside UV islands</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Establish Lighting and Form</h4>
+                                        <p>Create dimensionality through light and shadow:</p>
+                                        <ul>
+                                            <li>Determine your primary light source</li>
+                                            <li>Block in shadow shapes using cool colors or dark values</li>
+                                            <li>Add highlight shapes where light hits directly</li>
+                                            <li>Paint core shadows (darkest areas where light is blocked)</li>
+                                            <li>Add rim light or edge lighting where appropriate</li>
+                                            <li><em>Tip: Squint at your work to see if the lighting reads correctly</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Base Texture and Surface Detail</h4>
+                                        <p>Create surface interest and material definition:</p>
+                                        <ul>
+                                            <li>Paint basic texture patterns (fabric weave, wood grain, etc.)</li>
+                                            <li>Add subtle variation to prevent flat, plastic-looking surfaces</li>
+                                            <li>Use reference to guide how materials actually look</li>
+                                            <li>Vary your brush strokes to avoid repetitive patterns</li>
+                                            <li><em>Tip: Texture should enhance form, not fight it</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Paint Wear, Dirt, and Story Details</h4>
+                                        <p>Add history and character to your asset:</p>
+                                        <ul>
+                                            <li>Paint wear where objects would naturally rub or receive use</li>
+                                            <li>Add dirt and grime in crevices and low areas</li>
+                                            <li>Paint scratches, dents, and damage that tell a story</li>
+                                            <li>Add decorative elements that enhance the asset's purpose</li>
+                                            <li>Consider the asset's history and environment</li>
+                                            <li><em>Tip: Story details make assets feel lived-in and believable</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Refine and Adjust</h4>
+                                        <p>Polish your hand-painted work:</p>
+                                        <ul>
+                                            <li>Step back frequently to evaluate overall readability</li>
+                                            <li>Adjust color relationships as needed</li>
+                                            <li>Refine edge details and transitions</li>
+                                            <li>Check for any areas that need more or less detail</li>
+                                            <li>Ensure the asset reads well from intended viewing distances</li>
+                                            <li><em>Tip: Take breaks and return with fresh eyes to spot issues</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">6</div>
+                                    <div class="step-content">
+                                        <h4>Finalize and Export</h4>
+                                        <p>Prepare your hand-painted asset for use:</p>
+                                        <ul>
+                                            <li>Make any final color or value adjustments</li>
+                                            <li>Ensure all layers are properly organized and named</li>
+                                            <li>Consider baking any hand-painted details to textures if needed</li>
+                                            <li>Export textures with appropriate settings for Roblox</li>
+                                            <li>Test in Roblox Studio to confirm appearance</li>
+                                            <li><em>Tip: Save your Substance Painter file for future adjustments</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+</div>
+</div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

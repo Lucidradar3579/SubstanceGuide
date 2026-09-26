@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox UGC - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="accessories.html">Roblox Accessories</a></li>
+                    <li><a href="ugc.html" class="active">Roblox UGC</a></li>
+                    <li><a href="optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Roblox Specific > Roblox UGC
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Creating Roblox UGC Items with Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-secondary">Intermediate</span></span>
+                            <span>Time: 45 minutes</span>
+                            <span>Software: Substance 3D Painter, Roblox Studio</span>
+                            <span>Roblox Relevance: Essential</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>The Roblox User-Generated Content (UGC) program allows creators to design and sell their own avatar items in the Roblox marketplace. From clothing and accessories to body parts and animations, UGC creators can monetize their creativity while contributing to the Roblox ecosystem. This guide will walk you through the complete workflow for creating UGC items using Substance 3D Painter, from concept to marketplace publication.</p>
+
+                        <div class="callout-info">
+                            <h4>Why UGC Creation Matters for Roblox</h4>
+                            <p>UGC is a vital part of the Roblox economy and creator community. It allows talented artists to monetize their skills, provides players with unique customization options, and drives engagement on the platform. Successful UGC creators can earn significant revenue while building their reputation in the Roblox community.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding the Roblox UGC Program</h2>
+                            <p>What you need to know before getting started:</p>
+
+                            <div class="pro-tip">
+                                <h4>UGC Program Requirements:</h4>
+                                <ul>
+                                    <li><strong>Age Requirement:</strong> Must be 13 years or older</li>
+                                    <li><strong>Account Standing:</strong> Good standing with Roblox</li>
+                                    <li><strong>Application Process:</strong> Apply through the Roblox website</li>
+                                    <li><strong>Approval Timeline:</strong> Varies (typically days to weeks)</li>
+                                    <li><strong>Revenue Share:</strong> Creators earn a percentage of sales</li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>UGC Item Categories:</h4>
+                                <p>What you can create and sell:</p>
+                                <ul>
+                                    <li><strong>Accessories:</strong> Hats, faces, neck, shoulders, front, back, waist, climbing gear, gear</li>
+                                    <li><strong>Body Parts:</strong> Heads, torsos, limbs (with limitations)</li>
+                                    <li><strong>Animation Bundles:</strong> Emotes, poses, idle animations</li>
+                                    <li><strong>Clothing:</strong> Shirts, pants, t-shirts (legacy system)</li>
+                                    <li><strong>Limited Items:</strong> Collectible items with limited quantities</li>
+                                    <li><em>Tip: Start with accessories as they have the most flexibility and lowest barrier to entry</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Technical Requirements:</h4>
+                                <p>What your items need to meet:</p>
+                                <ul>
+                                    <li><strong>File Formats:</strong> FBX for mesh, PNG for textures</li>
+                                    <li><strong>Texture Resolution:</strong> Varies by item type (see specific guides)</li>
+                                    <li><strong>Texture Maps:</strong> ColorMap, NormalMap, RoughnessMap, MetalnessMap (for SurfaceAppearance)</li>
+                                    <li><strong>Polygon Count:</strong> Reasonable limits for performance</li>
+                                    <li><strong>UV Layout:</strong> Proper unwrapping without excessive stretching</li>
+                                    <li><strong>Attachment Points:</strong> Correct positioning for item type</li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Preparing Your UGC Project</h2>
+                            <p>Setting up for successful UGC creation:</p>
+
+                            <div class="steps">
+                                <h4>UGC Project Preparation Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Concept and Planning</h4>
+                                        <p>Design your UGC item:</p>
+                                        <ul>
+                                            <li>Research current trends and popular items</li>
+                                            <li>Identify gaps in the marketplace</li>
+                                            <li>Sketch your design concept</li>
+                                            <li>Consider your target audience</li>
+                                            <li>Plan your pricing strategy</li>
+                                            <li><em>Tip: Start with simple designs to learn the process</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Mesh Creation and Preparation</h4>
+                                        <p>Get your 3D model ready:</p>
+                                        <ul>
+                                            <li>Create or obtain your base mesh</li>
+                                            <li>Ensure proper topology for deformation (if needed)</li>
+                                            <li>Check scale (1 unit = 1 cm in Roblox)</li>
+                                            <li>Verify mesh is clean (no duplicated vertices, proper normals)</li>
+                                            <li>Apply proper UV unwrapping</li>
+                                            <li><em>Tip: Test your mesh in Roblox Studio before texturing</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Substance Painter Project Setup</h4>
+                                        <p>Configure for UGC item texturing:</p>
+                                        <ul>
+                                            <li>Import your FBX mesh</li>
+                                            <li>Set appropriate resolution based on item type</li>
+                                            <li>Choose PBR Metallic Roughness template</li>
+                                            <li>Set up texture sets if needed</li>
+                                            <li>Configure color management (sRGB/Linear)</li>
+                                            <li><em>Tip: Use Roblox-specific project templates for consistency</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Texturing UGC Accessories</h2>
+                            <p>Creating marketplace-ready accessories:</p>
+
+                            <div class="subsection">
+                                <h3>Accessory-Specific Considerations</h4>
+                                <p>What makes UGC accessories successful:</p>
+                                <div class="pro-tip">
+                                    <h4>Successful UGC Accessory Traits:</h4>
+                                    <ul>
+                                        <li><strong>Clear Silhouette:</strong> Recognizable from a distance</li>
+                                        <li><strong>Thematic Consistency:</strong> Fits a clear concept or theme</li>
+                                        <li><strong>Quality Texturing:</strong> Professional appearance</li>
+                                        <li><strong>Versatility:</strong> Works with multiple avatars and outfits</li>
+                                        <li><strong>Attention to Detail:</strong> Well-crafted details without being overwhelming</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating UGC Accessories Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Material Setup</h4>
+                                        <p>Establish fundamental item properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Main item color</li>
+                                            <li>Add variation for material texture or wear</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value</li>
+                                            <li>Add variation for material texture</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set based on material (0.0 for fabric, 0.3 for plastic, 0.8 for metal, etc.)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Item Detail</h4>
+                                        <p>Create realistic item texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for material detail</li>
+                                            <li>Use generators appropriate to material</li>
+                                            <li>Or use painted details for logos, patterns, etc.</li>
+                                            <li>Keep detail appropriate for viewing distance and item size</li>
+                                            <li><em>Tip: UGC items should read well in the catalog thumbnail</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Personality</h4>
+                                        <p>Where items show use and character:</p>
+                                        <ul>
+                                            <li>Use masks to control where wear appears</li>
+                                            <li>Position mask for areas that receive wear or handling</li>
+                                            <li>Curvature mask for edge wear and detailing</li>
+                                            <li>Combine with painted details for dirt, grime, and character</li>
+                                            <li><em>Tip: Consider what wear pattern tells a story about your item</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Special Features and Branding</h4>
+                                        <p>Making your item unique:</p>
+                                        <ul>
+                                            <li>Use Paint Layers for precise control</li>
+                                            <li>Or use stencils for repeating elements</li>
+                                            <li>Consider adding subtle branding or signatures</li>
+                                            <li><em>Tip: Avoid obstructive branding that ruins the item's aesthetics</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Export for Roblox UGC</h4>
+                                        <p>Prepare your item for upload:</p>
+                                        <ul>
+                                            <li>Export textures from Substance Painter</li>
+                                            <li>Ensure proper sizing and format (PNG)</li>
+                                            <li>Verify normal map orientation (Roblox uses DirectX format)</li>
+                                            <li>Test in Roblox Studio with UGC validation tools</li>
+                                            <li><em>Tip: Create multiple angles for your UGC catalog photos</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div
+                        </div>
+
+                        <section class="section">
+                            <h2>Creating UGC Clothing Items</h2>
+                            <p>Working with the legacy clothing system:</p>
+
+                            <div class="subsection">
+                                <h3>Legacy Clothing vs Modern UGC</h4>
+                                <p>Understanding the differences:</p>
+                                <div class="pro-tip">
+                                    <h4>Legacy Clothing System:</h4>
+                                    <ul>
+                                        <li><strong>Shirts and Pants:</strong> 2D textures applied to default avatar</li>
+                                        <li><strong>Resolution:</strong> 512x512 or 1024x1024</li>
+                                        <li><strong>Limitation:</strong> Only works with default R6/R15 avatars</li>
+                                        <li><strong>Template:</strong> Specific UV layouts required</li>
+                                    </ul>
+                                    <h4>Modern UGC System:</h4>
+                                    <ul>
+                                        <li><strong>Accessories and Body Parts:</strong> 3D meshes with PBR textures</li>
+                                        <li><strong>Resolution:</strong> Varies by item type</li>
+                                        <li><strong>Flexibility:</strong> Works with all avatar types</li>
+                                        <li><strong>Quality:</strong> Higher fidelity and detail possible</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Legacy Clothing Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Understanding the Clothing Template</h4>
+                                        <p>Roblox's specific UV layout:</p>
+                                        <ul>
+                                            <li>Shirts: Front, back, sleeves specific layout</li>
+                                            <li>Pants: Left/right legs specific layout</li>
+                                            <li>T-Shirts: Front only specific layout</li>
+                                            <li><em>Tip: Download official Roblox clothing templates</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Setting Up Your Project</h4>
+                                        <p>Configure for clothing texturing:</p>
+                                        <ul>
+                                            <li>Import your clothing template mesh</li>
+                                            <li>Resolution: 512x512 or 1024x1024</li>
+                                            <li>Template: PBR Metallic Roughness (though only Base Color used)</li>
+                                            <li>Disable unnecessary channels (only Base Color matters)</li>
+                                            <li><em>Tip: Focus on Base Color as other channels are ignored</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Designing Your Clothing</h4>
+                                        <p>Creating appealing clothing designs:</p>
+                                        <ul>
+                                            <li>Consider how design wraps around avatar</li>
+                                            <li>Pay attention to seams and how they align</li>
+                                            <li>Create designs that look good from all angles</li>
+                                            <li>Think about how clothing moves with avatar</li>
+                                            <li><em>Tip: Test how your design looks with different avatar poses</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Adding Details and Variation</h4>
+                                        <p>Making your clothing stand out:</p>
+                                        <ul>
+                                            <li>Use Fill Layers for base colors and patterns</li>
+                                            <li>Use Paint Layers for logos, text, and details</li>
+                                            <li>Consider how lighting affects your design</li>
+                                            <li>Add subtle variation for realism</li>
+                                            <li><em>Tip: Avoid overly complex designs that don't read at small sizes</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Export for Roblox Clothing</h4>
+                                        <p>Prepare your clothing for upload:</p>
+                                        <ul>
+                                            <li>Export Base Color texture from Substance Painter</li>
+                                            <li>Ensure it's PNG format</li>
+                                            <li>Verify it matches the clothing template exactly</li>
+                                            <li>Test in Roblox Studio with clothing preview</li>
+                                            <li><em>Tip: Create matching shirt and pants sets for complete outfits</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating UGC Animation Bundles</h2>
+                            <p>Working with emotes and poses:</p>
+
+                            <div class="subsection">
+                                <h3>Animation UGC Considerations</h4>
+                                <p>What makes UGC animations successful:</p>
+                                <div class="pro-tip">
+                                    <h4>Successful UGC Animation Traits:</h4>
+                                    <ul>
+                                        <li><strong>Clear Communication:</strong> Emotion or action is immediately readable</li>
+                                        <li><strong>Smooth Looping:</strong> Animations loop seamlessly</li>
+                                        <li><strong>Appropriate Length:</strong> Not too short or too long</li>
+                                        <li><strong>Personality:</strong> Unique style or character</li>
+                                        <li><strong>Versatility:</strong> Works in various contexts and games</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating UGC Animations Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Creating Your Animation</h4>
+                                        <p>Animation process (done outside Substance Painter):</p>
+                                        <ul>
+                                            <li>Use Blender, Maya, or other 3D software</li>
+                                            <li>Create animation for default R15 avatar</li>
+                                            <li>Focus on clear, readable motions</li>
+                                            <li>Ensure animation loops properly</li>
+                                            <li>Keep file size reasonable</li>
+                                            <li><em>Tip: Study successful animations for timing and appeal</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Preparing for Substance Painter (Optional)</h4>
+                                        <p>If you want to texture animated items:</p>
+                                        <ul>
+                                            <li>Only needed if animation includes wearable items</li>
+                                            <li>For pure animations, texturing isn't required</li>
+                                            <li>If texturing needed, follow standard UGC item process</li>
+                                            <li>Consider how textures look during animation</li>
+                                            <li><em>Tip: Most animation UGC doesn't require Substance Painter texturing</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Export for Roblox UGC</h4>
+                                        <p>Prepare your animation for upload:</p>
+                                        <ul>
+                                            <li>Export animation as FBX</li>
+                                            <li>Ensure proper naming conventions</li>
+                                            <li>Test in Roblox Studio with animation editor</li>
+                                            <li>Verify loop points and timing</li>
+                                            <li><em>Tip: Create multiple animations in a bundle for better value</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>UGC Publication Process</h2>
+                            <p>Getting your items on the marketplace:</p>
+
+                            <div class="steps">
+                                <h4>Publishing Your UGC Items</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Roblox Studio Preparation</h4>
+                                        <p>Getting ready for upload:</p>
+                                        <ul>
+                                            <li>Import your FBX mesh and textures</li>
+                                            <li>Configure SurfaceAppearance properties</li>
+                                            <li>Set up proper attachment points</li>
+                                            <li>Test in various lighting conditions</li>
+                                            <li>Verify with UGC validation tools</li>
+                                            <li><em>Tip: Create a test place to verify your item works correctly</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Upload Process</h4>
+                                        <p>Getting your item to Roblox:</p>
+                                        <ul>
+                                            <li>Go to the Create section on Roblox website</li>
+                                            <li>Select "UGC Items" or appropriate category</li>
+                                            <li>Upload your FBX and texture files</li>
+                                            <li>Fill out item details (name, description, genre)</li>
+                                            <li>Set your price (if selling) or mark as free</li>
+                                            <li>Upload preview images and videos</li>
+                                            <li><em>Tip: Create compelling preview media that shows your item well</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Moderation and Approval</h4>
+                                        <p>What happens after upload:</p>
+                                        <ul>
+                                            <li>Roblox reviews your item for compliance</li>
+                                            <li>Checks for intellectual property issues</li>
+                                            <li>Verifies technical requirements are met</li>
+                                            <li>Ensures content is appropriate for platform</li>
+                                            <li>Provides feedback if revisions needed</li>
+                                            <li><em>Tip: Review UGC policies thoroughly before submitting</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Post-Publication Management</h4>
+                                        <p>Managing your successful UGC items:</p>
+                                        <ul>
+                                            <li>Monitor sales and player feedback</li>
+                                            <li>Consider creating variations or bundles</li>
+                                            <li>Engage with your community</li>
+                                            <li>Monitor for intellectual property concerns</li>
+                                            <li>Plan your next creation based on feedback</li>
+                                            <li><em>Tip: Successful UGC creators often create series or themes</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Optimization for UGC Success</h2>
+                            <p>Maximizing your UGC potential:</p>
+
+                            <div class="callout">
+                                <h4>UGC Success Factors:</h4>
+                                <ul>
+                                    <li><strong>Market Research:</strong> Understand what players want</li>
+                                    <li><strong>Quality Focus:</strong> Prioritize polish and professionalism</li>
+                                    <li><strong>Consistent Releases:</strong> Regularly add new items</li>
+                                    <li><strong>Community Engagement:</strong> Listen to and interact with buyers</li>
+                                    <li><strong>Trend Awareness:</strong> Stay current with Roblox culture</li>
+                                </ul>
+                            </div>
+
+                            <div class="pro-tip">
+                                <h4>Creating UGC Collections:</h4>
+                                <ul>
+                                    <li>Create thematic sets (space explorer, medieval knight, cyberpunk)</li>
+                                    <li>Create seasonal collections (summer beach, winter holiday, spring festival)</li>
+                                    <li>Create collaboration sets with other creators</li>
+                                    <li><em>Tip: Bundled items often perform better than standalone pieces</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Pricing Strategies:</h4>
+                                <ul>
+                                    <li><strong>Research Similar Items:</strong> See what comparable items sell for</li>
+                                    <li><strong>Consider Complexity:</strong> More detailed items can command higher prices</li>
+                                    <li><strong>Start Competitive:</strong> Lower prices when building reputation</li>
+                                    <li><strong>Value Bundles:</strong> Offer sets at slightly discounted rates</li>
+                                    <li><strong>Limited Editions:</strong> Create scarcity for special items</li>
+                                    <li><em>Tip: Monitor sales and adjust pricing based on performance</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your UGC creation expertise:</p>
+                            <ul>
+                                <li><a href="optimization.html">Learn About Roblox Optimization</a> - Ensuring your UGC items perform well</li>
+                                <li><a href="../advanced/baking.html">Learn Baking Techniques</a> - For transferring high-poly details to low-poly UGC items</li>
+                                <li><a href="../advanced/hand-painted.html">Learn Advanced Hand-Painted Techniques</a> - For detailed UGC designs</li>
+                                <li><a href="../materials/metal.html">Create Metal UGC Items</a> - Apply metal-specific texturing techniques</li>
+                                <li><a href="../materials/fabric.html">Create Fabric UGC Items</a> - Apply fabric-specific texturing techniques</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create UGC Creation Templates</h4>
+                                <p>Save time on repetitive UGC setups:</p>
+                                <ul>
+                                    <li>Create a UGC accessory configuration you use frequently</li>
+                                    <li>Example: "Baseball Cap UGC Setup" (bill, panels, strap, attachment point)</li>
+                                    <li>Example: "Backpack UGC Setup" (main body, straps, pockets, attachment point)</li>
+                                    <li>Example: "Glasses UGC Setup" (frames, lenses, nose bridge, attachment point)</li>
+                                    <li>Right-click the layer group in layer stack</li>
+                                    <li>Choose "Create Smart Material" or "Save as Preset"</li>
+                                    <li>Name it descriptively (e.g., "Sports Hat UGC Template", "Tech Backpack UGC Base")</li>
+                                    <li>Save to your shelf for instant access</li>
+                                    <li><em>Now you can drag-and-drop this setup onto any UGC project</em></li>
+                                    <li><em>This ensures consistency across your UGC catalog and speeds up creation</em></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

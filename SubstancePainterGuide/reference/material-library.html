@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Material Library - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+        <div class="main-content">
+            <nav class="sidebar" aria-label="Guide categories">
+                <h2>Categories</h2>
+                <ul class="category-list"><li class="category-header">Getting Started</li><li><a href="../getting-started/installation.html">Installation &amp; Setup</a></li><li><a href="../getting-started/interface-overview.html">Interface Overview</a></li><li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+<li class="category-header">Substance 3D Painter Basics</li><li><a href="../basics/layers.html">Understanding Layers</a></li><li><a href="../basics/smart-materials.html">Smart Materials</a></li><li><a href="../basics/masks.html">Masks</a></li><li><a href="../basics/generators.html">Generators</a></li><li><a href="../basics/fill-layers.html">Fill Layers</a></li><li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+<li class="category-header">Materials</li><li><a href="../materials/metal.html">Metal</a></li><li><a href="../materials/plastic.html">Plastic</a></li><li><a href="../materials/leather.html">Leather</a></li><li><a href="../materials/fabric.html">Fabric</a></li><li><a href="../materials/wood.html">Wood</a></li><li><a href="../materials/skin.html" class="active" aria-current="page">Skin</a></li><li><a href="../materials/glass.html">Glass</a></li><li><a href="../materials/stone.html">Stone</a></li>
+<li class="category-header">Roblox Specific</li><li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li><li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li><li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li><li><a href="../roblox/clothing.html">Roblox Clothing</a></li><li><a href="../roblox/accessories.html">Roblox Accessories</a></li><li><a href="../roblox/ugc.html">Roblox UGC</a></li><li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+<li class="category-header">Advanced Techniques</li><li><a href="../advanced/anchors.html">Anchor Points</a></li><li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li><li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li><li><a href="../advanced/stylized.html">Stylized Texturing</a></li><li><a href="../advanced/realistic.html">Realistic Texturing</a></li><li><a href="../advanced/baking.html">Baking</a></li><li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+<li class="category-header">Troubleshooting</li><li><a href="../troubleshooting/common-issues.html">Common Issues</a></li><li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li><li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+<li class="category-header">Reference</li><li><a href="../reference/glossary.html">Glossary</a></li><li><a href="material-library.html" class="active" aria-current="page">Material Library</a></li><li><a href="../reference/texture-reference.html">Texture Reference Library</a></li><li><a href="../reference/faq.html">FAQ</a></li></ul>
+            </nav>
+            <main class="content">
+                <div class="breadcrumb"><a href="../index.html">Home</a> &gt; Reference &gt; Material Library</div>
+                <article class="article">
+    <header class="article-header">
+        <h1>Material Library for Roblox Assets</h1>
+        <div class="article-meta">
+            <span><strong>Scope:</strong> Common PBR materials</span>
+            <span><strong>Use:</strong> Starting points for Painter projects</span>
+        </div>
+    </header>
+    <div class="article-content">
+        <p>Browse the material guides for practical setup notes, Roblox considerations, and roughness and metalness starting ranges. Always judge the final look in Roblox Studio under the lighting used by your experience.</p>
+        <div class="callout-info"><h4>Shared PBR baseline</h4><p>Most non-metal materials use metalness 0. Bare, exposed metal uses metalness 1. Base color is authored as sRGB; roughness, metalness, and normal data are linear. Values are starting ranges, not universal constants.</p></div>
+        <section class="section">
+            <h2>Material Guides</h2>
+            <div class="grid-3">
+                <div class="feature-item"><h3><a href="../materials/metal.html">Metal</a></h3><p>Separate bare metal from paint, oxidation, and dirt. Use roughness to control reflection sharpness.</p></div>
+                <div class="feature-item"><h3><a href="../materials/plastic.html">Plastic</a></h3><p>Use dielectric values, molded details, and finish variation for hard or soft plastics.</p></div>
+                <div class="feature-item"><h3><a href="../materials/leather.html">Leather</a></h3><p>Build grain, folds, polished contact edges, and wear at an appropriate asset scale.</p></div>
+                <div class="feature-item"><h3><a href="../materials/fabric.html">Fabric</a></h3><p>Distinguish weave, knit, pile, seams, and folds while keeping texture readable in-game.</p></div>
+                <div class="feature-item"><h3><a href="../materials/wood.html">Wood</a></h3><p>Align grain with boards and beams; vary species, cut, finish, and weathering.</p></div>
+                <div class="feature-item"><h3><a href="../materials/skin.html">Skin</a></h3><p>Match the character workflow and use restrained color and roughness variation.</p></div>
+                <div class="feature-item"><h3><a href="../materials/glass.html">Glass</a></h3><p>Configure transparency in Roblox and use texture maps for tint, dirt, and surface cues.</p></div>
+                <div class="feature-item"><h3><a href="../materials/stone.html">Stone</a></h3><p>Match grain scale and weathering to the stone type and camera distance.</p></div>
+            </div>
+        </section>
+    </div>
+</article>
+</main>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

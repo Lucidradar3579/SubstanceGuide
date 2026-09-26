@@ -1,0 +1,626 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roblox Accessories - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="accessories.html" class="active">Roblox Accessories</a></li>
+                    <li><a href="ugc.html">Roblox UGC</a></li>
+                    <li><a href="optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Roblox Specific > Roblox Accessories
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Roblox Accessories Creation in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span> → <span class="badge badge-secondary">Intermediate</span></span>
+                            <span>Time: 25 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Accessories are what give Roblox avatars their unique personality and style. From hats and glasses to backpacks and jewelry, well-textured accessories allow players to express themselves and complete their avatar looks. This guide will walk you through the complete workflow for creating accessories that look great on Roblox avatars while following platform best practices.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Accessories Creation Matters for Roblox</h4>
+                            <p>Accessories are a major part of the Roblox avatar customization system. They allow players to express their individuality, complete their outfits, and create unique looks that stand out in the Roblox community.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Understanding Roblox Accessory Types</h2>
+                            <p>The different categories of accessories on Roblox:</p>
+
+                            <div class="pro-tip">
+                                <h4>Main Accessory Categories:</h4>
+                                <ul>
+                                    <li><strong>Hats:</strong> Headwear (helmets, caps, crowns, etc.)</li>
+                                    <li><strong>Faces:</strong> Facial accessories (glasses, masks, beards, etc.)</li>
+                                    <li><strong>Neck Accessories:</strong> Necklaces, ties, collars, etc.</li>
+                                    <li><strong>Shoulders:</strong> Shoulder attachments (pads, wings, etc.)</li>
+                                    <li><strong>Front:</strong> Front attachments (shields, logos, etc.)</li>
+                                    <li><strong>Back:</strong> Back attachments (backpacks, wings, etc.)</li>
+                                    <li><strong>Waist:</strong> Waist attachments (belts, pouches, etc.)</li>
+                                    <li><strong>Climbing Gear:</strong> Specialized climbing equipment</li>
+                                    <li><strong>Gear:</strong> Generic attachments and tools</li>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Attachment Points and Standards:</h4>
+                                <p>How accessories connect to avatars:</p>
+                                <ul>
+                                    <li>Roblox uses standardized attachment points for consistency</li>
+                                    <li>Each accessory type connects to specific bone/joint locations</li>
+                                    <li>This ensures accessories fit correctly across different avatar types</li>
+                                    <li><em>Tip: Design accessories with the standard attachment points in mind</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Setting Up Your Accessory Project</h2>
+                            <p>Preparing to texture Roblox accessories:</p>
+
+                            <div class="steps">
+                                <h4>Accessory Project Setup Steps</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Mesh Preparation</h4>
+                                        <p>Get your accessory mesh ready:</p>
+                                        <ul>
+                                            <li>Ensure proper UV layout (no overlapping islands unless intentional)</li>
+                                            <li>Check scale (1 unit = 1 cm in Roblox)</li>
+                                            <li>Verify mesh is clean (no duplicated vertices, proper normals)</li>
+                                            <li>Consider the attachment point and how it will connect to avatars</li>
+                                            <li><em>Tip: Test how your accessory looks when attached to different avatars</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Project Settings</h4>
+                                        <p>Configure for accessory texturing:</p>
+                                        <ul>
+                                            <li>Resolution: Depends on accessory size and detail needed</li>
+                                            <li>Small accessories (glasses, jewelry): 256x256 or 512x512</li>
+                                            <li>Medium accessories (hats, backpacks): 512x512 or 1024x1024</li>
+                                            <li>Large accessories (wings, large backpacks): 1024x1024 or 2048x2048</li>
+                                            <li>Template: PBR Metallic Roughness</li>
+                                            <li>Color Management: sRGB for color, Linear for data</li>
+                                            <li><em>Tip: Start with appropriate resolution for accessory size</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating Hats and Headwear</h2>
+                            <p>Texturing items that go on the avatar's head:</p>
+
+                            <div class="subsection">
+                                <h3>Hat Types and Considerations</h4>
+                                <p>Different hat styles and their texturing needs:</p>
+                                <div class="pro-tip">
+                                    <h4>Common Hat Types:</h4>
+                                    <ul>
+                                        <li><strong>Baseball Caps:</strong> Front panel, bill, back strap</li>
+                                        <li><strong>Beanies:</strong> Stretchy fabric that conforms to head</li>
+                                        <li><strong>Helmets:</strong> Hard shell with padding and straps</li>
+                                        <li><strong>Crowns/Tiaras:</strong> Ornate headwear with jewels and details</li>
+                                        <li><strong>Masks:</strong> Face coverings (holiday, thematic, etc.)</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating a Hat Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Accessory Setup</h4>
+                                        <p>Establish fundamental accessory properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Main accessory color</li>
+                                            <li>Add variation for material texture or wear</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value</li>
+                                            <li>Add variation for material texture</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set based on material (0.0 for fabric, 1.0 for metal)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Accessory Detail</h4>
+                                        <p>Create realistic accessory texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for material detail</li>
+                                            <li>Use generators appropriate to material</li>
+                                            <li>Or use painted details for logos, emblems, etc.</li>
+                                            <li>Keep detail appropriate for viewing distance</li>
+                                            <li><em>Tip: Hat detail should read at a distance, not be overly complex</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Damage</h4>
+                                        <p>Where hats show use:</p>
+                                        <ul>
+                                            <li>Use masks to control where wear appears</li>
+                                            <li>Position mask for areas that receive wear (bill, sides, etc.)</li>
+                                            <li>Curvature mask for edge wear and chipping</li>
+                                            <li>Combine with painted details for scratches and dirt</li>
+                                            <li><em>Tip: Hat wear should follow logical use patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Special Features</h4>
+                                        <p>Logs, vents, straps, buckles, etc.:</p>
+                                        <ul>
+                                            <li>Use Paint Layers for precise control</li>
+                                            <li>Or use stencils for repeating elements</li>
+                                            <li>Consider material accuracy for different parts</li>
+                                            <li><em>Tip: Different parts of hats may have different materials</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Export for Roblox</h4>
+                                        <p>Prepare your hat for upload:</p>
+                                        <ul>
+                                            <li>Export textures from Substance Painter</li>
+                                            <li>Ensure proper sizing for attachment point</li>
+                                            <li>Upload through Roblox website or Studio</li>
+                                            <li><em>Tip: Test how your hat looks on different avatars and hairstyles</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div
+                        </div>
+
+                        <section class="section">
+                            <h2>Creating Face Accessories</h2>
+                            <p>Texturing items that go on the avatar's face:</p>
+
+                            <div class="subsection">
+                                <h3>Face Accessory Types</h4>
+                                <p>Different face accessories and their texturing needs:</p>
+                                <div class="pro-tip">
+                                    <h4>Common Face Accessories:</h4>
+                                    <ul>
+                                        <li><strong>Glasses:</strong> Frames and lenses</li>
+                                        <li><strong>Masks:</strong> Full or partial face coverings</li>
+                                        <li><strong>Beards and Mustaches:</strong> Facial hair</li>
+                                        <li><strong>Eyes:</strong> Eye accessories and enhancements</li>
+                                        <li><strong>Ears:</strong> Earrings, earcups, etc.</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Glasses Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Accessory Setup</h4>
+                                        <p>Establish fundamental accessory properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Frame color</li>
+                                            <li>Add variation for material texture or wear</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value</li>
+                                            <li>Add variation for material texture</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set based on material (0.0 for plastic, 1.0 for metal)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Accessory Detail</h4>
+                                        <p>Create realistic accessory texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for frame detail</li>
+                                            <li>Use generators appropriate to material</li>
+                                            <li>Or use painted details for logos, engravings, etc.</li>
+                                            <li>Keep detail appropriate for viewing distance</li>
+                                            <li><em>Tip: Glasses detail should be clear and readable</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Lenses</h4>
+                                        <p>Creating realistic lenses:</p>
+                                        <ul>
+                                            <li>For clear lenses: Slight blue/green tint, high smoothness</li>
+                                            <li>For sunglasses: Appropriate tint and reflectivity</li>
+                                            <li>Use transparency if needed (alpha channel)</li>
+                                            <li><em>Tip: Test how lenses look with different eye colors</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Damage</h4>
+                                        <p>Where glasses show use:</p>
+                                        <ul>
+                                            <li>Use masks to control where wear appears</li>
+                                            <li>Position mask for areas that receive wear (nose bridge, temples)</li>
+                                            <li>Curvature mask for edge wear and scratches</li>
+                                            <li>Combine with painted details for dirt and smudges</li>
+                                            <li><em>Tip: Glasses wear should follow handling patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Export for Roblox</h4>
+                                        <p>Prepare your glasses for upload:</p>
+                                        <ul>
+                                            <li>Export textures from Substance Painter</li>
+                                            <li>Ensure proper sizing for attachment point</li>
+                                            <li>Upload through Roblox website or Studio</li>
+                                            <li><em>Tip: Test how your glasses look with different faces and expressions</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating Backpacks and Gear</h2>
+                            <p>Texturing items that go on the avatar's back:</p>
+
+                            <div class="subsection">
+                                <h3>Backpack Types and Considerations</h4>
+                                <p>Different backpack styles and their texturing needs:</p>
+                                <div class="pro-tip">
+                                    <h4>Common Backpack Types:</h4>
+                                    <ul>
+                                        <li><strong>School Backpacks:</strong> Standard book carrying packs</li>
+                                        <li><strong>Hiking Backpacks:</strong> Outdoor gear with straps and pockets</li>
+                                        <li><strong>Weapon Backpacks:</strong> For carrying weapons and gear</li>
+                                        <li><strong>Jetpacks:</strong> Futuristic propulsion packs</li>
+                                        <li><strong>Wings:</strong> Decorative or functional wing attachments</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating a Backpack Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Accessory Setup</h4>
+                                        <p>Establish fundamental accessory properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Main backpack color</li>
+                                            <li>Add variation for material texture or wear</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value</li>
+                                            <li>Add variation for material texture</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set based on material (0.0 for fabric, 0.5 for mixed, 1.0 for metal)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Accessory Detail</h4>
+                                        <p>Create realistic backpack texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for material detail</li>
+                                            <li>Use generators appropriate to material</li>
+                                            <li>Or use painted details for logos, straps, buckles, etc.</li>
+                                            <li>Keep detail appropriate for viewing distance</li>
+                                            <li><em>Tip: Backpack detail should read at a distance, not be overly complex</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Damage</h4>
+                                        <p>Where backpacks show use:</p>
+                                        <ul>
+                                            <li>Use masks to control where wear appears</li>
+                                            <li>Position mask for areas that receive wear (bottom, straps, corners)</li>
+                                            <li>Curvature mask for edge wear and abrasion</li>
+                                            <li>Combine with painted details for dirt, grime, and repairs</li>
+                                            <li><em>Tip: Backpack wear should follow carrying and use patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Special Features</h4>
+                                        <p>Pockets, zippers, straps, buckles, etc.:</p>
+                                        <ul>
+                                            <li>Use Paint Layers for precise control</li>
+                                            <li>Or use stencils for repeating elements</li>
+                                            <li>Consider material accuracy for different parts</li>
+                                            <li><em>Tip: Different parts of backpacks may have different materials</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Export for Roblox</h4>
+                                        <p>Prepare your backpack for upload:</p>
+                                        <ul>
+                                            <li>Export textures from Substance Painter</li>
+                                            <li>Ensure proper sizing for attachment point</li>
+                                            <li>Upload through Roblox website or Studio</li>
+                                            <li><em>Tip: Test how your backpack looks with different avatars and poses</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating Jewelry and Small Accessories</h2>
+                            <p>Texturing small, detailed items:</p>
+
+                            <div class="subsection">
+                                <h3>Jewelry Types and Considerations</h4>
+                                <p>Different jewelry styles and their texturing needs:</p>
+                                <div class="pro-tip">
+                                    <h4>Common Jewelry Types:</h4>
+                                    <ul>
+                                        <li><strong>Necklaces:</strong> Chains and pendants</li>
+                                        <li><strong>Bracelets:</strong> Wristbands and bangles</li>
+                                        <li><strong>Rings:</strong> Finger jewelry</li>
+                                        <li><strong>Earrings:</strong> Ear jewelry</li>
+                                        <li><strong>Brooches/Pins:</strong> Clothing attachments</li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="steps">
+                                <h4>Creating Jewelry Step-by-Step</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Base Accessory Setup</h4>
+                                        <p>Establish fundamental accessory properties:</p>
+                                        <ul>
+                                            <li>Base Color Fill Layer: Main jewelry color</li>
+                                            <li>Add variation for material texture or wear</li>
+                                            <li>Enable only Base Color channel</li>
+                                            <li>Add Fill Layer for Roughness</li>
+                                            <li>Set to appropriate grayscale value</li>
+                                            <li>Add variation for material texture</li>
+                                            <li>Enable only Roughness channel</li>
+                                            <li>Add Fill Layer for Metalness</li>
+                                            <li>Set based on material (0.0 for plastic/wood, 1.0 for metal)</li>
+                                            <li>Enable only Metalness channel</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Accessory Detail</h4>
+                                        <p>Create realistic jewelry texture:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for material detail</li>
+                                            <li>Use generators appropriate to material</li>
+                                            <li>Or use painted details for engravings, gems, etc.</li>
+                                            <li>Keep detail appropriate for viewing distance</li>
+                                            <li><em>Tip: Jewelry detail needs to be precise due to small size</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Damage</h4>
+                                        <p>Where jewelry shows use:</p>
+                                        <ul>
+                                            <li>Use masks to control where wear appears</li>
+                                            <li>Position mask for areas that receive wear (clasps, contacting surfaces)</li>
+                                            <li>Curvature mask for edge wear and scratches</li>
+                                            <li>Combine with painted details for tarnish and polishing</li>
+                                            <li><em>Tip: Jewelry wear should follow handling and contact patterns</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Export for Roblox</h4>
+                                        <p>Prepare your jewelry for upload:</p>
+                                        <ul>
+                                            <li>Export textures from Substance Painter</li>
+                                            <li>Ensure proper sizing for attachment point</li>
+                                            <li>Upload through Roblox website or Studio</li>
+                                            <li><em>Tip: Test how your jewelry looks on different avatars and in different lighting</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Optimization for Roblox Accessories</h2>
+                            <p>Balancing quality with performance:</p>
+
+                            <div class="callout">
+                                <h4>Accessory Optimization Guidelines:</h4>
+                                <ul>
+                                    <li><strong>Resolution:</strong> Match resolution to accessory size and detail needed</li>
+                                    <li><strong>Small Accessories:</strong> 256x256 or 512x512 (glasses, jewelry)</li>
+                                    <li><strong>Medium Accessories:</strong> 512x512 or 1024x1024 (hats, backpacks)</li>
+                                    <li><strong>Large Accessories:</strong> 1024x1024 or 2048x2048 (wings, large gear)</li>
+                                    <li><strong>Texture Reuse:</strong> Share textures between similar accessories</li>
+                                    <li><strong>Attachment Point Accuracy:</strong> Ensure proper alignment and sizing</li>
+                                </ul>
+                            </div>
+
+                            <div class="pro-tip">
+                                <h4>Creating Accessory Suites:</h4>
+                                <ul>
+                                    <li>Create matching sets (hat + glasses + backpack)</li>
+                                    <li>Create thematic collections (space, medieval, sports)</li>
+                                    <li>Create seasonal variations (summer, winter, holiday)</li>
+                                    <li><em>Tip: Use Smart Materials to quickly create matching accessory sets</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your accessory creation expertise:</p>
+                            <ul>
+                                <li><a href="ugc.html">Learn About Roblox UGC</a> - Understanding the marketplace and creation process</li>
+                                <li><a href="../materials/metal.html">Create Metal Accessories</a> - Apply metal-specific texturing techniques</li>
+                                <li><a href="../materials/plastic.html">Create Plastic Accessories</a> - Apply plastic-specific texturing techniques</li>
+                                <li><a href="../advanced/baking.html">Learn Baking Techniques</a> - For transferring high-poly accessory details to low-poly</li>
+                                <li><a href="../advanced/hand-painted.html">Learn Advanced Hand-Painted Techniques</a> - For detailed accessory designs</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create Accessory Design Templates</h4>
+                                <p>Save time on repetitive accessory setups:</p>
+                                <ul>
+                                    <li>Create an accessory design configuration you use frequently</li>
+                                    <li>Example: "Baseball Cap Setup" (bill, panels, strap)</li>
+                                    <li>Example: "Backpack Setup" (main body, straps, pockets)</li>
+                                    <li>Example: "Glasses Setup" (frames, lenses, nose bridge)</li>
+                                    <li>Right-click the layer group in layer stack</li>
+                                    <li>Choose "Create Smart Material" or "Save as Preset"</li>
+                                    <li>Name it descriptively (e.g., "Sports Hat Template", "Tech Backpack Base")</li>
+                                    <li>Save to your shelf for instant access</li>
+                                    <li><em>Now you can drag-and-drop this setup onto any accessory project</em></li>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

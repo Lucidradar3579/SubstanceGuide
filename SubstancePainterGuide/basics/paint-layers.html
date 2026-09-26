@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paint Layers - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="layers.html">Understanding Layers</a></li>
+                    <li><a href="smart-materials.html">Smart Materials</a></li>
+                    <li><a href="masks.html">Masks</a></li>
+                    <li><a href="generators.html">Generators</a></li>
+                    <li><a href="fill-layers.html">Fill Layers</a></li>
+                    <li><a href="paint-layers.html" class="active">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Substance 3D Painter Basics > Paint Layers
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Mastering Paint Layers in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span> → <span class="badge badge-danger">Advanced</span></span>
+                            <span>Time: 30 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Paint Layers give you direct artistic control over your textures, allowing you to add hand-crafted details, unique markings, and artistic touches that make your Roblox assets truly special. This guide covers everything from basic brush techniques to advanced projection and stencil techniques for creating professional-quality details.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Paint Layers Matter for Roblox Workflows</h4>
+                            <p>While procedural methods are efficient, Paint Layers allow you to add unique, character-defining details that make your Roblox assets stand out - from character-specific markings to hand-crafted wear patterns that feel authentic and personal.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Paint Layer Fundamentals</h2>
+                            <p>Understanding the basics of Paint Layers:</p>
+
+                            <div class="pro-tip">
+                                <h4>What Makes Paint Layers Special:</h4>
+                                <ul>
+                                    <li>Direct artistic control - paint exactly where you want</li>
+                                    <li>Works in both 2D (UV) and 3D views</li>
+                                    <li>Full brush engine with hundreds of brush types</li>
+                                    <li>Support for pressure sensitivity and tilt (with tablets)</li>
+                                    <li>Can affect one or multiple channels simultaneously</li>
+                                    <li><em>Roblox Tip: Use Paint Layers for unique details like character tattoos, logos, wear patterns, and artistic touches</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Paint Layer Structure:</h4>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Content Source</h4>
+                                        <p>Where the paint comes from:</p>
+                                        <ul>
+                                            <li>Brush Tip - Shape and texture of your brush</li>
+                                            <li>Color - Your selected paint color</li>
+                                            <li>Texture - Optional texture or pattern from brush</li>
+                                            <li>Channels - Which texture channels to paint to</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Brush Properties</h4>
+                                        <p>How your brush behaves:</p>
+                                        <ul>
+                                            <li>Size - Brush diameter in pixels</li>
+                                            <li>Hardness - Edge softness (0-100%)</li>
+                                            <li>Flow - Paint buildup rate per stroke</li>
+                                            <li>Spacing - Distance between paint dots</li>
+                                            <li>Rotation - Brush angle</li>
+                                            <li>Scatter - Random position variation</li>
+                                            <li>Pressure Size - Size responds to pen pressure</li>
+                                            <li>Pressure Opacity - Opacity responds to pen pressure</li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Blending and Channels</h4>
+                                        <p>How paint combines with existing content:</p>
+                                        <ul>
+                                            <li>Blending Mode (Normal, Multiply, Overlay, etc.)</li>
+                                            <li>Opacity (0-100%)</li>
+                                            <li>Flow vs Opacity distinction</li>
+                                            <li>Per-channel blending modes (advanced)</li>
+                                            <li>Channel selection (which channels to paint to)</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Brush Engine Deep Dive</h2>
+                            <p>Mastering the brush tools for artistic control:</p>
+
+                            <div class="subsection">
+                                <h3>Brush Types and Tips</h4>
+                                <p>The variety of brushes available:</p>
+                                <div class="pro-tip">
+                                    <h4>Essential Brush Categories:</h4>
+                                    <ul>
+                                        <li><strong>Round Brushes:</strong> Hard, soft, and textured tips</li>
+                                        <li><strong>Specialty Brushes:</strong> Scratches, leaks, grunge, texture brushes</li>
+                                        <li><strong>Shape Brushes:</strong> Lines, circles, rectangles, polygons</li>
+                                        <li><strong>Stamp Brushes:</strong> Pre-made shapes and textures</li>
+                                        <li><strong>Texture Brushes:</strong> Brushes with embedded textures</li>
+                                        <li><strong>Eraser Brushes:</strong> Various eraser types and shapes</li>
+                                    </ul>
+                                </div>
+                                <p><strong>Brush Parameters:</strong></p>
+                                <ul>
+                                    <li><strong>Size:</strong> Brush diameter</li>
+                                    <li><strong>Hardness:</strong> Edge softness (0=feathered, 100=hard)</li>
+                                    <li><strong>Flow:</strong> Paint buildup rate (low=gradual buildup)</li>
+                                    <li><strong>Spacing:</strong> Distance between paint dots</li>
+                                    <li><strong>Rotation:</strong> Brush angle</li>
+                                    <li><strong>Scatter:</strong> Random position distribution</li>
+                                    <li><strong>Texture:</strong> Optional texture applied through brush</li>
+                                    <li><strong>Pressure Features:</strong> Size, opacity, flow response to tablet pressure</li>
+                                    <li><em>Roblox Tip: Create custom brushes for common tasks like stud painting, fabric stitching, or metal scratching</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Painting Modes: 2D vs 3D</h4>
+                                <p>Choosing the right approach for your task:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>2D Painting (UV View)</h4>
+                                        <p>Painting on the UV layout:</p>
+                                        <ul>
+                                            <li>Precise, pixel-level control</li>
+                                            <li>Great for text, logos, and precise markings</li>
+                                            <li>No distortion - what you paint is what you get</li>
+                                            <li>Can be tedious for complex 3D shapes</li>
+                                            <li><em>Roblox Use:</em> UI elements, logos, text, precise character markings</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>3D Painting (Mesh View)</h4>
+                                        <p>Painting directly on your 3D model:</p>
+                                        <ul>
+                                            <li>Natural, intuitive painting experience</li>
+                                            <li>Follows surface contours automatically</li>
+                                            <li>Great for organic details and wear patterns</li>
+                                            <li>Can suffer from stretching in UV seams</li>
+                                            <li><em>Roblox Use:</em> Wear patterns, scratches, dirt, organic details</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Projection Painting</h4>
+                                        <p>Painting through camera or stencil:</p>
+                                        <ul>
+                                            <li>View Projected - Through current camera angle</li>
+                                            <li>UV Projected - Through UV space (like 2D)</li>
+                                            <li>Normal Projected - Along surface normals</li>
+                                            <li>Stencil Projected - Through a stencil mask</li>
+                                            <li><em>Roblox Use:</em> Decals, labels, logo placement, consistent angle details</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Basic Painting Techniques</h2>
+                            <p>Essential skills for effective Paint Layer use:</p>
+
+                            <div class="steps">
+                                <h4>Fundamental Painting Workflow</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Setting Up Your Paint Layer</h4>
+                                        <p>Prepare to paint:</p>
+                                        <ul>
+                                            <li>Add Paint Layer (Layer > Add Paint Layer)</li>
+                                            <li>Name it descriptively</li>
+                                            <li>Set desired color in Properties panel</li>
+                                            <li>Choose brush from Brush selector</li>
+                                            <li>Adjust brush size, hardness, flow as needed</li>
+                                            <li><em>Tip: Start with low flow (10-30%) for gradual buildup</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Choosing Your Painting Mode</h4>
+                                        <p>Select 2D, 3D, or projection:</p>
+                                        <ul>
+                                            <li>Press "2" for 2D/UV view painting</li>
+                                            <li>Press "3" for 3D/mesh view painting</li>
+                                            <li>Use projection buttons in toolbar for projection modes</li>
+                                            <li>Consider what you're painting when choosing mode</li>
+                                            <li><em>Tip: You can switch modes mid-stroke for different effects</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Applying Your Paint Stroke</h4>
+                                        <p>Make your mark:</p>
+                                        <ul>
+                                            <li>Click and drag to paint</li>
+                                            <li>Use tablet pressure for natural variation (if available)</li>
+                                            <li>Watch the build-up if using low flow</li>
+                                            <li>Release to complete stroke</li>
+                                            <li><em>Tip: Use short strokes for better control</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Correcting and Refining</h4>
+                                        <p>Fix mistakes and improve results:</p>
+                                        <ul>
+                                            <li>Press Ctrl+Z (Cmd+Z) to undo</li>
+                                            <li>Switch to Eraser tool to remove paint</li>
+                                            <li>Use Clone or Heal tools to fix areas</li>
+                                            <li>Adjust opacity or blending if too strong</li>
+                                            <li><em>Tip: Work in layers - it's easier to adjust than to repaint</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Advanced Painting Techniques</h2>
+                            <p>Pro-level paint control for professional results:</p>
+
+                            <div class="subsection">
+                                <h3>Stencils and Masks</h4>
+                                <p>Using guides for precise and repeatable painting:</p>
+                                <div class="pro-tip">
+                                    <h4>Types of Stencils:</h4>
+                                    <ul>
+                                        <li><strong>Geometric Stencils:</strong> Lines, circles, rectangles, polygons</li>
+                                        <li><strong>Text Stencils:</strong> Alphanumeric characters</li>
+                                        <li><strong>Texture Stencils:</strong> Images and textures as stencils</li>
+                                        <li><strong>Custom Stencils:</strong> Your own designs</li>
+                                    </ul>
+                                </div>
+                                <p><strong>Using Stencils:</strong></p>
+                                <ul>
+                                    <li>Select Stencil tool in toolbar</li>
+                                    <li>Choose stencil type from Properties panel</li>
+                                    <li>Adjust size, angle, offset as needed</li>
+                                    <li>Paint - stroke will be constrained to stencil shape</li>
+                                    <li><em>Roblox Use:</em> Logos, numbers, technical details, repeating patterns</em></li>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Clone and Heal Tools</h4>
+                                <p>Copying and repairing content:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Clone Tool</h4>
+                                        <p>Copies content from one area to another</p>
+                                        <ul>
+                                            <li>Alt+Click to set source point</li>
+                                            <li>Click and drag to paint cloned content</li>
+                                            <li>Great for repeating patterns or repairing damage</li>
+                                            <li><em>Roblox Use:</em> Repeating details, fixing texture seams, creating patterns</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Heal Tool</h4>
+                                        <p>Blends copied content with surroundings</p>
+                                        <ul>
+                                            <li>Similar to Clone but blends edges</li>
+                                            <li>Great for repairing without visible seams</li>
+                                            <li><em>Roblox Use:</em> Repairing damage, blending patches, natural-looking fixes</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Texture Painting</h4>
+                                <p>Painting with textures and patterns:</p>
+                                <div class="pro-tip">
+                                    <h4>Texture Sources:</h4>
+                                    <ul>
+                                        <li><strong>Brush Textures:</strong> Built into brush tips</li>
+                                        <li><strong>Stencil Textures:</strong> Used as stencil patterns</li>
+                                        <li><strong>Fill Textures:</strong> From Fill Layers or generators</li>
+                                        <li><strong>Imported Textures:</strong> Your own texture files</li>
+                                    </ul>
+                                </div>
+                                <p><strong>Using Texture Painting:</strong></p>
+                                <ul>
+                                    <li>Select brush with texture or use texture stencil</li>
+                                    <li>Adjust texture scale, offset, rotation</li>
+                                    <li>Paint - texture will be applied through your brush</li>
+                                    <li><em>Roblox Use:</em> Fabric weave, metal scratches, leather grain, concrete texture</em></li>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Practical Paint Layer Examples for Roblox</h2>
+                            <p>Real-world examples of how to use Paint Layers effectively:</p>
+
+                            <div class="subsection">
+                                <h3>Character and Clothing Details</h4>
+                                <p>Adding unique, personal touches:</p>
+                                <div class="steps">
+                                    <h4>Character Tattoos and Markings</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Planning Your Design</h4>
+                                            <ul>
+                                                <li>Reference tattoo placement on body</li>
+                                                <li>Consider visibility in different poses</li>
+                                                <li>Think about size and detail level</li>
+                                                <li><em>Roblox Tip: Test how tattoos look on different avatars and in different lighting</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Creating the Tattoo</h4>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose appropriate color</li>
+                                                <li>Select appropriate brush (fine liner for lines, fill for color)</li>
+                                                <li>Paint your design</li>
+                                                <li>Use layers to easily toggle on/off</li>
+                                                <li><em>Tip: Use reference images and take your time</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Adding Wear to Clothing</h4>
+                                            <ul>
+                                                <li>Add Paint Layer for wear/fading</li>
+                                                <li>Choose appropriate color (lighter for fading)</li>
+                                                <li>Select brush (soft round for gradual fading)</li>
+                                                <li>Paint in areas that would naturally wear</li>
+                                                <li>Consider elbows, knees, seat, and high-contact areas</li>
+                                                <li>Use low flow (10-20%) for gradual buildup</li>
+                                                <li><em>Roblox Tip: Think about how the clothing moves and stretches during use</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Adding Stains and Spots</h4>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose stain color (brown, red, etc.)</li>
+                                                <li>Select appropriate brush (round for dots, textured for splatters)</li>
+                                                <li>Paint where accidents would happen</li>
+                                                <li>Consider pockets, corners, and areas prone to spills</li>
+                                                <li>Vary size and opacity for natural look</li>
+                                                <li><em>Roblox Tip: Stains should look accidental, not mechanically placed</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Prop and Environment Details</h4>
+                                <p>Adding realistic touches to objects and scenery:</p>
+                                <div class="steps">
+                                    <h4>Creating Realistic Metal Props</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Adding Hand-Crafted Scratches</h4>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose color (lighter/darker than base metal)</li>
+                                                <li>Select scratch brush (linear or sharp tip)</li>
+                                                <li>Paint scratches following logical patterns</li>
+                                                <li>Consider how the object would be used and abused</li>
+                                                <li>Vary length, depth, and direction for realism</li>
+                                                <li><em>Roblox Tip: Reference real-world metal wear patterns</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Adding Dirt and Grime</h4>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose dirt color (dark brown, black)</li>
+                                                <li>Select appropriate brush (round, textured, or stipple)</li>
+                                                <li>Paint in recesses, corners, and low areas</li>
+                                                <li>Think about where dirt would naturally collect</li>
+                                                <li>Consider weather exposure and handling patterns</li>
+                                                <li><em>Roblox Tip: Use reference photos of real objects in similar conditions</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Adding Labels and Decals</h4>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose appropriate colors</li>
+                                                <li>Use Stencil tool for text and shapes</li>
+                                                <li>Or import logo/texture as stencil</li>
+                                                <li>Position where labels would logically be applied</li>
+                                                <li>Consider wear around edges of labels</li>
+                                                <li><em>Roblox Tip: Test how labels look at different angles and distances</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Roblox-Specific Examples</h4>
+                                <p>Details for platform-specific needs:</p>
+                                <div class="steps">
+                                    <h4>Stud and Connector Details</h4>
+
+                                    <div class="step">
+                                        <div class="step-number">1</div>
+                                        <div class="step-content">
+                                            <h4>Painting Studs and Connectors</h4>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose metallic color</li>
+                                                <li>Select round brush (appropriate size)</li>
+                                                <li>Paint studs and connectors</li>
+                                                <li>Consider consistent sizing and alignment</li>
+                                                <li><em>Roblox Tip: Create a stud brush for consistent sizing</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">2</div>
+                                        <div class="step-content">
+                                            <h4>Adding Wear to Connection Points</h4>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose wear color (smoother/shinier metal)</li>
+                                                <li>Select appropriate brush</li>
+                                                <li>Paint where friction occurs</li>
+                                                <li>Consider both sides of connection</li>
+                                                <li><em>Roblox Tip: Reference how players actually connect and disconnect items</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="step">
+                                        <div class="step-number">3</div>
+                                        <div class="step-content">
+                                            <h4>Creating UI Elements</h4>
+                                            <ul>
+                                                <li>Add Paint Layer</li>
+                                                <li>Choose appropriate colors</li>
+                                                <li>Use geometric stencils for shapes</li>
+                                                <li>Use text stencils for numbers and letters</li>
+                                                <li>Position for visibility and usability</li>
+                                                <li>Consider different states (normal, hover, active, disabled)</li>
+                                                <li><em>Roblox Tip: Test UI elements in actual Roblox Studio</em></p>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your Paint Layer expertise:</p>
+                            <ul>
+                                <li><a href="../advanced/hand-painted.html">Learn Advanced Hand-Painted Techniques</a> - Take your painting skills to the next level</li>
+                                <li><a href="masks.html">Master Masks</a> - Essential for controlling where Paint Layer content appears</li>
+                                <li><a href="generators.html">Explore Generators</a> - Learn how to create procedural content that complements hand painting</li>
+                                <li><a href="fill-layers.html">Explore Fill Layers</a> - For uniform content that Paint Layers can enhance</li>
+                                <li><a href="../materials/metal.html">Apply Your Knowledge: Create Metal Materials</a> - Practical project using Paint Layers</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create Paint Layer Presets</h4>
+                                <p>Save time on frequently used painting setups:</p>
+                                <ul>
+                                    <li>Create a Paint Layer configuration you use frequently</li>
+                                    <li>Example: "Character Tattoo Setup" (appropriate layer, color, brush)</li>
+                                    <li>Example: "Metal Scratching Setup" (wear color, scratch brush)</li>
+<li>Example: "UI Element Setup" (geometric stencils, appropriate colors)</li>
+                                    <li>Right-click the Paint Layer in layer stack</li>
+                                    <li>Choose "Create Smart Material" or "Save as Preset"</li>
+                                    <li>Name it descriptively (e.g., "Stud Painting Setup", "Character Marking Setup")</li>
+                                    <li>Save to your shelf for instant access</li>
+                                    <li><em>Now you can drag-and-drop this setup onto any texture set</em></p>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Glossary - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="glossary.html" class="active">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Reference > Glossary
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Substance 3D Painter & Roblox Glossary</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge">Beginner</span></span>
+                            <span>Time: 20 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </div>
+                    </header>
+
+                    <div class="article-content">
+                        <p>This glossary contains definitions of key terms used throughout this guide and in the Substance 3D Painter and Roblox communities. Understanding these terms will help you follow tutorials, communicate with other artists, and navigate documentation more effectively.</p>
+
+                        <div class="callout-info">
+                            <h4>How to Use This Glossary</h4>
+                            <p>Terms are organized alphabetically for easy reference. Each term includes a clear, concise definition and, where relevant, examples or related terms. Refer back to this glossary whenever you encounter unfamiliar terminology.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>A - D</h2>
+                            <div class="glossary">
+                                <div class="glossary-item">
+                                    <h3>Ambient Occlusion (AO)</h3>
+                                    <p>A shading method that calculates how exposed each point in a scene is to ambient lighting. Creates soft shadows in crevices, corners, and where objects meet.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Base Color</h3>
+                                    <p>The fundamental color of a material before lighting, shadows, or other effects are applied. In PBR workflows, this represents the diffuse color of the material.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Baking</h3>
+                                    <p>The process of transferring high-detail information from a high-polygon model to a low-polygon model through texture maps (normal, AO, curvature, etc.).</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Bitmap</h3>
+                                    <p>A digital image composed of pixels arranged in a grid. Common texture formats include PNG, JPG, and TGA.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Blend Mode</h3>
+                                    <p>A setting that determines how two layers interact with each other. Common modes include Normal, Multiply, Overlay, Screen, and Add.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Channel</h3>
+                                    <p>In texture maps, a channel refers to a specific component of the image (Red, Green, Blue, Alpha). In PBR, different channels store different material properties.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Curvature Map</h3>
+                                    <p>A texture map that highlights convex (peaks) and concave (valleys) areas of a model. Useful for adding wear, dirt, or highlighting edges.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Diffuse</h3>
+                                    <p>The base color of a material that represents how it appears under pure white light without any directional lighting effects.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Displacement Map</h3>
+                                    <p>A texture map that physically displaces vertices of a mesh to create actual geometry, rather than just simulating depth like a normal map.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Emissive</h3>
+                                    <p>The amount of light that a material emits itself, rather than reflecting from other light sources. Used for glowing materials.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Fill Layer</h3>
+                                    <p>A layer in Substance Painter that uniformly fills the texture with a solid color, gradient, or pattern.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Normal Map</h3>
+                                    <p>A texture map that simulates surface detail by altering how light interacts with the surface, creating the illusion of bumps and dents without adding geometry.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>PBR (Physically Based Rendering)</h3>
+                                    <p>A rendering approach that aims to simulate how light interacts with materials based on their physical properties, resulting in more realistic and consistent materials.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Procedural Texture</h3>
+                                    <p>A texture generated mathematically rather than from image files, allowing for infinite detail and resolution independence.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Roughness</h3>
+                                    <p>A measure of how rough or smooth a material's surface is. A value of 0 is perfectly smooth (mirror-like), while 1 is completely rough (matte).</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Smart Material</h3>
+                                    <p>A pre-configured collection of layers and effects in Substance Painter that can be applied to create complex materials quickly.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Specular</h3>
+                                    <p>The mirror-like reflection of light from a surface. In PBR workflows, specular is often derived from the metalness value.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Stencil</h3>
+                                    <p>A mask used to limit where paint or effects can be applied, allowing for precise control over where textures appear.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Texel Density</h3>
+                                    <p>The number of texture pixels per unit of 3D space. Consistent texel density ensures uniform texture resolution across a model.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Texture Set</h3>
+                                    <p>A collection of texture maps (Base Color, Normal, Roughness, etc.) that together define the complete appearance of a material.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>UV Mapping</h3>
+                                    <p>The process of flattening a 3D model's surface onto a 2D plane so that textures can be applied correctly. UVs are the 2D coordinates used for this mapping.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Value</h3>
+                                    <p>The lightness or darkness of a color, independent of its hue or saturation. In grayscale images, value represents the brightness.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>E - K</h2>
+                            <div class="glossary">
+                                <div class="glossary-item">
+                                    <h3>Height Map</h3>
+                                    <p>A texture map that stores elevation information, where white represents the highest points and black represents the lowest points.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>ID Map</h3>
+                                    <p>A texture map that uses different colors to identify different materials or sections of a model, useful for creating masks.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Instance</h3>
+                                    <p>In Roblox, an instance is any object that exists in the game world, such as a Part, MeshPart, Script, or GUI element.</li>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Layer</h3>
+                                    <p>In Substance Painter, a layer is a container for texture information that can be stacked, blended, and masked to create complex materials.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Material</h3>
+                                    <p>The substance or substances that an object is made of, which determines how it interacts with light and other environmental factors.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Metalness</h3>
+                                    <p>A value that indicates how metallic a material is. A value of 0 is a non-metal (dielectric), while 1 is a pure metal.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Mipmap</h3>
+                                    <p>A series of progressively lower resolution versions of a texture used for efficient rendering at different distances.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Normal (Tangent Space)</h3>
+                                    <p>The standard format for normal maps where the RGB values represent perturbations relative to the surface orientation.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Opacity</h3>
+                                    <p>The degree to which a material allows light to pass through it. 0 is completely transparent, 1 is completely opaque.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>PBR Workflow</h3>
+                                    <p>The process of creating materials using Physically Based Rendering principles, typically involving Base Color, Normal, Roughness, and Metalness maps.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Particle System</h3>
+                                    <p>In Roblox, a system for creating and managing large numbers of small, similar objects (like sparks, smoke, or debris) efficiently.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Photogrammetry</h3>
+                                    <p>The process of creating 3D models from photographs, often used to create highly realistic textures and geometry.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Pixel</h3>
+                                    <p>The smallest unit of a digital image, representing a single point of color.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Point Light</h3>
+                                    <p>A light source that emits light equally in all directions from a single point in space.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Polygon</h3>
+                                    <p>A flat, multi-sided shape that forms the building blocks of 3D models. Triangles and quads are the most common polygon types.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Procedural Generation</h3>
+                                    <p>The creation of content algorithmically rather than manually, often used for textures, terrain, and other repetitive elements.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Projection</h3>
+                                    <p>The method used to apply a 2D texture onto a 3D surface. Common types include planar, cylindrical, spherical, and UV projection.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Rigging</h3>
+                                    <p>The process of creating a skeleton and controls for a 3D model to enable animation.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Roblox Studio</h3>
+                                    <p>The official development environment for creating Roblox games and experiences.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Shader</h3>
+                                    <p>A program that runs on the GPU to calculate how pixels should be rendered based on lighting, material properties, and other factors.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Skybox</h3>
+                                    <p>A large cube or sphere that surrounds a scene and displays a background image, often used to create distant environments.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Specular Workflow</h3>
+                                    <p>An alternative to the metalness workflow where specular color and intensity are defined directly rather than derived from metalness.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Subdivision Surface</h3>
+                                    <p>A technique for creating smooth surfaces by recursively subdividing and averaging the vertices of a polygonal mesh.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Texture Atlas</h3>
+                                    <p>A single large texture that contains multiple smaller textures, used to reduce draw calls and improve performance.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Texture Filtering</h3>
+                                    <p>The method used to determine the color of a texture when it's displayed at a size different from its original resolution.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Texture Resolution</h3>
+                                    <p>The dimensions of a texture in pixels (width × height). Higher resolutions provide more detail but require more memory.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>UV Island</h3>
+                                    <p>A connected piece of a UV layout that represents a continuous section of the 3D model's surface.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>UV Seam</h3>
+                                    <p>The edge where two UV islands meet in the UV layout. Seams can cause visible artifacts if not handled properly.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Vector</h3>
+                                    <p>A mathematical quantity with both magnitude and direction, often used to represent positions, velocities, and forces in 3D space.</p>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>L - R</h2>
+                            <div class="glossary">
+                                <div class="glossary-item">
+                                    <h3>Layer Stack</h3>
+                                    <p>The ordered collection of layers in Substance Painter that determines how they blend together to create the final material appearance.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Level of Detail (LOD)</h3>
+                                    <p>Technique of using different versions of a model with varying complexity based on distance from the camera to improve performance.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Lightmap</h3>
+                                    <p>A pre-calculated texture that stores lighting information for static objects, allowing for complex lighting without real-time calculation.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Mask</h3>
+                                    <p>A grayscale image used to control the visibility or intensity of layers or effects, where white shows the effect fully and black hides it completely.</p>
+                                </div>
+
+                                <div class="glossitem">
+                                    <h3>Material ID</h3>
+                                    <p>An identifier used to distinguish different materials within a single object, often used with ID maps for masking.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Metallic Workflow</h3>
+                                    <p>A PBR workflow that uses a metalness map to define which parts of a material are metallic and which are non-metallic.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Normal Map Compression</h3>
+                                    <p>Techniques for reducing the file size of normal maps while minimizing quality loss, important for game performance.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Object Space</h3>
+                                    <p>A coordinate system where the origin is at the center of an individual object, rather than the world or camera.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Overdraw</h3>
+                                    <p>The situation where the same pixel is drawn multiple times in a single frame, wasting GPU resources.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Parallax Occlusion Mapping</h3>
+                                    <p>An advanced technique that simulates depth and self-occlusion in textures, providing more realistic results than standard normal maps.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Physically Based Rendering (PBR)</h3>
+                                    <p>A rendering approach that aims to simulate how light interacts with materials based on their physical properties, resulting in more realistic and consistent materials.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Pixel Shader</h3>
+                                    <p>A shader that calculates the color and other attributes of individual pixels.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Point Cloud</h3>
+                                    <p>A set of data points in 3D space, often created by 3D scanners, used to represent the external surface of an object.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Post-Process</h3>
+                                    <p>Effects applied after the main rendering pass, such as bloom, motion blur, or color grading.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Projection Painting</h3>
+                                    <p>A technique where 2D images are projected onto a 3D model to guide texturing or painting.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>PBR (Physically Based Rendering)</h3>
+                                    <p>A rendering approach that aims to simulate how light interacts with materials based on their physical properties, resulting in more realistic and consistent materials.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Ray Tracing</h3>
+                                    <p>A rendering technique that simulates the physical behavior of light to produce highly realistic lighting and reflections.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Reflection</h3>
+                                    <p>The bouncing of light off a surface, which can be specular (mirror-like) or diffuse (scattered in many directions).</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Refraction</h3>
+                                    <p>The bending of light as it passes through a transparent material, such as glass or water.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Resolution</h3>
+                                    <p>The level of detail in an image or model, typically measured in pixels for textures or polygons for 3D models.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Rim Light</h3>
+                                    <p>Light that hits the edges of an object from behind, creating a bright outline that helps separate the object from the background.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Roughness Map</h3>
+                                    <p>A texture map that stores roughness information, where black represents smooth areas and white represents rough areas.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Sample</h3>
+                                    <p>In digital audio or imaging, a single measurement taken from a continuous signal at a specific point in time or space.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Saturation</h3>
+                                    <p>The intensity or purity of a color. A fully saturated color is pure hue, while a desaturated color appears more gray.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Scalar</h3>
+                                    <p>A single numerical value, as opposed to a vector or matrix which has multiple components.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Screen Space</h3>
+                                    <p>A coordinate system where the origin is at the corner of the screen, used for post-processing effects and UI elements.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Seamless Texture</h3>
+                                    <p>A texture that can be tiled repeatedly without visible seams or discontinuities at the edges.</p>
+                                </div>
+
+                                <div class="glossary-item>
+                                    <h3>Shader Model</h3>
+                                    <p>A version of the shader programming language and capabilities supported by a GPU or graphics API.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Sharpening</h3>
+                                    <p>A filter or process that increases the contrast between adjacent pixels to make edges appear more distinct.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Sky Light</h3>
+                                    <p>Light that comes from the sky or environment, providing indirect illumination to objects in a scene.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Specular Map</h3>
+                                    <p>A texture map that stores specular reflection information, controlling how shiny or reflective different areas of a material are.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Sphere</h3>
+                                    <p>A three-dimensional geometric shape where all points on the surface are equidistant from the center.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>SSAO (Screen Space Ambient Occlusion)</h3>
+                                    <p>A real-time technique for approximating ambient occlusion in screen space, often used in games for performance.</p>
+                                </div>
+
+                                <div class="glossary-item">
+                                    <h3>Substance</h3>
+                                    <p>The core technology behind Substance 3D Painter that allows for procedural, non-destructive texturing through parametric controls.</p>
+</div>
+</article>
+</div>
+</div>
+</div>
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Texturing - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+        <div class="main-content">
+            <nav class="sidebar" aria-label="Guide categories">
+                <h2>Categories</h2>
+                <ul class="category-list"><li class="category-header">Getting Started</li><li><a href="../getting-started/installation.html">Installation &amp; Setup</a></li><li><a href="../getting-started/interface-overview.html">Interface Overview</a></li><li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+<li class="category-header">Substance 3D Painter Basics</li><li><a href="../basics/layers.html">Understanding Layers</a></li><li><a href="../basics/smart-materials.html">Smart Materials</a></li><li><a href="../basics/masks.html">Masks</a></li><li><a href="../basics/generators.html">Generators</a></li><li><a href="../basics/fill-layers.html">Fill Layers</a></li><li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+<li class="category-header">Materials</li><li><a href="metal.html">Metal</a></li><li><a href="plastic.html">Plastic</a></li><li><a href="leather.html">Leather</a></li><li><a href="fabric.html">Fabric</a></li><li><a href="wood.html">Wood</a></li><li><a href="skin.html" class="active" aria-current="page">Skin</a></li><li><a href="glass.html">Glass</a></li><li><a href="stone.html">Stone</a></li>
+<li class="category-header">Roblox Specific</li><li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li><li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li><li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li><li><a href="../roblox/clothing.html">Roblox Clothing</a></li><li><a href="../roblox/accessories.html">Roblox Accessories</a></li><li><a href="../roblox/ugc.html">Roblox UGC</a></li><li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+<li class="category-header">Advanced Techniques</li><li><a href="../advanced/anchors.html">Anchor Points</a></li><li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li><li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li><li><a href="../advanced/stylized.html">Stylized Texturing</a></li><li><a href="../advanced/realistic.html">Realistic Texturing</a></li><li><a href="../advanced/baking.html">Baking</a></li><li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+<li class="category-header">Troubleshooting</li><li><a href="../troubleshooting/common-issues.html">Common Issues</a></li><li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li><li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+<li class="category-header">Reference</li><li><a href="../reference/glossary.html">Glossary</a></li><li><a href="../reference/material-library.html">Material Library</a></li><li><a href="../reference/texture-reference.html">Texture Reference Library</a></li><li><a href="../reference/faq.html">FAQ</a></li></ul>
+            </nav>
+            <main class="content">
+                <div class="breadcrumb"><a href="../index.html">Home</a> &gt; <a href="../reference/material-library.html">Materials</a> &gt; Skin</div>
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Skin Texturing for Roblox Characters</h1>
+                        <div class="article-meta">
+                            <span><strong>Difficulty:</strong> Intermediate</span>
+                            <span><strong>Time:</strong> 35-60 minutes</span>
+                            <span><strong>Software:</strong> Substance 3D Painter</span>
+                            <span><strong>Roblox relevance:</strong> Essential</span>
+                        </div>
+                    </header>
+                    <div class="article-content">
+                        <p>Character skin can range from clean stylized avatar colors to detailed creature surfaces. For Roblox, keep the design readable at gameplay distance and align texturing with the character rig and intended avatar system.</p>
+                        <div class="callout-info"><h4>Roblox workflow note</h4><p>Roblox character appearance often uses body colors, face assets, layered clothing, or mesh textures depending on the character setup. A standard SurfaceAppearance does not provide general subsurface scattering, so use restrained color and roughness variation rather than relying on SSS.</p></div>
+                        <section class="section">
+                            <h2>Material Properties</h2>
+                            <div class="grid-3"><div class="feature-item"><h3>Color regions</h3><p>Use gentle shifts for cheeks, ears, hands, and other exposed areas when the style needs them.</p></div>
+<div class="feature-item"><h3>Roughness</h3><p>Keep highlights soft and avoid oily, plastic-looking gloss.</p></div>
+<div class="feature-item"><h3>Detail scale</h3><p>Pores and fine marks should only be added when the mesh and camera distance can support them.</p></div></div>
+                        </section>
+                        <section class="section">
+                            <h2>Starting Reference Values</h2>
+                            <p>Use these as practical starting points, then tune the result under the target lighting and at the final in-game viewing distance.</p>
+                            <div class="table-wrap"><table>
+                                <thead><tr><th>Material</th><th>Color direction</th><th>Roughness</th><th>Metalness</th><th>Typical use</th></tr></thead>
+                                <tbody><tr><td>Stylized clean skin</td><td>Chosen character palette</td><td>0.45-0.70</td><td>0.0</td><td>Most avatar and NPC styles</td></tr>
+<tr><td>Soft realistic skin</td><td>Balanced warm or cool tone</td><td>0.35-0.55</td><td>0.0</td><td>Detailed close-up characters</td></tr>
+<tr><td>Creature skin</td><td>Palette matched to species</td><td>0.40-0.75</td><td>0.0</td><td>Scales, plates, or rough patches via masks</td></tr>
+<tr><td>Painted skin detail</td><td>Subtle blush or markings</td><td>0.40-0.70</td><td>0.0</td><td>Freckles, makeup, markings</td></tr></tbody>
+                            </table></div>
+                            <p class="small-note">Roughness values are approximate authoring ranges, not universal physical measurements. Keep metalness at 0 for non-metallic surfaces.</p>
+                        </section>
+                        <section class="section">
+                            <h2>Painter Workflow</h2>
+                            <div class="steps"><div class="step"><div class="step-number">1</div><div class="step-content"><h4>Confirm the character setup</h4><p>Identify whether the character uses standard avatar parts, skinned meshes, or a custom texture workflow.</p></div></div>
+<div class="step"><div class="step-number">2</div><div class="step-content"><h4>Establish an even base</h4><p>Set the main skin palette and check it under neutral lighting before adding detail.</p></div></div>
+<div class="step"><div class="step-number">3</div><div class="step-content"><h4>Add controlled variation</h4><p>Place blush, freckles, scars, or creature markings intentionally and keep symmetry only where appropriate.</p></div></div>
+<div class="step"><div class="step-number">4</div><div class="step-content"><h4>Test on the rig</h4><p>Check face and body seams during animation and verify that exported maps match the target Roblox workflow.</p></div></div></div>
+                        </section>
+                        <section class="section">
+                            <h2>Export and Quality Check</h2>
+                            <ul>
+                                <li>Keep base color in sRGB; treat roughness, metalness, and normal maps as linear data.</li>
+                                <li>Use the Roblox SurfaceAppearance export preset or confirm each channel is packed and named as expected.</li>
+                                <li>Check UV seams, texture scale, compression, and the material under more than one lighting condition.</li>
+                                <li>Import into Roblox Studio and compare at the actual camera distance before increasing texture detail.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Metal Texturing - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+        <div class="main-content">
+            <nav class="sidebar" aria-label="Guide categories">
+                <h2>Categories</h2>
+                <ul class="category-list"><li class="category-header">Getting Started</li><li><a href="../getting-started/installation.html">Installation &amp; Setup</a></li><li><a href="../getting-started/interface-overview.html">Interface Overview</a></li><li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+<li class="category-header">Substance 3D Painter Basics</li><li><a href="../basics/layers.html">Understanding Layers</a></li><li><a href="../basics/smart-materials.html">Smart Materials</a></li><li><a href="../basics/masks.html">Masks</a></li><li><a href="../basics/generators.html">Generators</a></li><li><a href="../basics/fill-layers.html">Fill Layers</a></li><li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+<li class="category-header">Materials</li><li><a href="metal.html" class="active" aria-current="page">Metal</a></li><li><a href="plastic.html">Plastic</a></li><li><a href="leather.html">Leather</a></li><li><a href="fabric.html">Fabric</a></li><li><a href="wood.html">Wood</a></li><li><a href="skin.html">Skin</a></li><li><a href="glass.html">Glass</a></li><li><a href="stone.html">Stone</a></li>
+<li class="category-header">Roblox Specific</li><li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li><li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li><li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li><li><a href="../roblox/clothing.html">Roblox Clothing</a></li><li><a href="../roblox/accessories.html">Roblox Accessories</a></li><li><a href="../roblox/ugc.html">Roblox UGC</a></li><li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+<li class="category-header">Advanced Techniques</li><li><a href="../advanced/anchors.html">Anchor Points</a></li><li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li><li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li><li><a href="../advanced/stylized.html">Stylized Texturing</a></li><li><a href="../advanced/realistic.html">Realistic Texturing</a></li><li><a href="../advanced/baking.html">Baking</a></li><li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+<li class="category-header">Troubleshooting</li><li><a href="../troubleshooting/common-issues.html">Common Issues</a></li><li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li><li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+<li class="category-header">Reference</li><li><a href="../reference/glossary.html">Glossary</a></li><li><a href="../reference/material-library.html">Material Library</a></li><li><a href="../reference/texture-reference.html">Texture Reference Library</a></li><li><a href="../reference/faq.html">FAQ</a></li></ul>
+            </nav>
+            <main class="content">
+                <div class="breadcrumb"><a href="../index.html">Home</a> &gt; <a href="../reference/material-library.html">Materials</a> &gt; Metal</div>
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Metal Texturing in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span><strong>Difficulty:</strong> Beginner to Advanced</span>
+                            <span><strong>Time:</strong> 30-90 minutes</span>
+                            <span><strong>Software:</strong> Substance 3D Painter</span>
+                            <span><strong>Roblox relevance:</strong> Essential</span>
+                        </div>
+                    </header>
+                    <div class="article-content">
+                        <p>Build readable metal surfaces for Roblox weapons, armor, machinery, vehicles, and props. The key is to separate bare metal from paint, dirt, and oxidation instead of making every layer metallic.</p>
+                        <div class="callout-info"><h4>Roblox workflow note</h4><p>Set metalness to 1 for exposed metal and 0 for paint, rust, dirt, or other non-metal layers. Roblox reflections depend on scene lighting and environment settings, so judge the exported maps in Studio as well as Painter.</p></div>
+                        <section class="section">
+                            <h2>Material Properties</h2>
+                            <div class="grid-3"><div class="feature-item"><h3>Metalness</h3><p>Bare metal is 1.0; paint and corrosion are dielectric at 0.0.</p></div>
+<div class="feature-item"><h3>Roughness</h3><p>Polished surfaces are lower; brushed, worn, or oxidized surfaces are higher.</p></div>
+<div class="feature-item"><h3>Surface detail</h3><p>Use directional scratches, edge wear, dents, and restrained oxidation.</p></div></div>
+                        </section>
+                        <section class="section">
+                            <h2>Starting Reference Values</h2>
+                            <p>Use these as practical starting points, then tune the result under the target lighting and at the final in-game viewing distance.</p>
+                            <div class="table-wrap"><table>
+                                <thead><tr><th>Material</th><th>Color direction</th><th>Roughness</th><th>Metalness</th><th>Typical use</th></tr></thead>
+                                <tbody><tr><td>Brushed steel</td><td>Gray</td><td>0.25-0.45</td><td>1.0</td><td>Tools, armor, machinery</td></tr>
+<tr><td>Polished aluminum</td><td>Light gray</td><td>0.10-0.25</td><td>1.0</td><td>Trim and clean hardware</td></tr>
+<tr><td>Copper</td><td>Warm reddish brown</td><td>0.18-0.35</td><td>1.0</td><td>Pipes, fittings, decorative pieces</td></tr>
+<tr><td>Painted steel</td><td>Chosen paint color</td><td>0.30-0.55</td><td>0.0 paint / 1.0 exposed metal</td><td>Vehicles and props</td></tr></tbody>
+                            </table></div>
+                            <p class="small-note">Roughness values are approximate authoring ranges, not universal physical measurements. Keep metalness at 0 for non-metallic surfaces.</p>
+                        </section>
+                        <section class="section">
+                            <h2>Painter Workflow</h2>
+                            <div class="steps"><div class="step"><div class="step-number">1</div><div class="step-content"><h4>Set the material regions</h4><p>Use polygon fill, material IDs, or masks to separate exposed metal from paint and grime.</p></div></div>
+<div class="step"><div class="step-number">2</div><div class="step-content"><h4>Establish the finish</h4><p>Choose the metal tint and roughness first. Keep scratches aligned with the manufacturing process, such as brushing or machining.</p></div></div>
+<div class="step"><div class="step-number">3</div><div class="step-content"><h4>Layer wear deliberately</h4><p>Add edge wear and oxidation with masks. Keep corrosion localized and ensure its metalness is zero.</p></div></div>
+<div class="step"><div class="step-number">4</div><div class="step-content"><h4>Check under Roblox lighting</h4><p>Export the SurfaceAppearance maps and inspect reflections and color in Studio before adding more detail.</p></div></div></div>
+                        </section>
+                        <section class="section">
+                            <h2>Export and Quality Check</h2>
+                            <ul>
+                                <li>Keep base color in sRGB; treat roughness, metalness, and normal maps as linear data.</li>
+                                <li>Use the Roblox SurfaceAppearance export preset or confirm each channel is packed and named as expected.</li>
+                                <li>Check UV seams, texture scale, compression, and the material under more than one lighting condition.</li>
+                                <li>Import into Roblox Studio and compare at the actual camera distance before increasing texture detail.</li>
+                            </ul>
+                        </section>
+                    </div>
+                </article>
+            </main>
+        </div>
+    </div>
+    <script src="../script.js"></script>
+</body>
+</html>

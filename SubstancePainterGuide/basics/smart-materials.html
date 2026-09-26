@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Materials - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="../getting-started/basic-workflow.html">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="layers.html">Understanding Layers</a></li>
+                    <li><a href="smart-materials.html" class="active">Smart Materials</a></li>
+                    <li><a href="masks.html">Masks</a></li>
+                    <li><a href="generators.html">Generators</a></li>
+                    <li><a href="fill-layers.html">Fill Layers</a></li>
+                    <li><a href="paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li
+<li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Substance 3D Painter Basics > Smart Materials
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Smart Materials in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span> → <span class="badge badge-secondary">Intermediate</span></span>
+                            <span>Time: 30 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: High</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Smart Materials are one of Substance 3D Painter's most powerful features - they're intelligent, adaptive material presets that automatically adjust to your model's geometry. This guide will teach you how to use existing Smart Materials, customize them for Roblox workflows, and create your own library of Roblox-optimized materials.</p>
+
+                        <div class="callout-info">
+                            <h4>Why Smart Materials Matter for Roblox</h4>
+                            <p>Smart Materials dramatically speed up your texturing workflow by providing intelligent starting points that adapt to your mesh's curvature, orientation, and position - perfect for creating consistent, high-quality Roblox assets quickly.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>What Makes a Material "Smart"?</h2>
+                            <p>Understanding the intelligence behind Smart Materials:</p>
+
+                            <div class="pro-tip">
+                                <h4>The Intelligence of Smart Materials:</h4>
+                                <ul>
+                                    <li><strong>Adaptive Generators:</strong> Use curvature, position, ambient occlusion, and other mesh maps to intelligently place details</li>
+                                    <li><strong>Parameter Exposure:</strong> Key controls are exposed for easy customization without digging into layers</li>
+                                    <li><strong>Non-Destructive:</strong> Fully editable layer stack underneath</li>
+                                    <li><strong>Resolution Independent:</strong> Work at any texture resolution</li>
+                                    <li><em>Roblox Tip: The adaptive nature means your materials look great on both low-poly and high-poly versions of the same asset</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="callout">
+                                <h4>Smart Material Structure</h4>
+                                <p>What's inside a typical Smart Material:</p>
+                                <ul>
+                                    <li>Base material layers (Fill Layers for color, roughness, metalness)</li>
+                                    <li>Detail layers (generators for scratches, wear, etc.)</li>
+                                    <li>Effect layers (dirt, grime, etc. using smart masks)</li>
+                                    <li>All organized in groups with exposed parameters</li>
+                                    <li><em>Example: A "Smart Rust" material might have:</em></li>
+                                    <ul>
+                                        <li>Base metal layers</li>
+                                        <li>Rust color fill layer masked by curvature (edges) + position (low points)</li>
+                                        <li>Roughness variation where rust occurs</li>
+                                        <li>Height detail for rust buildup</li>
+                                        <li>Exposed parameters: Rust amount, roughness variation, height scale</li>
+                                    </ul>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Using Smart Materials Effectively</h2>
+                            <p>How to get the most out of existing Smart Materials:</p>
+
+                            <div class="steps">
+                                <h4>Applying and Customizing Smart Materials</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Finding and Applying Smart Materials</h4>
+                                        <p>Get started with Smart Materials:</p>
+                                        <ul>
+                                            <li>Open the Shelf (usually on left)</li>
+                                            <li>Navigate to Smart Materials category</li>
+                                            <li>Browse or search for materials</li>
+                                            <li>Drag and drop onto your texture set</li>
+                                            <li><em>Tip: Hover over thumbnails to see preview</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Adjusting Exposed Parameters</h4>
+                                        <p>Customize without opening the layer stack:</p>
+                                        <ul>
+                                            <li>With Smart Material selected, look in Properties panel</li>
+                                            <li>Adjust sliders for exposed parameters (intensity, scale, etc.)</li>
+                                            <li>Common parameters: Wear, Dirt, Moisture, Oxidation, Scale, etc.</li>
+                                            <li><em>Roblox Tip: Save custom parameter sets as presets for reuse</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Editing the Underlying Layer Stack</h4>
+                                        <p>When you need deeper customization:</p>
+                                        <ul>
+                                            <li>Right-click Smart Material in layer stack</li>
+                                            <li>Choose "Convert to Layers"</li>
+                                            <li>Now you can edit all layers directly</li>
+                                            <li><em>Tip: Make a copy before converting if you want to keep the original Smart Material</em></p>
+                                        </ul>
+                                        <p><em>Roblox Use Case: Convert to layers to adjust for specific Roblox lighting or performance requirements</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Creating Variations</h4>
+                                        <p>Quickly create material variations:</p>
+                                        <ul>
+                                            <li>Apply Smart Material to texture set</li>
+                                            <li>Adjust parameters to desired look</li>
+                                            <li>Right-click > "Create Smart Material"</li>
+                                            <li>Name your variation (e.g., "Roblox Weathered Steel - Heavy Rust")</li>
+                                            <li>Save to your custom shelf</li>
+                                            <li><em>Now you have a reusable custom Smart Material</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Essential Smart Materials for Roblox Workflows</h2>
+                            <p>Starting points for common Roblox asset types:</p>
+
+                            <div class="subsection">
+                                <h3>Metals and Hardware</h4>
+                                <p>For tools, weapons, vehicles, and accessories:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Smart Metal</h4>
+                                        <p>Versatile metal base with adaptive wear</p>
+                                        <ul>
+                                            <li>Base metal color, roughness, metalness</li>
+                                            <li>Curvature-based scratches and wear</li>
+                                            <li>Position-based dirt in crevices</li>
+                                            <li><em>Roblox Use: Tools, weapons, vehicle parts, hardware</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Smart Rust</h4>
+                                        <p>Realistic rust and corrosion</p>
+                                        <ul>
+                                            <li>Metal base with rust coloration</li>
+                                            <li>Rust accumulates in low areas (position)</li>
+                                            <li>Edge wear where metal is exposed</li>
+                                            <li><em>Roblox Use: Outdoor structures, vehicles, hardware exposed to elements</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Smart Paint</h4>
+                                        <p>Paint with realistic wear and chips</p>
+                                        <ul>
+                                            <li>Base color with adjustable chipping</li>
+                                            <li>Wear on edges and high-contact areas</li>
+                                            <li>Primer/show-through where chipped</li>
+                                            <li><em>Roblox Use: Vehicles, equipment, painted structures</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Organic Materials</h4>
+                                <p>For natural materials and clothing:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Smart Fabric</h4>
+                                        <p>Cloth and textile materials</p>
+                                        <ul>
+                                            <li>Base color with weave pattern</li>
+                                            <li>Wear and fading on high-stress areas</li>
+                                            <li>Dirt accumulation in folds and creases</li>
+                                            <li><em>Roblox Use: Clothing, bags, tents, fabric accessories</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Smart Wood</h4>
+                                        <p>Wood materials with grain and wear</p>
+                                        <ul>
+                                            <li>Wood base with grain direction</li>
+                                            <li>Wear, scratches, and dents</li>
+                                            <li>Dirt and grime in grooves</li>
+                                            <li><em>Roblox Use: Furniture, tools, structures, handles</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Smart Leather</h4>
+                                        <p>Leather materials with grain and wear</p>
+                                        <ul>
+                                            <li>Leather base with grain pattern</li>
+                                            <li>Wear, creasing, and smoothing</li>
+                                            <li>Dirt and oils accumulation</li>
+                                            <li><em>Roblox Use: Shoes, bags, belts, furniture, accessories</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Roblox-Specific Materials</h4>
+                                <p>Materials tailored for common Roblox use cases:</p>
+                                <div class="grid-3">
+                                    <div class="feature-item">
+                                        <h4>Smart Studs</h4>
+                                        <p>For Roblox character studs and connectors</p>
+                                        <ul>
+                                            <li>Metallic base with wear</li>
+                                            <li>Adjustable size and spacing</li>
+                                            <li>Wear patterns appropriate for connection points</li>
+                                            <li><em>Roblox Use: Character customization, clothing connectors</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Smart Blocks</h4>
+                                        <p>For Roblox-style blocky materials</p>
+                                        <ul>
+                                            <li>Plastic/base material with consistent color</li>
+                                            <li>Subtle wear to avoid too-perfect look</li>
+                                            <li>Optional studs or connectors</li>
+                                            <li><em>Roblox Use: Building bricks, furniture, props</em></li>
+                                        </ul>
+                                    </div>
+
+                                    <div class="feature-item">
+                                        <h4>Smart Terrain</h4>
+                                        <p>For ground and environmental materials</p>
+                                        <ul>
+                                            <li>Base material (dirt, sand, grass, etc.)</li>
+                                            <li>Variation to avoid tiling patterns</li>
+                                            <li>Wear and displacement from use</li>
+                                            <li><em>Roblox Use: Ground surfaces, paths, environmental details</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Creating Custom Smart Materials for Roblox</h2>
+                            <p>Build your own library of Roblox-optimized materials:</p>
+
+                            <div class="steps">
+                                <h4>Step-by-Step Smart Material Creation</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Start with a Base Material</h4>
+                                        <p>Create your foundation:</p>
+                                        <ul>
+                                            <li>Create Fill Layers for Base Color, Roughness, Metalness</li>
+                                            <li>Set appropriate values for your material</li>
+                                            <li>Group these layers (e.g., "Base Material")</li>
+                                            <li><em>Example: For Roblox metal - color: #7F7F7F, roughness: 0.3, metalness: 1.0</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Add Adaptive Details</h4>
+                                        <p>Add intelligence with generators and smart masks:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for details (scratches, wear, etc.)</li>
+                                            <li>Set content to appropriate generator (Noise, Grunge, etc.)</li>
+                                            <li>Add Black Mask</li>
+                                            <li>Generate mask using curvature, position, or ambient occlusion</li>
+                                            <li>Adjust generator parameters for desired effect</li>
+                                            <li><em>Example: Curvature generator for edge wear, position generator for dirt in crevices</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Effects and Variations</h4>
+                                        <p>Enhance realism with additional effects:</p>
+                                        <ul>
+                                            <li>Add layers for dirt, dust, moisture, etc.</li>
+                                            <li>Use appropriate masks (position for dirt, curvature for wear)</li>
+                                            <li>Adjust opacity and blending for subtlety</li>
+                                            <li><em>Example: Position-based darkening in crevices for dirt accumulation</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Organize and Expose Parameters</h4>
+                                        <p>Make your Smart Material user-friendly:</p>
+                                        <ul>
+                                            <li>Organize layers into logical groups (Base, Details, Effects)</li>
+                                            <li>Identify key customization points</li>
+                                            <li>Right-click on groups/layers > "Create Smart Material"</li>
+                                            <li>In the Smart Material editor, expose important parameters</li>
+                                            <li><em>Parameters to expose: Wear intensity, dirt amount, scale, color variation, etc.</em></li>
+                                            <li>Test your Smart Material on different meshes</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Save and Organize</h4>
+                                        <p>Add to your library for reuse:</p>
+                                        <ul>
+                                            <li>Right-click your Smart Material in the layer stack</li>
+                                            <li>Choose "Create Smart Material"</li>
+                                            <li>Name it descriptively (include "Roblox" in name for easy finding)</li>
+                                            <li>Save to your custom shelf</li>
+                                            <li>Organize in appropriate category (Metals, Fabrics, etc.)</li>
+                                            <li><em>Examples: "Roblox Weathered Steel", "Roblox Fabric Uniform", "Roblox Plastic Brick"</em></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Workflow Integration for Roblox Projects</h2>
+                            <p>How to incorporate Smart Materials into your Roblox texturing pipeline:</p>
+
+                            <div class="callout">
+                                <h4>Recommended Roblox Smart Material Workflow:</h4>
+                                <ol>
+                                    <li><strong>Project Setup:</strong> Import model, set resolution, choose PBR template</li>
+                                    <li><strong>Base Material:</strong> Apply appropriate Smart Material as starting point</li>
+                                    <li><strong>Customize:</strong> Adjust exposed parameters to match your concept</li>
+                                    <li><strong>Refine:</strong> Convert to layers if needed for specific adjustments</li>
+                                    <li><strong>Roblox Checks:</strong> Verify PBR values, test in different lighting</li>
+                                    <li><strong>Export:</strong> Generate textures for Roblox Studio</li>
+                                    <li><strong>Library Building:</strong> Save variations as new Smart Materials for reuse</li>
+                                </ol>
+                            </div>
+
+                            <div class="pro-tip">
+                                <h4>Creating a Roblox Material Library</h4>
+                                <p>Build your go-to collection:</p>
+                                <ul>
+                                    <li><strong>Metals:</strong> Various finishes (polished, brushed, weathered, rusted)</li>
+                                    <li><strong>Plastics:</strong> Different types (glossy, matte, transparent, rubbery)</li>
+                                    <li><strong>Fabrics:</strong> Common clothing materials (cotton, denim, wool, leather)</li>
+                                    <li><strong>Wood:</strong> Different types and finishes (pine, oak, painted, varnished)</li>
+                                    <li><strong>Roblox Specific:</strong> Studs, blocks, terrain, UI elements</li>
+                                    <li><strong>Characters:</strong> Skin tones, hair, eyes, clothing variations</li>
+                                </ul>
+                                <p><em>Tip: Name consistently for easy finding: "Roblox [Material Type] [Variation]"</em></p>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your Smart Material expertise:</p>
+                            <ul>
+                                <li><a href="masks.html">Master Masks</a> - Essential for controlling where Smart Material effects appear</li>
+                                <li><a href="generators.html">Explore Generators</a> - The procedural engines that power Smart Materials</li>
+                                <li><a href="fill-layers.html">Deep Dive into Fill Layers</a> - Learn about the content types used in Smart Materials</li>
+                                <li><a href="../materials/metal.html">Create Roblox Metal Materials</a> - Apply Smart Materials to create realistic metals</li>
+                                <li><a href="../advanced/procedural-texturing.html">Learn Advanced Procedural Techniques</a> - Take your Smart Materials to the next level</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create Smart Material Variations</h4>
+                                <p>Quickly build material families:</p>
+                                <ul>
+                                    <li>Create a base Smart Material (e.g., "Roblox Steel")</li>
+                                    <li>Create variations by adjusting parameters:</li>
+                                    <ul>
+                                        <li>"Roblox Steel - Polished" (low roughness, high metalness)</li>
+                                        <li>"Roblox Steel - Brushed" (medium roughness, directional wear)</li>
+                                        <li>"Roblox Steel - Rusty" (added rust layers, increased roughness)</li>
+                                        <li>"Roblox Steel - Painted" (base color layer, chip wear)</li>
+                                    </ul>
+                                    <li>Save all to your shelf for instant access</li>
+                                    <li><em>Now you have a complete metal material family ready for any Roblox project</em></p>
+                                </ul>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

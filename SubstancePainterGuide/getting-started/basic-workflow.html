@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Workflow - Substance 3D Painter for Roblox</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Substance 3D Painter for Roblox</h1>
+            <p>The complete guide to texturing Roblox characters and assets</p>
+</header>
+
+        <div class="main-content">
+            <nav class="sidebar">
+                <h2>Categories</h2>
+                <ul class="category-list">
+                    <li class="category-header">Getting Started</li>
+                    <li><a href="../getting-started/installation.html">Installation & Setup</a></li>
+                    <li><a href="../getting-started/interface-overview.html">Interface Overview</a></li>
+                    <li><a href="basic-workflow.html" class="active">Basic Workflow</a></li>
+
+                    <li class="category-header">Substance 3D Painter Basics</li>
+                    <li><a href="../basics/layers.html">Understanding Layers</a></li>
+                    <li><a href="../basics/smart-materials.html">Smart Materials</a></li>
+                    <li><a href="../basics/masks.html">Masks</a></li>
+                    <li><a href="../basics/generators.html">Generators</a></li>
+                    <li><a href="../basics/fill-layers.html">Fill Layers</a></li>
+                    <li><a href="../basics/paint-layers.html">Paint Layers</a></li>
+
+                    <li class="category-header">Materials</li>
+                    <li><a href="../materials/metal.html">Metal</a></li>
+                    <li><a href="../materials/plastic.html">Plastic</a></li>
+                    <li><a href="../materials/leather.html">Leather</a></li>
+                    <li><a href="../materials/fabric.html">Fabric</a></li>
+                    <li><a href="../materials/wood.html">Wood</a></li>
+                    <li><a href="../materials/skin.html">Skin</a></li>
+                    <li><a href="../materials/glass.html">Glass</a></li>
+                    <li><a href="../materials/stone.html">Stone</a></li>
+
+                    <li class="category-header">Roblox Specific</li>
+                    <li><a href="../roblox/surface-appearance.html">Roblox SurfaceAppearance</a></li>
+                    <li><a href="../roblox/pbr-workflow.html">Roblox PBR Workflow</a></li>
+                    <li><a href="../roblox/character-workflow.html">Roblox Character Workflow</a></li>
+                    <li><a href="../roblox/clothing.html">Roblox Clothing</a></li>
+                    <li><a href="../roblox/accessories.html">Roblox Accessories</a></li>
+                    <li><a href="../roblox/ugc.html">Roblox UGC</a></li>
+                    <li><a href="../roblox/optimization.html">Roblox Optimization</a></li>
+
+                    <li class="category-header">Advanced Techniques</li>
+                    <li><a href="../advanced/anchors.html">Anchor Points</a></li>
+                    <li><a href="../advanced/procedural-texturing.html">Procedural Texturing</a></li>
+                    <li><a href="../advanced/hand-painted.html">Hand-Painted Texturing</a></li>
+                    <li><a href="../advanced/stylized.html">Stylized Texturing</a></li>
+                    <li><a href="../advanced/realistic.html">Realistic Texturing</a></li>
+                    <li><a href="../advanced/baking.html">Baking</a></li>
+                    <li><a href="../advanced/uv-unwrapping.html">UV Unwrapping</a></li>
+
+                    <li class="category-header">Troubleshooting</li>
+                    <li><a href="../troubleshooting/common-issues.html">Common Issues</a></li>
+                    <li><a href="../troubleshooting/bake-problems.html">Baking Problems</a></li>
+                    <li><a href="../troubleshooting/roblox-issues.html">Roblox-Specific Issues</a></li>
+
+                    <li class="category-header">Reference</li>
+                    <li><a href="../reference/glossary.html">Glossary</a></li>
+                    <li><a href="../reference/material-library.html">Material Library</a></li>
+                    <li><a href="../reference/texture-reference.html">Texture Reference Library</a></li>
+                    <li><a href="../reference/faq.html">FAQ</a></li>
+                </ul>
+            </nav>
+
+            <div class="content">
+                <div class="breadcrumb">
+                    <a href="../index.html">Home</a> > Getting Started > Basic Workflow
+                </div>
+
+                <article class="article">
+                    <header class="article-header">
+                        <h1>Basic Texturing Workflow in Substance 3D Painter</h1>
+                        <div class="article-meta">
+                            <span>Difficulty: <span class="badge badge-primary">Beginner</span></span>
+                            <span>Time: 30 minutes</span>
+                            <span>Software: Substance 3D Painter</span>
+                            <span>Roblox Relevance: Essential</span>
+                        </span>
+                    </div>
+
+                    <div class="article-content">
+                        <p>Learning a solid basic workflow will give you the foundation to tackle any Roblox texturing project. This guide walks you through the essential steps from importing your model to exporting textures ready for Roblox.</p>
+
+                        <div class="callout-info">
+                            <h4>Why a Consistent Workflow Matters for Roblox</h4>
+                            <p>Having a repeatable workflow ensures consistency across your Roblox assets, reduces errors, and makes collaboration easier when working with teams on Roblox projects.</p>
+                        </div>
+
+                        <section class="section">
+                            <h2>Workflow Overview</h2>
+                            <p>The basic Substance 3D Painter workflow consists of these key stages:</p>
+
+                            <div class="steps">
+                                <h4>Seven Steps to Textured Assets</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Import and Setup</h4>
+                                        <p>Getting your model into Substance Painter correctly:</p>
+                                        <ul>
+                                            <li>File > New Project</li>
+                                            <li>Select your mesh (FBX, OBJ, etc.)</li>
+                                            <li>Choose appropriate document resolution (1K, 2K, 4K)</li>
+                                            <li>Select "PBR Metallic Roughness" template (matches Roblox)</li>
+                                            <li>Click "OK" to create the project</li>
+                                            <li><em>Roblox Tip: Ensure your model has proper UVs and is scaled correctly (1 unit = 1 cm in Roblox)</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Bake Mesh Maps (If Needed)</h4>
+                                        <p>Transfer high-poly details to your low-poly model:</p>
+                                        <ul>
+                                            <li>Only needed if you have a high-poly source</li>
+                                            <li>Texture Set Settings > Bake Mesh Maps</li>
+                                            <li>Select high-poly mesh</li>
+                                            <li>Choose maps to bake (Normal, AO, Curvature, etc.)</li>
+                                            <li>Adjust settings (rays, distance, padding)</li>
+                                            <li>Click "Bake" to generate maps</li>
+                                            <li><em>Roblox Tip: For many Roblox assets, you can skip baking and use procedural details instead</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Establish Base Materials</h4>
+                                        <p>Setting up your foundational PBR values:</p>
+                                        <ul>
+                                            <li>Add a Fill Layer for each channel (Base Color, Roughness, Metalness)</li>
+                                            <li>Set appropriate values for your material</li>
+                                            <li>Use grayscale values for Roughness (0= smooth, 1= rough)</li>
+                                            <li>Use 0-1 values for Metalness (0= non-metal, 1= metal)</li>
+                                            <li><em>Roblox Tip: Reference real-world PBR values for accuracy</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Medium and Large Scale Details</h4>
+                                        <p>Building up the main material characteristics:</p>
+                                        <ul>
+                                            <li>Add Fill Layers or Paint Layers for patterns</li>
+                                            <li>Use generators for procedural details (noise, grunge, etc.)</li>
+                                            <li>Create masks to control where details appear</li>
+                                            <li>Examples: wood grain, fabric weave, metal plating patterns</li>
+                                            <li><em>Roblox Tip: Consider how details will read at a distance in Roblox experiences</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Add Small Scale Details and Wear</h4>
+                                        <p>Bringing your material to life with realistic details:</p>
+                                        <ul>
+                                            <li>Add scratches, dents, dirt, and wear</li>
+                                            <li>Use smart masks (curvature, position, ambient occlusion)</li>
+                                            <li>Paint manually for unique character</li>
+                                            <li>Layer different wear types (scratches over dirt over paint chips)</li>
+                                            <li><em>Roblox Tip: Focus on details that will be visible in-game, not microscopic ones</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">6</div>
+                                    <div class="step-content">
+                                        <h4>Refine and Iterate</h4>
+                                        <p>Checking your work and making improvements:</p>
+                                        <ul>
+                                            <li>Toggle layers on/off to see their contribution</li>
+                                            <li>Check in different lighting environments</li>
+                                            <li>Compare to reference images</li>
+                                            <li>Adjust values and masks as needed</li>
+                                            <li>Keep your layer stack organized and labeled</li>
+                                        </ul>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">7</div>
+                                    <div class="step-content">
+                                        <h4>Export Textures for Roblox</h4>
+                                        <p>Getting your textures ready to use in Roblox Studio:</p>
+                                        <ul>
+                                            <li>File > Export Textures</li>
+                                            <li>Choose export preset or create custom one</li>
+                                            <li>Select output format (PNG recommended)</li>
+                                            <li>Verify color spaces (sRGB for color, Linear for data)</li>
+                                            <li>Click "Export" to generate texture files</li>
+                                            <li><em>Roblox Tip: Name files clearly (BaseColor.png, Normal.png, etc.)</em></p>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Detailed Walkthrough: Simple Prop Example</h2>
+                            <p>Let's walk through texturing a simple crate for Roblox:</p>
+
+                            <div class="steps">
+                                <h4>Step-by-Step Crate Texturing</h4>
+
+                                <div class="step">
+                                    <div class="step-number">1</div>
+                                    <div class="step-content">
+                                        <h4>Project Setup</h4>
+                                        <p>Start with a clean slate:</p>
+                                        <ul>
+                                            <li>Import your crate FBX/OBJ</li>
+                                            <li>Use 1024 resolution (good balance for small props)</li>
+                                            <li>PBR Metallic Roughness template</li>
+                                            <li>No baking needed (low-poly only)</li>
+                                        </ul>
+                                        <p><em>You should see your crate in the viewport with default gray material</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">2</div>
+                                    <div class="step-content">
+                                        <h4>Establish Base Wood Material</h4>
+                                        <p>Create our wood foundation:</p>
+                                        <ul>
+                                            <li>Add Fill Layer named "Base Wood Color"</li>
+                                            <li>Set Base Color to warm brown (#8B4513 or similar)</li>
+                                            <li>Add Fill Layer named "Wood Roughness"</li>
+                                            <li>Set Roughness to 0.3 (somewhat smooth wood)</li>
+                                            <li>Add Fill Layer named "Wood Metalness"</li>
+                                            <li>Set Metalness to 0.0 (wood is not metallic)</li>
+                                        </ul>
+                                        <p><em>Your crate should now look like plain wood</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">3</div>
+                                    <div class="step-content">
+                                        <h4>Add Wood Grain Details</h4>
+                                        <p>Make it look like real wood:</p>
+                                        <ul>
+                                            <li>Add Fill Layer above base color</li>
+                                            <li>Set to "Wood" generator (or noise + gradient)</li>
+                                            <li>Add Black Mask</li>
+                                            <li>Generate mask using "Wood" generator</li>
+                                            <li>Set layer blending to "Overlay" at 30% opacity</li>
+                                            <li>Adjust generator parameters for grain direction</li>
+                                        </ul>
+                                        <p><em>Now you should see subtle wood grain patterns</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">4</div>
+                                    <div class="step-content">
+                                        <h4>Add Wear and Damage</h4>
+                                        <p>Give the crate history and use:</p>
+                                        <ul>
+                                            <li>Add Fill Layer for scratches</li>
+                                            <li>Set color to slightly lighter than wood</li>
+                                            <li>Add Black Mask</li>
+                                            <li>Generate using Curvature + Noise</li>
+                                            <li>Set blending to "Normal" at 20% opacity</li>
+                                            <li>Add Fill Layer for dirt in crevices</li>
+                                            <li>Set color to dark brown</li>
+                                            <li>Add Black Mask</li>
+                                            <li>Generate using Ambient Occlusion</li>
+                                            <li>Set blending to "Multiply" at 15% opacity</li>
+                                        </ul>
+                                        <p><em>Your crate now looks used and realistic</em></p>
+                                    </div>
+                                </div>
+
+                                <div class="step">
+                                    <div class="step-number">5</div>
+                                    <div class="step-content">
+                                        <h4>Final Checks and Export</h4>
+                                        <p>Make sure it's ready for Roblox:</p>
+                                        <ul>
+                                            <li>Check in different lighting (studio, outdoor, etc.)</li>
+                                            <li>Verify no seams or stretching in UV view</li>
+                                            <li>Ensure Normal Map looks correct (if baked)</li>
+                                            <li>Export as PNG textures</li>
+                                            <li>Name files: BaseColor.png, Normal.png, Roughness.png, Metalness.png</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Workflow Tips for Different Roblox Asset Types</h2>
+                            <p>Adapt your approach based on what you're creating:</p>
+
+                            <div class="subsection">
+                                <h3>Characters and Avatars</h4>
+                                <p>Special considerations for wearable items:</p>
+                                <ul>
+                                    <li><strong>Skin:</strong> Focus on subsurface scattering approximation, pore details, slight variation</li>
+                                    <li><strong>Clothing:</strong> Fabric weave, thread count, seams, wear at stress points</li>
+                                    <li><strong>Accessories:</strong> Material accuracy, branding, functional details</li>
+                                    <li><strong>UV Considerations:</strong> Plan for symmetry, hide seams in less visible areas</li>
+                                    <li><em>Roblox Tip: Test textures on actual R15/Rthro avatars in various poses</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>Props and Environment Assets</h4>
+                                <p>For buildings, furniture, vehicles, etc.:</p>
+                                <ul>
+                                    <li><strong>Scale:</strong> Larger assets can use lower texture densities</li>
+                                    <li><strong>Repetition:</strong> Plan for tiling textures where appropriate</li>
+                                    <li><strong>Lighting:</strong> Consider how asset will look in various Roblox lighting</li>
+                                    <li><strong>Performance:</strong> Balance detail with texture size limits</li>
+                                    <li><em>Roblox Tip: Use tiling textures for large surfaces like walls or floors</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="subsection">
+                                <h3>UI and 2D Assets</h4>
+                                <p>For interfaces, icons, and 2D elements:</p>
+                                <ul>
+                                    <li><strong>Resolution:</strong> Higher DPI needed for crisp UI</li>
+                                    <li><strong>Pixel Perfect:</strong> Pay attention to hard edges and alignment</li>
+                                    <li><strong>Transparency:</strong> Proper alpha channel handling</li>
+                                    <li><strong>Consistency:</strong> Match style with other UI elements</li>
+                                    <li><em>Roblox Tip: Create UI at 2x intended size for better scaling</em></p>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Common Beginner Mistakes to Avoid</h2>
+                            <p>Learn from others' pitfalls:</p>
+
+                            <div class="callout-danger">
+                                <h4>Mistake: Incorrect PBR Values</h4>
+                                <p><strong>Problem:</strong> Materials look wrong in Roblox due to unrealistic values</p>
+                                <p><strong>Solution:</strong></p>
+                                <ul>
+                                    <li>Reference real-world PBR charts</li>
+                                    <li>Metalness should be 0 or 1 (rarely in-between)</li>
+                                    <li>Roughness: 0-0.2 (very smooth), 0.2-0.5 (medium), 0.5-0.8 (rough), 0.8-1.0 (very rough)</li>
+                                    <li><em>Example: Polished metal = Roughness 0.1-0.3, Metalness 1.0</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="callout-danger">
+                                <h4>Mistake: Ignoring UV Layout</h4>
+                                <p><strong>Problem:</strong> Stretching, seams, or inefficient texture use</p>
+                                <p><strong>Solution:</strong></p>
+                                <ul>
+                                    <li>Check UVs in 3D software before importing</li>
+                                    <li>Use UV viewport mode in Substance to spot issues</li>
+                                    <li>Plan for adequate padding (2-4 pixels)</li>
+                                    <li>Consider UV island size relative to importance</li>
+                                    <li><em>Tip: Straighten UV islands and pack efficiently</em></p>
+                                </ul>
+                            </div>
+
+                            <div class="callout-danger">
+                                <h4>Mistake: Overdoing Details</h4>
+                                <p><strong>Problem:</strong> Assets look noisy or unrealistic due to excessive detail</p>
+                                <p><strong>Solution:</strong></p>
+                                <ul>
+                                    <li>Start subtle, build up gradually</li>
+                                    <li>Reference real-world wear patterns</li>
+                                    <li>Consider viewing distance in-game</li>
+                                    <li>Use layers to control detail intensity</li>
+                                    <li><em>Tip: Toggle groups on/off to judge their contribution</em></p>
+                                </ul>
+                            </div>
+                        </section>
+
+                        <section class="section">
+                            <h2>Next Steps</h2>
+                            <p>Continue building your texturing skills:</p>
+                            <ul>
+                                <li><a href="../basics/layers.html">Master Layers</a> - Deep dive into layer types, blending, and organization</li>
+                                <li><a href="../basics/smart-materials.html">Explore Smart Materials</a> - Learn to use and create powerful material presets</li>
+                                <li><a href="../basics/masks.html">Understand Masks</a> - Essential for controlling where effects appear</li>
+                                <li><a href="../materials/metal.html">Try Metal Texturing</a> - Apply your workflow to create realistic metallic materials</li>
+                                <li><a href="../advanced/baking.html">Learn Baking Techniques</a> - For transferring high-poly details to low-poly models</li>
+                            </ul>
+
+                            <div class="pro-tip">
+                                <h4>Pro Tip: Create a Workflow Checklist</h4>
+                                <p>Keep this checklist handy for your Roblox projects:</p>
+                                <ol>
+                                    <li>✓ Model imported with correct scale and UVs</li>
+                                    <li>✓ Project settings: appropriate resolution, PBR template</li>
+                                    <li>✓ Base PBR values established (color, roughness, metalness)</li>
+                                    <li>✓ Medium details added (patterns, grain, etc.)</li>
+                                    <li>✓ Fine details and wear applied</li>
+                                    <li>✓ Work reviewed in multiple lighting conditions</li>
+                                    <li>✓ Textures exported with correct naming and format</li>
+                                    <li>✓ Tested in Roblox Studio before finalizing</li>
+                                </ol>
+                                <p>Print it out or save it as a note for quick reference!</p>
+                            </div>
+                        </section>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
