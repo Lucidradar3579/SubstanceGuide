@@ -828,6 +828,11 @@ body {
     color: #14231c;
 }
 
+.dark-mode .step-number {
+    background: #2c704f;
+    color: #f0faf3;
+}
+
 .dark-mode .callout-info,
 .dark-mode .pro-tip {
     background: #1b3530;

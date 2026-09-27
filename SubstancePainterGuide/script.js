@@ -4,9 +4,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // Dark mode toggle (if implemented)
     const darkModeToggle = document.createElement('button');
     darkModeToggle.innerHTML = '🌓 Dark Mode';
-    darkModeToggle.style.position = 'fixed';
-    darkModeToggle.style.top = '20px';
-    darkModeToggle.style.right = '20px';
     darkModeToggle.style.padding = '8px 12px';
     darkModeToggle.style.background = 'var(--primary)';
     darkModeToggle.style.color = 'white';
